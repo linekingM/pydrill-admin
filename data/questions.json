@@ -61,7 +61,7 @@
       },
       {
         "key": "B",
-        "text": "代码会报错 TypeError",
+        "text": "报错：TypeError",
         "hint": "嵌套列表仍可改，不会 TypeError"
       },
       {
@@ -71,18 +71,18 @@
       },
       {
         "key": "D",
-        "text": "代码会报错 SyntaxError",
-        "hint": "这是合法赋值，不会 SyntaxError"
+        "text": "报错：SyntaxError",
+        "hint": "这是合法赋值，不会SyntaxError"
       }
     ],
     "answer": "A",
     "explanation": "答案是 A，输出 `(10, 20, [35, 40])`。元组是不可变容器，指其元素的引用地址不可变；但第 3 个元素是可变列表，`my_tuple[2][0] = 35` 修改的是列表内部的值，并没有改变元组持有的列表引用。易错点：容易误以为元组内所有嵌套元素都无法修改而误选 TypeError。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "报错选项统一为「报错：TypeError/SyntaxError」",
     "type": "输出判断",
     "difficulty": 2,
     "subtopic": "引用与可变性"
@@ -115,18 +115,18 @@
       },
       {
         "key": "D",
-        "text": "代码会因为默认参数错误而报错",
-        "hint": "这样写合法，只是共享同一个列表"
+        "text": "[1] [2, 1]",
+        "hint": "共享同一列表，且元素追加在末尾"
       }
     ],
     "answer": "C",
     "explanation": "答案是 C，输出 `[1, 2] [1, 2]`。Python 函数默认参数在 `def` 定义时只求值一次，未传参时会一直共享同一个默认列表。第 1 次调用追加 1，第 2 次追加 2，`list1` 与 `list2` 最终指向同一个列表 `[1, 2]`。易错点：容易误以为每次调用都会新建一个空列表。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "D选项换成可信干扰项 [1] [2, 1]",
     "type": "输出判断",
     "difficulty": 2,
     "subtopic": "默认参数机制"
@@ -667,7 +667,7 @@
       {
         "key": "A",
         "text": "A",
-        "hint": "finally 里的 return 会盖掉 A"
+        "hint": "finally里的return会盖掉A"
       },
       {
         "key": "B",
@@ -677,22 +677,22 @@
       {
         "key": "C",
         "text": "C",
-        "hint": "finally 返回 C，盖过 try 的 A"
+        "hint": "finally返回C，盖过try的A"
       },
       {
         "key": "D",
         "text": "报错：SyntaxError",
-        "hint": "finally 里 return 不是语法错误"
+        "hint": "finally里return不是语法错误"
       }
     ],
     "answer": "C",
-    "explanation": "答案是 C，输出 `C`。`try` 里的 `return \"A\"` 会先把返回值暂存起来，但在函数真正退出之前，`finally` 一定会执行；`finally` 里又写了 `return \"C\"`，它会覆盖掉之前暂存的 \"A\"，所以最终返回 \"C\"。这里没有发生异常，`except` 分支根本不会执行。易错点：`try` 里的 `return` 不会跳过 `finally`。实际写代码时不要在 `finally` 里 `return`（会吞掉返回值和异常，Python 3.14 起还会给出 SyntaxWarning）。",
+    "explanation": "答案是 C，输出 `C`。`try` 里的 `return \"A\"` 会先把返回值暂存起来，但在函数真正退出之前，`finally` 一定会执行；`finally` 里又写了 `return \"C\"`，它会覆盖掉之前暂存的 \"A\"，所以最终返回 \"C\"。这里没有发生异常，`except` 分支根本不会执行。易错点：`try` 里的 `return` 不会跳过 `finally`。Python 3.14 起在 finally 里写 return 会出 SyntaxWarning（PEP 765），实际写代码不要这样用。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "解析补充 Python 3.14 finally内return的SyntaxWarning",
     "type": "输出判断",
     "difficulty": 2,
     "subtopic": "流程控制与清理"
@@ -1431,12 +1431,12 @@
     "explanation": "答案是 D，输出 `4`。在 Python 中，`for` 循环的循环变量在循环结束后仍然存在，并且保持最后一次迭代时的值。`range(5)` 产生 0 到 4，循环结束后 `i` 的值停在 4。这和 C/Java 等语言不同，那些语言的循环变量在循环外不可用。易错点：容易误以为 `i` 在循环结束后就不存在了，或者误以为 `range(5)` 的最后一个值是 5。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "难度2→1",
     "type": "输出判断",
-    "difficulty": 2,
+    "difficulty": 1,
     "subtopic": "变量生命周期"
   },
   {
@@ -1701,46 +1701,46 @@
   },
   {
     "id": "q040",
-    "title": "try块直接返回跳过else",
+    "title": "捕获异常对象打印错误消息",
     "topic": "异常处理",
     "tags": [
       "异常处理"
     ],
-    "stem": "运行这段代码，最终输出的内容是？",
-    "code": "def f():\n    try:\n        return 1\n    except:\n        return 2\n    else:\n        return 3\n\nprint(f())",
+    "stem": "执行以下代码后，控制台打印的结果是？",
+    "code": "def check_age(age):\n    if age < 0:\n        raise ValueError(\"年龄不能为负数\")\n    return f\"年龄: {age}\"\n\ntry:\n    check_age(-1)\nexcept ValueError as e:\n    print(e)",
     "options": [
       {
         "key": "A",
-        "text": "3",
-        "hint": "try里有return，else不会执行"
+        "text": "ValueError: 年龄不能为负数",
+        "hint": "print(e)不包含异常类型名"
       },
       {
         "key": "B",
-        "text": "2",
-        "hint": "没有异常，except不会执行"
+        "text": "年龄不能为负数",
+        "hint": "print(e)输出异常的消息文本"
       },
       {
         "key": "C",
-        "text": "报错：SyntaxError",
-        "hint": "语法正确，只是else不会执行"
+        "text": "年龄: -1",
+        "hint": "raise后函数立即中断并退出"
       },
       {
         "key": "D",
-        "text": "1",
-        "hint": "try里直接return，跳过else"
+        "text": "报错：ValueError",
+        "hint": "异常被except捕获，不会崩溃"
       }
     ],
-    "answer": "D",
-    "explanation": "答案是 D，输出 `1`。`try` 块中执行 `return 1` 后函数就准备返回了。虽然没有异常发生，按理 `else` 块会在 `try` 正常结束后执行，但这里 `try` 里的 `return` 让控制流直接离开，`else` 块来不及执行。没有 `finally` 来拦截返回值，所以函数直接返回 1。易错点：容易误以为 `else` 在没有异常时总会执行，但 `try` 里的 `return` 会跳过 `else`。",
+    "answer": "B",
+    "explanation": "答案是 B，输出 `年龄不能为负数`。当调用 `check_age(-1)` 时，由于 `-1 < 0` 触发了 `raise ValueError(\"年龄不能为负数\")`，函数立即中断退出，后续的 `return` 语句不会被执行；异常向外抛出后被 `except ValueError as e` 成功捕获并赋值给变量 `e`。在 Python 中，直接 `print(e)` 会调用异常对象的 `__str__` 方法，只输出创建异常时传入的消息文本，不会包含 `ValueError:` 类型前缀。易错点：初学者容易误以为 `print(e)` 会像终端未捕获报错（Traceback）那样连带异常类名一起打印，或者误以为 `raise` 之后同一函数还会继续向下执行。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "改为异常抛出：print(e)只输出消息文本",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "流程控制与清理"
+    "subtopic": "异常抛出与自定义"
   },
   {
     "id": "q041",
@@ -2476,8 +2476,8 @@
       },
       {
         "key": "B",
-        "text": "[1, 2, 3, 4, 5, 6]",
-        "hint": "步长为2时会隔一个取一个"
+        "text": "[1, 3]",
+        "hint": "切片会走完全部，不会提前停下"
       },
       {
         "key": "C",
@@ -2486,18 +2486,18 @@
       },
       {
         "key": "D",
-        "text": "[1, 2]",
-        "hint": "::2里的2是步长不是个数"
+        "text": "[2, 4]",
+        "hint": "从下标0开始取，且会取到末尾"
       }
     ],
     "answer": "C",
-    "explanation": "答案是 C，输出 `[1, 3, 5]`。`nums[::2]` 省略了起止，步长是 2：从下标 0 开始，之后每次把下标加 2，依次落到 0、2、4，对应的值是 `1`、`3`、`5`。易错点：步长 2 的意思是隔一个取一个，不是只保留前两个，也不是从第二个数开始取。",
+    "explanation": "答案是 C，输出 `[1, 3, 5]`。`nums[::2]` 省略了起止，步长是 2：从下标 0 开始，之后每次把下标加 2，依次落到 0、2、4，对应的值是 `1`、`3`、`5`。易错点：步长 2 的意思是隔一个取一个，从下标 0 开始取，不会提前停止，也不是从下标 1 开始。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "错误选项换成初学者常误选的答案",
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "切片索引与步长"
@@ -2757,12 +2757,12 @@
     "explanation": "答案是 A，输出 `9`。`nums[1:4]` 先得到 `[2, 3, 4]`，循环只遍历这三个数。`total` 从 0 开始，依次加上 2、3、4，最后是 9。易错点：开头的 `1` 不在这段切片里，下标 4 上的 `5` 也不包含。",
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": null,
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "难度3→1",
     "type": "输出判断",
-    "difficulty": 3,
+    "difficulty": 1,
     "subtopic": "切片索引与步长"
   },
   {
@@ -2811,89 +2811,89 @@
   },
   {
     "id": "q066",
-    "title": "元组不支持按索引修改",
+    "title": "元组index返回首个索引",
     "topic": "元组/引用",
     "stem": "运行以下代码，控制台输出的结果是？",
-    "code": "info = (\"Alice\", 90)\ninfo[1] = 95\nprint(info)",
+    "code": "fruits = (\"apple\", \"banana\", \"orange\", \"banana\")\nprint(fruits.index(\"banana\"))",
     "options": [
       {
         "key": "A",
-        "text": "('Alice', 95)",
-        "hint": "元组不可变，不支持按索引修改"
+        "text": "3",
+        "hint": "index返回首个匹配，非末尾位置"
       },
       {
         "key": "B",
-        "text": "('Alice', 90)",
-        "hint": "赋值语句执行时就会直接报错"
+        "text": "1",
+        "hint": "index返回首个匹配项下标1"
       },
       {
         "key": "C",
-        "text": "报错：TypeError",
-        "hint": "元组属于不可变类型，抛出此异常"
+        "text": "2",
+        "hint": "2是出现次数，那是count的结果"
       },
       {
         "key": "D",
-        "text": "报错：IndexError",
-        "hint": "下标1有效，报的是TypeError"
+        "text": "(1, 3)",
+        "hint": "index只返回整数，不返回元组"
       }
     ],
-    "answer": "C",
-    "explanation": "答案是 C，会报错 `TypeError`。Python 中的元组属于不可变序列，一旦创建就不能修改其中的元素。代码执行 `info[1] = 95` 试图按下标修改元素时，Python 会抛出 `TypeError`。如果需要修改元素内容，应使用列表（list）存储。易错点：初学者容易混淆元组与列表，误以为元组也支持按索引修改。",
+    "answer": "B",
+    "explanation": "答案是 B，输出 `1`。元组的 `index(x)` 方法用于查找元素 `x` 在元组中第一次出现的索引下标。在元组 `fruits` 中，`\"banana\"` 分别出现在下标 1 和 3，`index()` 找到第一个匹配项即返回其下标 1。易错点：容易误以为 `index()` 会返回最后一次出现的下标、返回包含所有下标的元组，或者将其与统计出现次数的 `count()` 方法混淆。",
     "tags": [
       "元组"
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
-    "type": "报错判断",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "换新角度：元组index返回首次出现下标",
+    "type": "输出判断",
     "difficulty": 1,
     "subtopic": "元组基础"
   },
   {
     "id": "q067",
-    "title": "变量重新赋值不影响原别名",
+    "title": "列表+=与+拼接的引用区别",
     "topic": "元组/引用",
     "stem": "执行以下代码后，最后一行打印的结果是？",
-    "code": "cart = [\"苹果\", \"牛奶\"]\nhistory = cart\ncart = [\"面包\"]\nprint(history)",
+    "code": "a = [1, 2]\nb = a\na += [3]\n\nc = [1, 2]\nd = c\nc = c + [3]\n\nprint(b, d)",
     "options": [
       {
         "key": "A",
-        "text": "['面包']",
-        "hint": "cart重新赋值未改变原列表对象"
+        "text": "[1, 2, 3] [1, 2, 3]",
+        "hint": "+拼接生成新列表，d不随c改变"
       },
       {
         "key": "B",
-        "text": "['苹果', '牛奶', '面包']",
-        "hint": "这是重新赋值，并没有追加元素"
+        "text": "[1, 2] [1, 2]",
+        "hint": "+=是原地修改，别名b会同步改变"
       },
       {
         "key": "C",
-        "text": "[]",
-        "hint": "原列表没有被清空，数据仍在"
+        "text": "[1, 2, 3] [1, 2]",
+        "hint": "+=原地修改影响b，+生成新列表"
       },
       {
         "key": "D",
-        "text": "['苹果', '牛奶']",
-        "hint": "history仍指向最初的列表对象"
+        "text": "[1, 2] [1, 2, 3]",
+        "hint": "+=修改原列表，+不影响别名d"
       }
     ],
-    "answer": "D",
-    "explanation": "答案是 D，输出 `['苹果', '牛奶']`。`history = cart` 让两个变量指向内存中的同一个列表对象。随后 `cart = [\"面包\"]` 是对变量 `cart` 重新赋值，使其绑定到一个全新的列表，这并不会修改原列表对象的内容。因此 `history` 仍然指向原来的列表。易错点：容易混淆「变量重新赋值」与「原地修改对象」。",
+    "answer": "C",
+    "explanation": "答案是 C，输出 `[1, 2, 3] [1, 2]`。对列表执行 `+=` 运算符时，调用的是原地修改方法 `extend`，列表对象自身被修改，因此别名 `b` 看到的内容也随之变为 `[1, 2, 3]`；而 `c + [3]` 会创建一个全新的列表对象再赋值给 `c`，原列表对象未被修改，别名 `d` 依然指向原列表 `[1, 2]`。易错点：容易误以为 `+=` 与 `+` 行为完全一致，忽略了 `+=` 对可变对象是原地修改。",
     "tags": [
       "可变对象与引用",
-      "变量与赋值"
+      "列表"
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "改考 a+=[x] 原地修改与 a=a+[x] 新建列表的区别",
     "type": "输出判断",
-    "difficulty": 1,
+    "difficulty": 2,
     "subtopic": "引用与可变性"
   },
   {
@@ -2964,24 +2964,24 @@
       },
       {
         "key": "D",
-        "text": "copy",
-        "hint": "copy是模块名，不能当作函数调用"
+        "text": "scores.copy",
+        "hint": "scores.copy不接收参数，会报错"
       }
     ],
     "answer": "C",
-    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 不影响 `scores` 中的内层嵌套列表，必须进行深拷贝。`copy.deepcopy()` 会递归复制所有层级的对象，生成完全独立的副本；而 `copy.copy()` 和 `list()` 都只是浅拷贝，内层列表仍然是同一个引用。选项 D 中的 `copy` 是模块名而非函数。易错点：容易误以为浅拷贝能完全隔离嵌套结构。",
+    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 不影响 `scores` 中的内层嵌套列表，必须进行深拷贝。`copy.deepcopy()` 会递归复制所有层级的对象，生成完全独立的副本；而 `copy.copy()` 和 `list()` 都只是浅拷贝，内层列表仍然是同一个引用。选项 D 中的 `scores.copy` 属于实例方法不能传参调用。易错点：容易误以为浅拷贝能完全隔离嵌套结构。",
     "tags": [
       "可变对象与引用",
       "模块导入"
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "难度3→2；选项D换成scores.copy",
     "type": "代码补全",
-    "difficulty": 3,
+    "difficulty": 2,
     "subtopic": "同一性与拷贝"
   },
   {
@@ -3003,8 +3003,8 @@
       },
       {
         "key": "C",
-        "text": "['user', 'user']",
-        "hint": "追加的是admin，不是user"
+        "text": "['admin', 'user']",
+        "hint": "append追加在末尾，不会放开头"
       },
       {
         "key": "D",
@@ -3020,10 +3020,10 @@
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "C改为['admin', 'user']，正确答案不再是唯一最长",
     "type": "输出判断",
     "difficulty": 3,
     "subtopic": "引用与可变性"
@@ -3108,12 +3108,12 @@
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "难度1→2",
     "type": "报错判断",
-    "difficulty": 1,
+    "difficulty": 2,
     "subtopic": "参数传递与调用"
   },
   {
@@ -3162,47 +3162,47 @@
   },
   {
     "id": "q074",
-    "title": "None规避默认参数共享",
+    "title": "循环内return终止函数",
     "topic": "函数/默认参数",
-    "stem": "在横线处填入下列哪项，能让控制台输出 ['Alice']？",
-    "code": "def add_user(name, users=____):\n    if users is None:\n        users = []\n    users.append(name)\n    return users\n\nu1 = add_user(\"Alice\")\nu2 = add_user(\"Bob\")\nprint(u1)",
+    "stem": "执行以下代码后，控制台打印的结果是？",
+    "code": "def find_first_even(nums):\n    for x in nums:\n        if x % 2 == 0:\n            return x\n    return -1\n\nprint(find_first_even([1, 3, 4, 6]))",
     "options": [
       {
         "key": "A",
-        "text": "[]",
-        "hint": "默认列表会被多次调用共享，输出两项"
+        "text": "4",
+        "hint": "遇到首个偶数4即return退出"
       },
       {
         "key": "B",
-        "text": "()",
-        "hint": "元组不可变且没有append方法，报错"
+        "text": "6",
+        "hint": "遇到4已结束函数，不会到6"
       },
       {
         "key": "C",
-        "text": "list",
-        "hint": "list是类型名非实例，调用报错"
+        "text": "[4, 6]",
+        "hint": "return只返回单值不收集列表"
       },
       {
         "key": "D",
-        "text": "None",
-        "hint": "每次调用新创建列表，避免默认值共享"
+        "text": "-1",
+        "hint": "已提前return，不会走到末尾"
       }
     ],
-    "answer": "D",
-    "explanation": "答案是 D，输出 `['Alice']`。在 Python 中，如果直接使用可变对象（如 `[]`）作为默认参数，该对象在函数定义时创建并在多次调用间共享。如果填入 `[]`，第二次调用时 `users is None` 为假，会向同一个共享列表追加 `\"Bob\"`，导致 `u1` 输出为 `['Alice', 'Bob']`。推荐惯用法是使用 `None` 作为默认占位符，函数内部判断 `users is None` 时动态创建新列表，使每次调用拥有独立的列表。易错点：容易误以为每次调用都会重新生成默认参数中的 `[]`。",
+    "answer": "A",
+    "explanation": "答案是 A，输出 `4`。在函数内部执行到 `return` 语句时，会立即结束当前函数的执行并返回值，不会继续留在循环中。遍历到数字 4 时满足 `x % 2 == 0`，函数立即返回 4，因此后面的 6 以及末尾的 `return -1` 都不会被执行。易错点：初学者容易误以为 `return` 只是跳过当前单次循环，或者误以为函数会把循环中所有符合条件的元素收集起来返回。",
     "tags": [
-      "默认参数",
-      "None与真假值"
+      "函数",
+      "循环"
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
-    "type": "代码补全",
-    "difficulty": 3,
-    "subtopic": "默认参数机制"
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "换新角度：循环内return立即结束函数（函数定义与返回值）",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "函数定义与返回值"
   },
   {
     "id": "q075",
@@ -3601,45 +3601,45 @@
   },
   {
     "id": "q084",
-    "title": "LEGB作用域查找顺序",
+    "title": "同名变量按LEGB就近查找",
     "topic": "作用域/变量",
-    "stem": "在 Python 中，当在函数内部访问一个变量时，默认的作用域查找顺序（LEGB 规则）是？",
-    "code": "",
+    "stem": "执行以下代码后，控制台打印的结果是？",
+    "code": "sum = 100\n\ndef calc_score(bonus):\n    sum = 80\n    def total():\n        return sum + bonus\n    return total()\n\nprint(calc_score(10), sum)",
     "options": [
       {
         "key": "A",
-        "text": "全局作用域 -> 局部作用域 -> 闭包作用域 -> 内置作用域",
-        "hint": "查找应从当前最内层局部作用域开始"
+        "text": "90 100",
+        "hint": "total优先读取外层闭包的sum"
       },
       {
         "key": "B",
-        "text": "局部作用域 -> 全局作用域 -> 闭包作用域 -> 内置作用域",
-        "hint": "外层闭包作用域优先于全局作用域"
+        "text": "110 100",
+        "hint": "LEGB规则中闭包优先于全局变量"
       },
       {
         "key": "C",
-        "text": "局部作用域 -> 闭包作用域 -> 全局作用域 -> 内置作用域",
-        "hint": "遵循L->E->G->B由内向外查找"
+        "text": "90 80",
+        "hint": "函数内局部赋值不影响全局变量"
       },
       {
         "key": "D",
-        "text": "闭包作用域 -> 局部作用域 -> 内置作用域 -> 全局作用域",
-        "hint": "优先查找当前函数的局部作用域"
+        "text": "110 80",
+        "hint": "内层读闭包80，全局仍为100"
       }
     ],
-    "answer": "C",
-    "explanation": "答案是 C，查找顺序为：局部作用域 -> 闭包作用域 -> 全局作用域 -> 内置作用域。Python 变量查找严格遵循经典的 LEGB 规则，由内向外依次查找：1. L（Local，局部作用域）：当前函数内部定义的变量；2. E（Enclosing，嵌套/闭包作用域）：外层嵌套函数的局部变量；3. G（Global，全局作用域）：当前模块顶层定义的变量；4. B（Built-in，内置作用域）：Python 内置的函数与异常。一旦在较内层作用域找到同名变量便立即停止查找，若查完内置作用域仍未找到则抛出 `NameError`。易错点：容易颠倒闭包（Enclosing）和全局（Global）的顺序，记住查找始终是由内向外层层扩散。",
+    "answer": "A",
+    "explanation": "答案是 A，输出 `90 100`。Python 变量查找遵循 LEGB 规则，由内向外依次查找：局部作用域（Local）-> 闭包作用域（Enclosing）-> 全局作用域（Global）-> 内置作用域（Built-in）。内层函数 `total` 查找 `sum` 时，在当前局部未找到，但在外层函数 `calc_score` 的闭包作用域中找到了 `sum = 80`，因此停止查找并计算 `80 + 10 = 90`，不会使用全局变量 `sum = 100` 或内置函数 `sum`；而外层的 `print` 直接访问全局作用域，`sum` 依然是 `100`。易错点：容易误以为内层函数会跳过外层闭包去读取全局变量，或者误以为函数内部对 `sum` 赋值会修改全局变量。",
     "tags": [
       "作用域"
     ],
     "animationId": null,
     "status": "verified",
-    "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T18:44:36+08:00",
-    "editNote": "",
-    "type": "概念理解",
-    "difficulty": 1,
+    "revised": true,
+    "revision": 1,
+    "lastEditedAt": "2026-10-11T19:42:53+08:00",
+    "editNote": "概念题改为代码题：LEGB同名变量查找",
+    "type": "输出判断",
+    "difficulty": 2,
     "subtopic": "嵌套作用域与闭包"
   },
   {
