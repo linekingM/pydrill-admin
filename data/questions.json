@@ -38,7 +38,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "循环控制"
   },
   {
     "id": "q002",
@@ -79,7 +82,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "引用与可变性"
   },
   {
     "id": "q003",
@@ -120,7 +126,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "默认参数机制"
   },
   {
     "id": "q004",
@@ -161,7 +170,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "循环控制"
   },
   {
     "id": "q005",
@@ -202,7 +214,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "元组基础"
   },
   {
     "id": "q006",
@@ -243,7 +258,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "默认参数机制"
   },
   {
     "id": "q007",
@@ -284,7 +302,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q008",
@@ -325,7 +346,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "切片修改与拷贝"
   },
   {
     "id": "q009",
@@ -365,7 +389,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "键的特性与哈希"
   },
   {
     "id": "q010",
@@ -405,7 +432,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "常用字典方法"
   },
   {
     "id": "q011",
@@ -446,7 +476,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 2,
+    "subtopic": "全局与局部变量"
   },
   {
     "id": "q012",
@@ -487,7 +520,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "嵌套作用域与闭包"
   },
   {
     "id": "q013",
@@ -527,7 +563,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "类属性与实例属性"
   },
   {
     "id": "q014",
@@ -567,7 +606,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "继承与特殊方法"
   },
   {
     "id": "q015",
@@ -607,7 +649,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "流程控制与清理"
   },
   {
     "id": "q016",
@@ -647,7 +692,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "流程控制与清理"
   },
   {
     "id": "q017",
@@ -687,7 +735,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "切片与索引"
   },
   {
     "id": "q018",
@@ -728,7 +779,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "字符串方法"
   },
   {
     "id": "q019",
@@ -769,7 +823,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "循环控制"
   },
   {
     "id": "q020",
@@ -809,7 +866,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "元组基础"
   },
   {
     "id": "q021",
@@ -850,7 +910,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "同一性与拷贝"
   },
   {
     "id": "q022",
@@ -891,7 +954,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "同一性与拷贝"
   },
   {
     "id": "q023",
@@ -932,7 +998,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "函数定义与返回值"
   },
   {
     "id": "q024",
@@ -973,7 +1042,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "参数传递与调用"
   },
   {
     "id": "q025",
@@ -1014,7 +1086,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "参数传递与调用"
   },
   {
     "id": "q026",
@@ -1055,7 +1130,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q027",
@@ -1096,7 +1174,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表操作与方法"
   },
   {
     "id": "q028",
@@ -1137,7 +1218,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "列表操作与方法"
   },
   {
     "id": "q029",
@@ -1177,7 +1261,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "键的特性与哈希"
   },
   {
     "id": "q030",
@@ -1217,7 +1304,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "访问与成员检查"
   },
   {
     "id": "q031",
@@ -1257,7 +1347,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "常用字典方法"
   },
   {
     "id": "q032",
@@ -1297,7 +1390,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "嵌套作用域与闭包"
   },
   {
     "id": "q033",
@@ -1338,7 +1434,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "变量生命周期"
   },
   {
     "id": "q034",
@@ -1379,7 +1478,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "变量生命周期"
   },
   {
     "id": "q035",
@@ -1419,7 +1521,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "类属性与实例属性"
   },
   {
     "id": "q036",
@@ -1459,7 +1564,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "方法定义与调用"
   },
   {
     "id": "q037",
@@ -1499,7 +1607,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "继承与特殊方法"
   },
   {
     "id": "q038",
@@ -1539,7 +1650,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配"
   },
   {
     "id": "q039",
@@ -1580,7 +1694,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "异常捕获与匹配"
   },
   {
     "id": "q040",
@@ -1620,7 +1737,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "流程控制与清理"
   },
   {
     "id": "q041",
@@ -1661,7 +1781,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片与索引"
   },
   {
     "id": "q042",
@@ -1702,7 +1825,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "循环控制"
   },
   {
     "id": "q043",
@@ -1743,7 +1869,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "字符串方法"
   },
   {
     "id": "q044",
@@ -1784,7 +1913,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串方法"
   },
   {
     "id": "q045",
@@ -1825,7 +1957,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "循环控制"
   },
   {
     "id": "q046",
@@ -2274,12 +2409,15 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q057",
     "title": "切片[:-1]排除末尾元素",
-    "topic": "切片",
+    "topic": "列表/切片",
     "tags": [
       "切片",
       "列表"
@@ -2315,12 +2453,15 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q058",
     "title": "切片[::2]步长隔项提取",
-    "topic": "切片",
+    "topic": "列表/切片",
     "tags": [
       "切片",
       "运算符与表达式"
@@ -2356,7 +2497,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q059",
@@ -2397,12 +2541,15 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q060",
     "title": "列表切片赋值不等长替换",
-    "topic": "切片",
+    "topic": "列表/切片",
     "tags": [
       "切片",
       "列表"
@@ -2438,12 +2585,15 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "切片修改与拷贝"
   },
   {
     "id": "q061",
     "title": "del语句删除列表切片区间",
-    "topic": "切片",
+    "topic": "列表/切片",
     "tags": [
       "切片",
       "列表"
@@ -2479,7 +2629,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "切片修改与拷贝"
   },
   {
     "id": "q062",
@@ -2519,7 +2672,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q063",
@@ -2560,12 +2716,15 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q064",
     "title": "for循环遍历切片子列表",
-    "topic": "切片",
+    "topic": "列表/切片",
     "tags": [
       "切片",
       "循环"
@@ -2601,7 +2760,10 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "切片索引与步长"
   },
   {
     "id": "q065",
@@ -2642,6 +2804,1324 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "切片索引与步长"
+  },
+  {
+    "id": "q066",
+    "title": "元组不支持按索引修改",
+    "topic": "元组/引用",
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "info = (\"Alice\", 90)\ninfo[1] = 95\nprint(info)",
+    "options": [
+      {
+        "key": "A",
+        "text": "('Alice', 95)",
+        "hint": "元组不可变，不支持按索引修改"
+      },
+      {
+        "key": "B",
+        "text": "('Alice', 90)",
+        "hint": "赋值语句执行时就会直接报错"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "元组属于不可变类型，抛出此异常"
+      },
+      {
+        "key": "D",
+        "text": "报错：IndexError",
+        "hint": "下标1有效，报的是TypeError"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，会报错 `TypeError`。Python 中的元组属于不可变序列，一旦创建就不能修改其中的元素。代码执行 `info[1] = 95` 试图按下标修改元素时，Python 会抛出 `TypeError`。如果需要修改元素内容，应使用列表（list）存储。易错点：初学者容易混淆元组与列表，误以为元组也支持按索引修改。",
+    "tags": [
+      "元组"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "元组基础"
+  },
+  {
+    "id": "q067",
+    "title": "变量重新赋值不影响原别名",
+    "topic": "元组/引用",
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "cart = [\"苹果\", \"牛奶\"]\nhistory = cart\ncart = [\"面包\"]\nprint(history)",
+    "options": [
+      {
+        "key": "A",
+        "text": "['面包']",
+        "hint": "cart重新赋值未改变原列表对象"
+      },
+      {
+        "key": "B",
+        "text": "['苹果', '牛奶', '面包']",
+        "hint": "这是重新赋值，并没有追加元素"
+      },
+      {
+        "key": "C",
+        "text": "[]",
+        "hint": "原列表没有被清空，数据仍在"
+      },
+      {
+        "key": "D",
+        "text": "['苹果', '牛奶']",
+        "hint": "history仍指向最初的列表对象"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `['苹果', '牛奶']`。`history = cart` 让两个变量指向内存中的同一个列表对象。随后 `cart = [\"面包\"]` 是对变量 `cart` 重新赋值，使其绑定到一个全新的列表，这并不会修改原列表对象的内容。因此 `history` 仍然指向原来的列表。易错点：容易混淆「变量重新赋值」与「原地修改对象」。",
+    "tags": [
+      "可变对象与引用",
+      "变量与赋值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "引用与可变性"
+  },
+  {
+    "id": "q068",
+    "title": "元组解包同步赋值",
+    "topic": "元组/引用",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "x = 5\ny = 10\nx, y = y, x + y\nprint(x, y)",
+    "options": [
+      {
+        "key": "A",
+        "text": "10 20",
+        "hint": "右侧先打包计算，x用的是原值5"
+      },
+      {
+        "key": "B",
+        "text": "10 15",
+        "hint": "右侧先求值为(10,15)再解包"
+      },
+      {
+        "key": "C",
+        "text": "5 15",
+        "hint": "x被赋予了y的原值10，已更新"
+      },
+      {
+        "key": "D",
+        "text": "15 10",
+        "hint": "解包依次赋值，x为10而非15"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `10 15`。多元赋值 `x, y = y, x + y` 执行时，Python 会先计算右侧所有表达式的值并打包为临时元组 `(10, 15)`，然后再依次解包赋值给左侧的 `x` 和 `y`。因此计算 `x + y` 时使用的是 `x` 原来的值 5，而不是赋值后的 10。易错点：容易误以为赋值是从左到右逐句执行，从而误算为 10 20。",
+    "tags": [
+      "元组",
+      "解包"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "元组基础"
+  },
+  {
+    "id": "q069",
+    "title": "deepcopy深拷贝列表",
+    "topic": "元组/引用",
+    "stem": "在横线处填入下列哪项，能让控制台输出 2？",
+    "code": "import copy\n\nscores = [[90, 85], [88, 92]]\nnew_scores = ____(scores)\nnew_scores[0].append(95)\nprint(len(scores[0]))",
+    "options": [
+      {
+        "key": "A",
+        "text": "copy.copy",
+        "hint": "copy.copy是浅拷贝，内层仍共享"
+      },
+      {
+        "key": "B",
+        "text": "list",
+        "hint": "list()也是浅拷贝，内层列表会变"
+      },
+      {
+        "key": "C",
+        "text": "copy.deepcopy",
+        "hint": "深拷贝完全独立，原列表不受影响"
+      },
+      {
+        "key": "D",
+        "text": "copy",
+        "hint": "copy是模块名，不能当作函数调用"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 不影响 `scores` 中的内层嵌套列表，必须进行深拷贝。`copy.deepcopy()` 会递归复制所有层级的对象，生成完全独立的副本；而 `copy.copy()` 和 `list()` 都只是浅拷贝，内层列表仍然是同一个引用。选项 D 中的 `copy` 是模块名而非函数。易错点：容易误以为浅拷贝能完全隔离嵌套结构。",
+    "tags": [
+      "可变对象与引用",
+      "模块导入"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "代码补全",
+    "difficulty": 3,
+    "subtopic": "同一性与拷贝"
+  },
+  {
+    "id": "q070",
+    "title": "多字典键共享同一列表引用",
+    "topic": "元组/引用",
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "default_roles = [\"user\"]\nuser_a = {\"name\": \"Alice\", \"roles\": default_roles}\nuser_b = {\"name\": \"Bob\", \"roles\": default_roles}\nuser_a[\"roles\"].append(\"admin\")\nprint(user_b[\"roles\"])",
+    "options": [
+      {
+        "key": "A",
+        "text": "['user']",
+        "hint": "roles引用共享，原列表已被修改"
+      },
+      {
+        "key": "B",
+        "text": "['admin']",
+        "hint": "append是追加，原元素仍保留"
+      },
+      {
+        "key": "C",
+        "text": "['user', 'user']",
+        "hint": "追加的是admin，不是user"
+      },
+      {
+        "key": "D",
+        "text": "['user', 'admin']",
+        "hint": "两个字典共享同一列表引用"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `['user', 'admin']`。`user_a` 和 `user_b` 的 `roles` 键都引用了同一个列表对象 `default_roles`。当通过 `user_a[\"roles\"].append(\"admin\")` 向该列表追加元素时，列表本身在原地被修改。由于 `user_b[\"roles\"]` 指向同一个列表对象，因此打印出来的也是更新后的内容。易错点：容易误以为两个字典中的 `roles` 是互相独立的列表。",
+    "tags": [
+      "可变对象与引用",
+      "字典"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "引用与可变性"
+  },
+  {
+    "id": "q071",
+    "title": "函数多返回值打包为元组",
+    "topic": "函数/默认参数",
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "def get_min_max(scores):\n    return min(scores), max(scores)\n\nresult = get_min_max([88, 95, 72])\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[72, 95]",
+        "hint": "逗号返回多值打包为元组而非列表"
+      },
+      {
+        "key": "B",
+        "text": "72 95",
+        "hint": "返回的是元组对象，打印带有圆括号"
+      },
+      {
+        "key": "C",
+        "text": "95",
+        "hint": "两项都会返回，不会只取最后一个值"
+      },
+      {
+        "key": "D",
+        "text": "(72, 95)",
+        "hint": "Python多返回值会自动打包为元组"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `(72, 95)`。在 Python 中，当 `return` 语句后面用逗号分隔多个表达式时，Python 会自动将这些值打包成一个元组（tuple）返回。因此 `result` 接收到的是元组 `(72, 95)`，通过 `print()` 打印时会带有外层圆括号。易错点：初学者容易误以为返回的是列表，或者误以为只有最后一个表达式会被返回。",
+    "tags": [
+      "函数",
+      "元组"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "函数定义与返回值"
+  },
+  {
+    "id": "q072",
+    "title": "位置参数不可在关键字后",
+    "topic": "函数/默认参数",
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "def calc_price(price, discount):\n    return price - discount\n\nprint(calc_price(price=100, 20))",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：SyntaxError",
+        "hint": "位置参数不能放在关键字参数之后"
+      },
+      {
+        "key": "B",
+        "text": "80",
+        "hint": "语法错误，解析阶段直接报错不运行"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "这是语法错误，报SyntaxError"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "传入数值合法，并非ValueError"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，会报错 `SyntaxError`。在 Python 中调用函数时，位置参数必须全部在关键字参数之前传入。代码中 `price=100` 是关键字传参，而后面的 `20` 是位置参数，位置参数跟在关键字参数后违反了 Python 语法规则，在语法解析阶段就会直接抛出 `SyntaxError: positional argument follows keyword argument`。易错点：初学者常以为只要实参能和形参对应上，传参顺序就无关紧要。",
+    "tags": [
+      "函数",
+      "异常处理"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "参数传递与调用"
+  },
+  {
+    "id": "q073",
+    "title": "显式传None不触发默认值",
+    "topic": "函数/默认参数",
+    "stem": "执行以下代码后，控制台打印的结果是？",
+    "code": "def make_title(name, prefix=\"VIP\"):\n    return f\"[{prefix}] {name}\"\n\nprint(make_title(\"小明\", None))",
+    "options": [
+      {
+        "key": "A",
+        "text": "[VIP] 小明",
+        "hint": "显式传入None不会触发默认参数"
+      },
+      {
+        "key": "B",
+        "text": "[None] 小明",
+        "hint": "形参接收到None并转为字符串拼接"
+      },
+      {
+        "key": "C",
+        "text": "小明",
+        "hint": "prefix为None仍会拼入结果中"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "None支持转字符串拼接，不会报错"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `[None] 小明`。在 Python 中，默认参数仅在调用时「未提供对应实参」的情况下才会生效。当显式传入实参 `None` 时，形参 `prefix` 接收到的就是对象 `None`，并不会自动回退为默认值 `\"VIP\"`。随后在格式化字符串中，`None` 被转换为字符串 `\"None\"` 拼接输出。易错点：初学者常误以为传入 `None` 可以触发使用默认参数。",
+    "tags": [
+      "默认参数",
+      "None与真假值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "默认参数机制"
+  },
+  {
+    "id": "q074",
+    "title": "None规避默认参数共享",
+    "topic": "函数/默认参数",
+    "stem": "在横线处填入下列哪项，能让控制台输出 ['Alice']？",
+    "code": "def add_user(name, users=____):\n    if users is None:\n        users = []\n    users.append(name)\n    return users\n\nu1 = add_user(\"Alice\")\nu2 = add_user(\"Bob\")\nprint(u1)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[]",
+        "hint": "默认列表会被多次调用共享，输出两项"
+      },
+      {
+        "key": "B",
+        "text": "()",
+        "hint": "元组不可变且没有append方法，报错"
+      },
+      {
+        "key": "C",
+        "text": "list",
+        "hint": "list是类型名非实例，调用报错"
+      },
+      {
+        "key": "D",
+        "text": "None",
+        "hint": "每次调用新创建列表，避免默认值共享"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `['Alice']`。在 Python 中，如果直接使用可变对象（如 `[]`）作为默认参数，该对象在函数定义时创建并在多次调用间共享。如果填入 `[]`，第二次调用时 `users is None` 为假，会向同一个共享列表追加 `\"Bob\"`，导致 `u1` 输出为 `['Alice', 'Bob']`。推荐惯用法是使用 `None` 作为默认占位符，函数内部判断 `users is None` 时动态创建新列表，使每次调用拥有独立的列表。易错点：容易误以为每次调用都会重新生成默认参数中的 `[]`。",
+    "tags": [
+      "默认参数",
+      "None与真假值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "代码补全",
+    "difficulty": 3,
+    "subtopic": "默认参数机制"
+  },
+  {
+    "id": "q075",
+    "title": "*args贪婪接收位置参数",
+    "topic": "函数/默认参数",
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "def join_tags(*tags, sep=\"-\"):\n    return sep.join(tags)\n\nresult = join_tags(\"Python\", \"Go\", \"/\")\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Python/Go",
+        "hint": "'/'被*tags收集为元素，非分隔符"
+      },
+      {
+        "key": "B",
+        "text": "Python-Go-/",
+        "hint": "位置实参全入tags，sep保持默认值-"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "实参均合法传入tags，不会报错"
+      },
+      {
+        "key": "D",
+        "text": "Python-Go",
+        "hint": "'/'也会作为标签拼入，不会被丢弃"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `Python-Go-/`。在函数定义中，`*tags` 会将所有未匹配的位置参数收集成一个元组。因为 `'/'` 是作为位置参数传入的，它会被收录进 `tags` 元组中，成为第三个元素 `('Python', 'Go', '/')`。位于 `*tags` 之后的 `sep` 是命名关键字参数，只有通过关键字传参（如 `sep='/'`）才能为其赋值，未传关键字时它保持默认值 `'-'`。因此最终是用 `'-'` 连接三个字符串。易错点：初学者容易误以为 `'/'` 会自动对应到形参 `sep`。",
+    "tags": [
+      "函数",
+      "默认参数"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "参数传递与调用"
+  },
+  {
+    "id": "q076",
+    "title": "查不存在键报KeyError",
+    "topic": "字典",
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "scores = {\"小明\": 95, \"小红\": 88}\nprint(scores[\"小华\"])",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：KeyError",
+        "hint": "中括号查不存在的键报KeyError"
+      },
+      {
+        "key": "B",
+        "text": "None",
+        "hint": "中括号不会返回None而是直接报错"
+      },
+      {
+        "key": "C",
+        "text": "0",
+        "hint": "字典未查到键时不会自动补0"
+      },
+      {
+        "key": "D",
+        "text": "报错：IndexError",
+        "hint": "字典按键访问不会报IndexError"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，会报错 `KeyError`。在 Python 中，使用中括号语法 `d[key]` 访问字典时，若指定的键不存在，Python 会抛出 `KeyError` 异常，而不会自动返回 `None` 或默认值。若想在键不存在时安全返回默认值而不中断程序，应使用 `d.get(key, 默认值)`。易错点：初学者容易误以为查不到的键会返回 `None`，或混淆字典与序列类型误以为会报 `IndexError`。",
+    "tags": [
+      "字典",
+      "异常处理"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "访问与成员检查"
+  },
+  {
+    "id": "q077",
+    "title": "for循环遍历字典默认遍历键",
+    "topic": "字典",
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "scores = {\"小明\": 90, \"小红\": 95}\nnames = []\nfor x in scores:\n    names.append(x)\nprint(names)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[90, 95]",
+        "hint": "直接遍历产出的是键而非值"
+      },
+      {
+        "key": "B",
+        "text": "[('小明', 90), ('小红', 95)]",
+        "hint": "需调用items()才会产出键值对元组"
+      },
+      {
+        "key": "C",
+        "text": "['小明', '小红']",
+        "hint": "直接for遍历字典默认迭代所有键"
+      },
+      {
+        "key": "D",
+        "text": "['小明', 90, '小红', 95]",
+        "hint": "每次循环仅产出键一个元素"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `['小明', '小红']`。在 Python 中，直接对字典进行 `for` 循环遍历（如 `for x in scores:`），迭代出来的默认是字典的键（相当于 `scores.keys()`），而不是对应的值。因此列表中追加的是学生的姓名 `x`。如果需要遍历值应使用 `.values()`，遍历键值对元组应使用 `.items()`。易错点：初学者常直觉以为遍历字典会得到字典里的值或键值对。",
+    "tags": [
+      "字典",
+      "循环"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "访问与成员检查"
+  },
+  {
+    "id": "q078",
+    "title": "pop删除字典键并返回值",
+    "topic": "字典",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "user = {\"name\": \"Alice\", \"role\": \"admin\"}\nrole = user.pop(\"role\")\nprint(role, \"role\" in user)",
+    "options": [
+      {
+        "key": "A",
+        "text": "admin False",
+        "hint": "pop就地删除该键并返回对应的值"
+      },
+      {
+        "key": "B",
+        "text": "admin True",
+        "hint": "pop已将role键从字典中彻底删除"
+      },
+      {
+        "key": "C",
+        "text": "None False",
+        "hint": "pop返回的是被删的值而非None"
+      },
+      {
+        "key": "D",
+        "text": "role False",
+        "hint": "pop返回的是值admin而非键名"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `admin False`。`dict.pop(key)` 方法有两个核心动作：一是将指定的键从字典中删除，二是将该键对应的值作为返回值返回。代码中 `user.pop(\"role\")` 删除了 `\"role\"` 键并返回 `\"admin\"`，因此 `role` 变量接收到 `\"admin\"`；随后通过 `\"role\" in user` 检查该键是否存在，因其已被删除，结果为 `False`。易错点：初学者容易误以为 `pop` 只取值不删除，或误以为其返回值是 `None`。",
+    "tags": [
+      "字典"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "常用字典方法"
+  },
+  {
+    "id": "q079",
+    "title": "get统计频次设置默认值",
+    "topic": "字典",
+    "stem": "在横线处填入下列哪项，能让控制台输出 2？",
+    "code": "fruits = [\"苹果\", \"香蕉\", \"苹果\"]\ncounts = {}\nfor f in fruits:\n    counts[f] = ____\nprint(counts[\"苹果\"])",
+    "options": [
+      {
+        "key": "A",
+        "text": "counts.get(f, 1) + 1",
+        "hint": "初值设为1会导致每次多计1次"
+      },
+      {
+        "key": "B",
+        "text": "counts[f] + 1",
+        "hint": "首次遇到新键会抛出KeyError"
+      },
+      {
+        "key": "C",
+        "text": "counts.get(f, 0) + 1",
+        "hint": "缺键默认返回0再加1，计数正确"
+      },
+      {
+        "key": "D",
+        "text": "counts.get(f, 0)",
+        "hint": "仅获取原值未加1，最终输出0"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `2`。在统计频次的经典惯用法中，使用 `counts.get(f, 0) + 1` 能兼顾新键与旧键：当水果首次出现时，字典中不存在该键，`counts.get(f, 0)` 返回默认值 `0`，加 1 后写入字典；当水果再次出现时，`get()` 取出已有的计数值继续累加 1。填入其他选项：A 会导致初值为 1 结果多算得到 3；B 遇到新键直接按索引取值抛出 `KeyError`；D 未执行加 1 操作输出 0。易错点：新键计数应以 0 为初始基数加 1，若默认值填 1 首次就会变成 2。",
+    "tags": [
+      "字典",
+      "循环"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "代码补全",
+    "difficulty": 3,
+    "subtopic": "常用字典方法"
+  },
+  {
+    "id": "q080",
+    "title": "推导式同名键覆盖取最后值",
+    "topic": "字典",
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "cities = [\"北京\", \"上海\", \"北海\"]\ncity_map = {c[0]: c for c in cities}\nprint(city_map[\"北\"], len(city_map))",
+    "options": [
+      {
+        "key": "A",
+        "text": "北海 2",
+        "hint": "后出现的同名键覆盖前值，共2个键"
+      },
+      {
+        "key": "B",
+        "text": "北京 2",
+        "hint": "后出现的键值会覆盖前值而非保留旧值"
+      },
+      {
+        "key": "C",
+        "text": "北海 3",
+        "hint": "同名键会发生覆盖，字典长度不会是3"
+      },
+      {
+        "key": "D",
+        "text": "['北京', '北海'] 2",
+        "hint": "同名键直接覆盖，不会自动合并为列表"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `北海 2`。在字典推导式中，表达式会依次遍历列表中的元素并执行键值对赋值。遍历到 `\"北京\"` 时，生成键值对 `'北': '北京'`；遍历到 `\"上海\"` 时，生成 `'上': '上海'`；遍历到 `\"北海\"` 时，首字符同样是 `'北'`，字典中同一个键只能存在一个，后放入的值会直接覆盖掉前面的旧值，因此 `'北'` 对应的值最终变为 `\"北海\"`。字典最终只包含 `'北'` 和 `'上'` 两个键，长度为 2。易错点：初学者容易误以为字典会保留第一次出现的值，或误以为同名键会自动合并为列表。",
+    "tags": [
+      "字典",
+      "推导式"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "键的特性与哈希"
+  },
+  {
+    "id": "q081",
+    "title": "global修改全局变量",
+    "topic": "作用域/变量",
+    "stem": "若要使以下代码在控制台输出 150，横线处应填入的代码是？",
+    "code": "total = 100\n\ndef add_score(points):\n    ____\n    total += points\n\nadd_score(50)\nprint(total)",
+    "options": [
+      {
+        "key": "A",
+        "text": "local total",
+        "hint": "Python没有local关键字"
+      },
+      {
+        "key": "B",
+        "text": "total = total",
+        "hint": "未声明global会报未赋值错误"
+      },
+      {
+        "key": "C",
+        "text": "global total",
+        "hint": "声明全局变量后可直接修改其值"
+      },
+      {
+        "key": "D",
+        "text": "nonlocal total",
+        "hint": "nonlocal只用于外层嵌套函数"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `150`。在 Python 中，当需要在函数内部修改模块级的全局变量时，必须使用 `global 变量名` 进行显式声明。如果不写 `global total`，执行 `total += points` 时 Python 会将 `total` 视为局部变量，由于其在赋值前被引用，会导致抛出 `UnboundLocalError`。而使用 `global total` 后，函数内对 `total` 的操作就会直接修改外部全局变量。易错点：初学者容易误以为函数可以直接给全局变量赋值，或者记错全局声明的关键字。",
+    "tags": [
+      "作用域",
+      "变量与赋值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "全局与局部变量"
+  },
+  {
+    "id": "q082",
+    "title": "函数外访问局部变量报错",
+    "topic": "作用域/变量",
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "def calc_discount(price):\n    final_price = price * 0.8\n    return final_price\n\ncalc_discount(100)\nprint(final_price)",
+    "options": [
+      {
+        "key": "A",
+        "text": "80.0",
+        "hint": "局部变量无法在函数外部访问"
+      },
+      {
+        "key": "B",
+        "text": "报错：NameError",
+        "hint": "外部访问未定义变量报NameError"
+      },
+      {
+        "key": "C",
+        "text": "None",
+        "hint": "访问未定义变量不会返回None"
+      },
+      {
+        "key": "D",
+        "text": "报错：UnboundLocalError",
+        "hint": "外部未定义变量会报NameError"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，会报错 `NameError`。在函数内部定义的变量 `final_price` 是局部变量，它的生命周期只存在于函数执行期间。函数执行完毕后，其局部命名空间被销毁。在函数外部直接访问不存在的变量名 `final_price` 时，Python 无法在任何作用域找到该变量，因此抛出 `NameError`。若想在外部使用计算结果，应该将函数返回值赋给外部变量，例如 `result = calc_discount(100)`。易错点：初学者容易误以为函数内部定义的变量在函数运行后仍然能在外部直接访问。",
+    "tags": [
+      "作用域",
+      "变量与赋值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "变量生命周期"
+  },
+  {
+    "id": "q083",
+    "title": "同名局部变量不影响全局变量",
+    "topic": "作用域/变量",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "score = 100\n\ndef update_score():\n    score = 90\n    return score\n\nupdate_score()\nprint(score)",
+    "options": [
+      {
+        "key": "A",
+        "text": "90",
+        "hint": "函数内的赋值只修改局部变量"
+      },
+      {
+        "key": "B",
+        "text": "100",
+        "hint": "同名局部变量不影响全局变量的值"
+      },
+      {
+        "key": "C",
+        "text": "None",
+        "hint": "全局变量score仍保留原值100"
+      },
+      {
+        "key": "D",
+        "text": "报错：UnboundLocalError",
+        "hint": "函数内先赋值后使用，语法正确"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `100`。在 Python 中，函数内部的赋值语句 `score = 90` 会在函数局部作用域内创建一个新的同名局部变量 `score`，它暂时遮蔽了外部的全局变量。当函数执行结束返回后，局部变量随之销毁，而全局变量 `score` 的值从未改变，依然是 100。因此最后 `print(score)` 输出的是全局变量的值 100。易错点：初学者容易误以为函数内的赋值会修改同名全局变量；如果确实需要修改全局变量，必须在函数内先声明 `global score`。",
+    "tags": [
+      "作用域",
+      "变量与赋值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "全局与局部变量"
+  },
+  {
+    "id": "q084",
+    "title": "LEGB作用域查找顺序",
+    "topic": "作用域/变量",
+    "stem": "在 Python 中，当在函数内部访问一个变量时，默认的作用域查找顺序（LEGB 规则）是？",
+    "code": "",
+    "options": [
+      {
+        "key": "A",
+        "text": "全局作用域 -> 局部作用域 -> 闭包作用域 -> 内置作用域",
+        "hint": "查找应从当前最内层局部作用域开始"
+      },
+      {
+        "key": "B",
+        "text": "局部作用域 -> 全局作用域 -> 闭包作用域 -> 内置作用域",
+        "hint": "外层闭包作用域优先于全局作用域"
+      },
+      {
+        "key": "C",
+        "text": "局部作用域 -> 闭包作用域 -> 全局作用域 -> 内置作用域",
+        "hint": "遵循L->E->G->B由内向外查找"
+      },
+      {
+        "key": "D",
+        "text": "闭包作用域 -> 局部作用域 -> 内置作用域 -> 全局作用域",
+        "hint": "优先查找当前函数的局部作用域"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，查找顺序为：局部作用域 -> 闭包作用域 -> 全局作用域 -> 内置作用域。Python 变量查找严格遵循经典的 LEGB 规则，由内向外依次查找：1. L（Local，局部作用域）：当前函数内部定义的变量；2. E（Enclosing，嵌套/闭包作用域）：外层嵌套函数的局部变量；3. G（Global，全局作用域）：当前模块顶层定义的变量；4. B（Built-in，内置作用域）：Python 内置的函数与异常。一旦在较内层作用域找到同名变量便立即停止查找，若查完内置作用域仍未找到则抛出 `NameError`。易错点：容易颠倒闭包（Enclosing）和全局（Global）的顺序，记住查找始终是由内向外层层扩散。",
+    "tags": [
+      "作用域"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "概念理解",
+    "difficulty": 1,
+    "subtopic": "嵌套作用域与闭包"
+  },
+  {
+    "id": "q085",
+    "title": "闭包保存独立局部环境",
+    "topic": "作用域/变量",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "def create_counter():\n    history = []\n    def add(x):\n        history.append(x)\n        return sum(history)\n    return add\n\nc1 = create_counter()\nc2 = create_counter()\nc1(10)\nprint(c1(20), c2(5))",
+    "options": [
+      {
+        "key": "A",
+        "text": "20 5",
+        "hint": "闭包会保留历史数据而不是重置"
+      },
+      {
+        "key": "B",
+        "text": "35 5",
+        "hint": "c1前两次和为30而非35"
+      },
+      {
+        "key": "C",
+        "text": "30 5",
+        "hint": "两个闭包各自独立维护历史数据"
+      },
+      {
+        "key": "D",
+        "text": "30 35",
+        "hint": "不同闭包实例不共享内部列表"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `30 5`。`create_counter` 返回了内层函数 `add` 并引用了外层函数的局部变量 `history`，形成了闭包。每次调用 `create_counter()` 都会创建一个全新的独立局部命名空间，因此 `c1` 和 `c2` 各自持有独立的 `history` 列表互不影响。`c1(10)` 后其列表为 `[10]`；随后执行 `print(c1(20), c2(5))` 时，`c1(20)` 将 20 加入其列表变为 `[10, 20]`，求和为 30；而 `c2(5)` 则是向其独立的列表中加入 5，求和为 5。因此最终输出 `30 5`。易错点：容易误以为多次创建的闭包会共享同一个外层变量，或者误以为每次调用闭包都会重置外层变量。",
+    "tags": [
+      "作用域",
+      "函数"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "嵌套作用域与闭包"
+  },
+  {
+    "id": "q086",
+    "title": "__init__初始化属性",
+    "topic": "类/对象",
+    "stem": "在横线处填入下列哪项，能让控制台输出 Python基础 59？",
+    "code": "class Book:\n    def ____(self, title, price):\n        self.title = title\n        self.price = price\n\nb = Book(\"Python基础\", 59)\nprint(b.title, b.price)",
+    "options": [
+      {
+        "key": "A",
+        "text": "__init__",
+        "hint": "__init__是实例的初始化方法"
+      },
+      {
+        "key": "B",
+        "text": "init",
+        "hint": "普通方法无法在实例化时自动执行"
+      },
+      {
+        "key": "C",
+        "text": "__new__",
+        "hint": "__new__负责创建实例而非初始化"
+      },
+      {
+        "key": "D",
+        "text": "__str__",
+        "hint": "__str__用于定义对象转字符串格式"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `Python基础 59`。在 Python 中，`__init__` 是类的构造初始化方法。通过 `Book(...)` 实例化对象时，Python 会自动调用 `__init__`，并将新创建的对象作为第一个参数 `self` 传入，完成实例属性的绑定与赋值。如果填入 `init`，它只是一个普通的实例方法，不会在实例化时自动调用，且因为类没有定义带参构造方法会抛出 `TypeError`。易错点：初学者容易漏写方法名两侧的双下划线，或者把初始化方法记成其他语言的名字。",
+    "tags": [
+      "类与对象",
+      "函数"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "方法定义与调用"
+  },
+  {
+    "id": "q087",
+    "title": "未用self绑定属性报错",
+    "topic": "类/对象",
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "class Player:\n    def __init__(self, name, score):\n        self.name = name\n        score = score\n\np = Player(\"小明\", 100)\nprint(p.score)",
+    "options": [
+      {
+        "key": "A",
+        "text": "100",
+        "hint": "score=score只赋值给局部变量"
+      },
+      {
+        "key": "B",
+        "text": "报错：AttributeError",
+        "hint": "未绑定到self，实例无此属性报错"
+      },
+      {
+        "key": "C",
+        "text": "None",
+        "hint": "未定义的实例属性不会返回None"
+      },
+      {
+        "key": "D",
+        "text": "报错：NameError",
+        "hint": "访问不存在的对象属性报属性错误"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，会报错 `AttributeError`。在 `__init__` 方法中，语句 `score = score` 只是把传入的参数值赋给了局部变量 `score`，该局部变量在 `__init__` 执行结束后就被销毁了，并没有通过 `self.score = score` 绑定到实例对象上。因此外部通过 `p.score` 访问该属性时，Python 找不到该实例属性，会抛出 `AttributeError`。易错点：初学者常常忘记写 `self.` 前缀，误以为在 `__init__` 内部给同名变量赋值就能自动成为实例属性。",
+    "tags": [
+      "类与对象",
+      "变量与赋值"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 2,
+    "subtopic": "类属性与实例属性"
+  },
+  {
+    "id": "q088",
+    "title": "子类继承父类方法直接调用",
+    "topic": "类/对象",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\n    def eat(self):\n        return f\"{self.name}在吃东西\"\n\nclass Dog(Animal):\n    def bark(self):\n        return \"汪汪叫\"\n\nd = Dog(\"豆豆\")\nprint(d.eat())",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：AttributeError",
+        "hint": "子类继承父类方法，不会报错"
+      },
+      {
+        "key": "B",
+        "text": "在吃东西",
+        "hint": "创建实例时已正确绑定name为豆豆"
+      },
+      {
+        "key": "C",
+        "text": "汪汪叫",
+        "hint": "代码显式调用eat方法而非bark"
+      },
+      {
+        "key": "D",
+        "text": "豆豆在吃东西",
+        "hint": "子类实例可直接调用继承的eat方法"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `豆豆在吃东西`。在 Python 中，子类通过 `class Dog(Animal)` 继承父类。子类会自动继承父类中定义的方法和属性。`Dog` 类自身没有重写 `__init__` 和 `eat`，因此在实例化 `d = Dog(\"豆豆\")` 时会执行父类的 `__init__` 绑定 `name` 属性，调用 `d.eat()` 时也会直接执行从父类继承而来的 `eat` 方法，返回并打印 `豆豆在吃东西`。易错点：初学者容易误以为子类只能调用自身定义的新方法。",
+    "tags": [
+      "类与对象"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "继承与特殊方法"
+  },
+  {
+    "id": "q089",
+    "title": "super调用父类重写方法",
+    "topic": "类/对象",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "class Ticket:\n    def __init__(self, price):\n        self.price = price\n\n    def get_price(self):\n        return self.price\n\nclass StudentTicket(Ticket):\n    def get_price(self):\n        return super().get_price() // 2\n\nt = StudentTicket(100)\nprint(t.get_price())",
+    "options": [
+      {
+        "key": "A",
+        "text": "50",
+        "hint": "super调用父类得100再整除2"
+      },
+      {
+        "key": "B",
+        "text": "100",
+        "hint": "子类重写了方法并计算了半价"
+      },
+      {
+        "key": "C",
+        "text": "报错：RecursionError",
+        "hint": "super调用的是父类方法不会递归"
+      },
+      {
+        "key": "D",
+        "text": "报错：AttributeError",
+        "hint": "父类有该方法，super可正常调用"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `50`。在 Python 面向对象编程中，子类重写父类的方法后，可以使用 `super().方法名()` 调用父类被重写的原始实现。本题中，`StudentTicket` 重写了 `get_price` 方法，在方法体内部通过 `super().get_price()` 获取父类 `Ticket` 计算出的原价 `100`，再执行 `// 2` 整除运算得到半价 `50`。易错点：初学者容易将 `super().get_price()` 误以为会递归调用当前子类的方法导致无限递归，或者不清楚 `super()` 的语法作用。",
+    "tags": [
+      "类与对象"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "继承与特殊方法"
+  },
+  {
+    "id": "q090",
+    "title": "方法内修改另一实例属性",
+    "topic": "类/对象",
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "class Wallet:\n    def __init__(self, balance):\n        self.balance = balance\n\n    def transfer(self, target, amount):\n        self.balance -= amount\n        target.balance += amount\n\nw1 = Wallet(100)\nw2 = Wallet(30)\nw1.transfer(w2, 40)\nprint(w1.balance, w2.balance)",
+    "options": [
+      {
+        "key": "A",
+        "text": "60 30",
+        "hint": "target账户也增加了40元"
+      },
+      {
+        "key": "B",
+        "text": "60 70",
+        "hint": "w1扣减40同时w2增加40"
+      },
+      {
+        "key": "C",
+        "text": "100 70",
+        "hint": "w1自身金额也扣减了40元"
+      },
+      {
+        "key": "D",
+        "text": "70 60",
+        "hint": "扣减的是w1，增加的是w2"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `60 70`。在 Python 中，对象方法可以接收其他对象作为参数，并通过对象引用直接访问和修改其属性。调用 `w1.transfer(w2, 40)` 时，`w1` 对应方法内的 `self`，`w2` 对应参数 `target`。执行 `self.balance -= 40` 会使 `w1.balance` 从 100 减少为 60；执行 `target.balance += 40` 会直接修改传入的对象引用 `w2`，使 `w2.balance` 从 30 增加为 70。因此最后打印为 `60 70`。易错点：初学者容易误以为方法内部修改形参引用的属性不会影响外部原对象。",
+    "tags": [
+      "类与对象",
+      "可变对象与引用"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "方法定义与调用"
+  },
+  {
+    "id": "q091",
+    "title": "raise主动抛出异常",
+    "topic": "异常处理",
+    "stem": "在横线处填入下列哪个关键字，能让控制台输出 年龄无效？",
+    "code": "def check_age(age):\n    if age < 0:\n        ____ ValueError(\"年龄无效\")\n    return \"有效\"\n\ntry:\n    check_age(-1)\nexcept ValueError as e:\n    print(e)",
+    "options": [
+      {
+        "key": "A",
+        "text": "raise",
+        "hint": "raise用于主动抛出异常"
+      },
+      {
+        "key": "B",
+        "text": "throw",
+        "hint": "throw不是关键字会语法报错"
+      },
+      {
+        "key": "C",
+        "text": "return",
+        "hint": "return仅返回值不触发捕获"
+      },
+      {
+        "key": "D",
+        "text": "assert",
+        "hint": "assert断言真值不触发异常"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `年龄无效`。在 Python 中，主动引发异常需要使用 `raise` 关键字。函数内部执行 `raise ValueError(\"年龄无效\")` 后，会立即中断当前函数的执行并向外抛出异常，随后被外层的 `except ValueError as e` 成功捕获，`print(e)` 打印出错误提示。选项 B 的 `throw` 是其他语言（如 Java、JavaScript）的关键字，在 Python 中并非有效关键字，填入会报语法错误；`return` 只是将异常对象作为普通值返回，不会触发异常捕获机制；`assert` 断言非空对象时为真，不会触发异常。易错点：受其他编程语言影响，初学者容易误将 `raise` 写成 `throw`。",
+    "tags": [
+      "异常处理",
+      "函数"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "异常抛出与自定义"
+  },
+  {
+    "id": "q092",
+    "title": "未捕获异常向外传播",
+    "topic": "异常处理",
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "user = {\"name\": \"Tom\"}\ntry:\n    age = user[\"age\"]\nexcept IndexError:\n    age = 18\nprint(age)",
+    "options": [
+      {
+        "key": "A",
+        "text": "18",
+        "hint": "类型不符未捕获，不进except"
+      },
+      {
+        "key": "B",
+        "text": "None",
+        "hint": "抛异常中断，变量未被赋值"
+      },
+      {
+        "key": "C",
+        "text": "报错：IndexError",
+        "hint": "查不存在键引发KeyError"
+      },
+      {
+        "key": "D",
+        "text": "报错：KeyError",
+        "hint": "未捕获该异常，向外抛出中断"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，会报错 `KeyError`。在 Python 中，通过不存在的键访问字典（如 `user[\"age\"]`）会引发 `KeyError`。而代码中的 `except` 只指定捕获了列表/序列索引越界的 `IndexError`，两者类型不匹配，因此该异常未能被捕获。未被捕获的异常会直接向外传播，导致程序中断并报错 `KeyError`。易错点：初学者容易混淆序列的 `IndexError` 与字典的 `KeyError`，误以为只要写了 `try...except` 就能拦截所有类型的错误。",
+    "tags": [
+      "异常处理",
+      "字典"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配"
+  },
+  {
+    "id": "q093",
+    "title": "循环内捕获异常不中断",
+    "topic": "异常处理",
+    "stem": "执行以下处理数据的代码，控制台输出的结果是？",
+    "code": "total = 0\nitems = [\"10\", \"abc\", \"20\"]\nfor s in items:\n    try:\n        total += int(s)\n    except ValueError:\n        pass\nprint(total)",
+    "options": [
+      {
+        "key": "A",
+        "text": "10",
+        "hint": "捕获后循环继续，不提前退出"
+      },
+      {
+        "key": "B",
+        "text": "30",
+        "hint": "跳过非法项继续加，得到30"
+      },
+      {
+        "key": "C",
+        "text": "0",
+        "hint": "异常已捕获，累加值不被清零"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "异常已被捕获，程序不会崩溃"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `30`。在 `for` 循环内部，`try...except` 块包裹了类型转换与累加操作。第 1 轮处理 `\"10\"`，成功累加得到 `total = 10`；第 2 轮处理 `\"abc\"` 时，`int(\"abc\")` 引发 `ValueError`，程序跳转至 `except ValueError` 执行 `pass`，该轮迭代正常结束；关键在于：异常在循环体内被捕获处理后，循环并不会中断退出，而是继续执行第 3 轮，处理 `\"20\"` 并累加得到 30。循环结束后打印 `total`，输出 30。易错点：初学者容易误以为发生异常循环就会终止，混淆了 `except` 与 `break` 的作用。",
+    "tags": [
+      "异常处理",
+      "循环"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "流程控制与清理"
+  },
+  {
+    "id": "q094",
+    "title": "多except分支匹配顺序",
+    "topic": "异常处理",
+    "stem": "执行以下数据解析代码，控制台输出的结果是？",
+    "code": "def parse_score(data, key):\n    try:\n        val = int(data[key])\n        return 100 // val\n    except (KeyError, ValueError):\n        return -1\n    except ZeroDivisionError:\n        return 0\n\nprint(parse_score({\"score\": \"0\"}, \"score\"))",
+    "options": [
+      {
+        "key": "A",
+        "text": "-1",
+        "hint": "首个分支不匹配除零异常"
+      },
+      {
+        "key": "B",
+        "text": "100",
+        "hint": "整数除以0会引发异常"
+      },
+      {
+        "key": "C",
+        "text": "报错：ZeroDivisionError",
+        "hint": "异常已被捕获，程序不崩溃"
+      },
+      {
+        "key": "D",
+        "text": "0",
+        "hint": "除零异常匹配第二分支返回0"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `0`。代码中 `parse_score` 函数包含多级异常处理：首先执行 `val = int(data[\"score\"])`，字典中存在键 `\"score\"` 且其值 `\"0\"` 成功转为整数 0，此时未发生异常；接着执行 `100 // 0`，由于除数为 0 引发 `ZeroDivisionError`；Python 自上而下匹配 `except` 分支，第一个分支 `(KeyError, ValueError)` 使用元组捕获键错误或值错误，类型不匹配直接跳过；随后进入第二个分支 `except ZeroDivisionError`，成功匹配并返回 0。易错点：初学者容易误以为首个分支捕获了所有错误而返回 -1，或者以为程序会因除以零崩溃。",
+    "tags": [
+      "异常处理",
+      "字典"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "异常捕获与匹配"
+  },
+  {
+    "id": "q095",
+    "title": "自定义异常抛出与捕获",
+    "topic": "异常处理",
+    "stem": "执行以下账户取款代码，控制台输出的结果是？",
+    "code": "class LimitError(Exception): pass\n\ndef withdraw(acc, amt):\n    if amt > acc[\"bal\"]:\n        raise LimitError(\"余额不足\")\n    acc[\"bal\"] -= amt\n\nu = {\"bal\": 50}\ntry:\n    withdraw(u, 80)\nexcept LimitError as e:\n    print(e, u[\"bal\"])",
+    "options": [
+      {
+        "key": "A",
+        "text": "余额不足 -30",
+        "hint": "异常中断后续扣款，余额保持"
+      },
+      {
+        "key": "B",
+        "text": "余额不足 50",
+        "hint": "捕获异常输出提示，余额为50"
+      },
+      {
+        "key": "C",
+        "text": "LimitError 50",
+        "hint": "打印e输出的是异常描述文本"
+      },
+      {
+        "key": "D",
+        "text": "报错：LimitError",
+        "hint": "自定义异常已被捕获处理"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `余额不足 50`。代码首先定义了继承自 `Exception` 的自定义异常类 `LimitError`。在 `withdraw` 函数中，取款金额 80 大于当前余额 50，触发条件判断并执行 `raise LimitError(\"余额不足\")`。`raise` 会立即中断函数执行并抛出异常，因此后续的扣款语句 `acc[\"bal\"] -= amt` 不会执行，账户余额依然保持 50；外层的 `except LimitError as e` 成功捕获该异常，变量 `e` 绑定了异常实例，`print(e, u[\"bal\"])` 打印出异常提示文本 `\"余额不足\"` 和未被修改的余额 `50`。易错点：初学者容易误以为扣款已经发生而算出负数，或者误以为 `print(e)` 会打印类名 `LimitError`。",
+    "tags": [
+      "异常处理",
+      "函数"
+    ],
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T18:44:36+08:00",
+    "editNote": "",
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "异常抛出与自定义"
   }
 ]
