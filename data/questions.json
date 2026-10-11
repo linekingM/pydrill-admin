@@ -349,7 +349,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "切片修改与拷贝"
+    "subtopic": "列表修改与拷贝"
   },
   {
     "id": "q009",
@@ -738,7 +738,7 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "切片与索引"
+    "subtopic": "字符串操作"
   },
   {
     "id": "q018",
@@ -782,7 +782,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "字符串方法"
+    "subtopic": "字符串操作"
   },
   {
     "id": "q019",
@@ -1177,7 +1177,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "列表操作与方法"
+    "subtopic": "列表修改与拷贝"
   },
   {
     "id": "q028",
@@ -1221,7 +1221,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "列表操作与方法"
+    "subtopic": "列表修改与拷贝"
   },
   {
     "id": "q029",
@@ -1784,7 +1784,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片与索引"
+    "subtopic": "字符串操作"
   },
   {
     "id": "q042",
@@ -1872,7 +1872,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "字符串方法"
+    "subtopic": "字符串操作"
   },
   {
     "id": "q044",
@@ -1916,7 +1916,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "字符串方法"
+    "subtopic": "字符串操作"
   },
   {
     "id": "q045",
@@ -2588,7 +2588,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "切片修改与拷贝"
+    "subtopic": "列表修改与拷贝"
   },
   {
     "id": "q061",
@@ -2632,7 +2632,7 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "切片修改与拷贝"
+    "subtopic": "列表修改与拷贝"
   },
   {
     "id": "q062",
@@ -2954,8 +2954,8 @@
       },
       {
         "key": "B",
-        "text": "list",
-        "hint": "list()也是浅拷贝，内层列表会变"
+        "text": "copy.deep_copy",
+        "hint": "深拷贝函数名不带下划线，会报错"
       },
       {
         "key": "C",
@@ -2964,12 +2964,12 @@
       },
       {
         "key": "D",
-        "text": "scores.copy",
-        "hint": "scores.copy不接收参数，会报错"
+        "text": "copy.shallow_copy",
+        "hint": "copy模块无此函数，会报错"
       }
     ],
     "answer": "C",
-    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 不影响 `scores` 中的内层嵌套列表，必须进行深拷贝。`copy.deepcopy()` 会递归复制所有层级的对象，生成完全独立的副本；而 `copy.copy()` 和 `list()` 都只是浅拷贝，内层列表仍然是同一个引用。选项 D 中的 `scores.copy` 属于实例方法不能传参调用。易错点：容易误以为浅拷贝能完全隔离嵌套结构。",
+    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 不影响 `scores` 中的内层嵌套列表，必须进行深拷贝。`copy.deepcopy()` 会递归复制所有层级的对象，生成完全独立的副本；而 `copy.copy()` 只是浅拷贝，内层列表仍然是同一个引用。标准库 `copy` 模块中没有 `deep_copy` 和 `shallow_copy` 这两个函数，调用会报 `AttributeError`。易错点：容易误以为浅拷贝能完全隔离嵌套结构，或记错深拷贝函数名拼写。",
     "tags": [
       "可变对象与引用",
       "模块导入"
@@ -2977,55 +2977,55 @@
     "animationId": null,
     "status": "verified",
     "revised": true,
-    "revision": 1,
-    "lastEditedAt": "2026-10-11T19:42:53+08:00",
-    "editNote": "难度3→2；选项D换成scores.copy",
+    "revision": 2,
+    "lastEditedAt": "2026-10-11T20:01:27+08:00",
+    "editNote": "调整选项使长度接近且正确答案不是最长，用常见命名混淆项替换短选项。",
     "type": "代码补全",
     "difficulty": 2,
     "subtopic": "同一性与拷贝"
   },
   {
     "id": "q070",
-    "title": "多字典键共享同一列表引用",
+    "title": "别名修改后is与==比较",
     "topic": "元组/引用",
-    "stem": "执行以下代码后，最后一行打印的结果是？",
-    "code": "default_roles = [\"user\"]\nuser_a = {\"name\": \"Alice\", \"roles\": default_roles}\nuser_b = {\"name\": \"Bob\", \"roles\": default_roles}\nuser_a[\"roles\"].append(\"admin\")\nprint(user_b[\"roles\"])",
+    "stem": "执行以下代码后，控制台打印的结果是？",
+    "code": "a = [1, 2]\nb = a\nb.append(3)\nprint(a == b, a is b)",
     "options": [
       {
         "key": "A",
-        "text": "['user']",
-        "hint": "roles引用共享，原列表已被修改"
+        "text": "True True",
+        "hint": "别名指向同个列表，修改后仍完全一致"
       },
       {
         "key": "B",
-        "text": "['admin']",
-        "hint": "append是追加，原元素仍保留"
+        "text": "False False",
+        "hint": "b=a赋值引用，修改b会同步影响a"
       },
       {
         "key": "C",
-        "text": "['admin', 'user']",
-        "hint": "append追加在末尾，不会放开头"
+        "text": "True False",
+        "hint": "b与a引用同一对象，is判断返回True"
       },
       {
         "key": "D",
-        "text": "['user', 'admin']",
-        "hint": "两个字典共享同一列表引用"
+        "text": "False True",
+        "hint": "同一对象的值必定相等，==比较为True"
       }
     ],
-    "answer": "D",
-    "explanation": "答案是 D，输出 `['user', 'admin']`。`user_a` 和 `user_b` 的 `roles` 键都引用了同一个列表对象 `default_roles`。当通过 `user_a[\"roles\"].append(\"admin\")` 向该列表追加元素时，列表本身在原地被修改。由于 `user_b[\"roles\"]` 指向同一个列表对象，因此打印出来的也是更新后的内容。易错点：容易误以为两个字典中的 `roles` 是互相独立的列表。",
+    "answer": "A",
+    "explanation": "答案是 A，输出 `True True`。`b = a` 只是让变量 `b` 引用了 `a` 所指向的同一个列表对象（别名赋值），并没有创建新列表。当调用 `b.append(3)` 就地修改列表时，由于两者指向同一个内存对象，`a` 和 `b` 的内容都会变为 `[1, 2, 3]`。因此，`==` 比较两者内容相等返回 `True`，`is` 比较两者为同一对象也返回 `True`。易错点：容易误以为 `b = a` 会独立拷贝列表，修改 `b` 不影响 `a`；或误以为不同变量名之间 `is` 必定返回 `False`。",
     "tags": [
       "可变对象与引用",
-      "字典"
+      "列表"
     ],
     "animationId": null,
     "status": "verified",
     "revised": true,
-    "revision": 1,
-    "lastEditedAt": "2026-10-11T19:42:53+08:00",
-    "editNote": "C改为['admin', 'user']，正确答案不再是唯一最长",
+    "revision": 2,
+    "lastEditedAt": "2026-10-11T20:01:27+08:00",
+    "editNote": "与q022考查独立列表不同，改考别名赋值与就地修改后，==与is均为True。",
     "type": "输出判断",
-    "difficulty": 3,
+    "difficulty": 2,
     "subtopic": "引用与可变性"
   },
   {
@@ -3604,12 +3604,12 @@
     "title": "同名变量按LEGB就近查找",
     "topic": "作用域/变量",
     "stem": "执行以下代码后，控制台打印的结果是？",
-    "code": "sum = 100\n\ndef calc_score(bonus):\n    sum = 80\n    def total():\n        return sum + bonus\n    return total()\n\nprint(calc_score(10), sum)",
+    "code": "total = 100\n\ndef calc_score(bonus):\n    total = 80\n    def get_total():\n        return total + bonus\n    return get_total()\n\nprint(calc_score(10), total)",
     "options": [
       {
         "key": "A",
         "text": "90 100",
-        "hint": "total优先读取外层闭包的sum"
+        "hint": "内层优先读取外层闭包的total"
       },
       {
         "key": "B",
@@ -3628,16 +3628,16 @@
       }
     ],
     "answer": "A",
-    "explanation": "答案是 A，输出 `90 100`。Python 变量查找遵循 LEGB 规则，由内向外依次查找：局部作用域（Local）-> 闭包作用域（Enclosing）-> 全局作用域（Global）-> 内置作用域（Built-in）。内层函数 `total` 查找 `sum` 时，在当前局部未找到，但在外层函数 `calc_score` 的闭包作用域中找到了 `sum = 80`，因此停止查找并计算 `80 + 10 = 90`，不会使用全局变量 `sum = 100` 或内置函数 `sum`；而外层的 `print` 直接访问全局作用域，`sum` 依然是 `100`。易错点：容易误以为内层函数会跳过外层闭包去读取全局变量，或者误以为函数内部对 `sum` 赋值会修改全局变量。",
+    "explanation": "答案是 A，输出 `90 100`。Python 变量查找遵循 LEGB 规则，由内向外依次查找：局部作用域（Local）-> 闭包作用域（Enclosing）-> 全局作用域（Global）-> 内置作用域（Built-in）。内层函数 `get_total` 查找 `total` 时，在当前局部未找到，但在外层函数 `calc_score` 的闭包作用域中找到了 `total = 80`，因此停止查找并计算 `80 + 10 = 90`，不会使用全局变量 `total = 100`；而外层的 `print` 直接访问全局作用域，`total` 依然是 `100`。易错点：容易误以为内层函数会跳过外层闭包去读取全局变量，或者误以为函数内部对 `total` 赋值会修改全局变量。",
     "tags": [
       "作用域"
     ],
     "animationId": null,
     "status": "verified",
     "revised": true,
-    "revision": 1,
-    "lastEditedAt": "2026-10-11T19:42:53+08:00",
-    "editNote": "概念题改为代码题：LEGB同名变量查找",
+    "revision": 2,
+    "lastEditedAt": "2026-10-11T20:01:27+08:00",
+    "editNote": "将变量名 sum 全部改为 total，避免遮蔽内置函数，并同步更新代码、提示和解析。",
     "type": "输出判断",
     "difficulty": 2,
     "subtopic": "嵌套作用域与闭包"
