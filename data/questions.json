@@ -4123,5 +4123,1185 @@
     "type": "输出判断",
     "difficulty": 3,
     "subtopic": "异常抛出与自定义"
+  },
+  {
+    "id": "q096",
+    "title": "捕获异常后程序继续执行",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "运算符与表达式"
+    ],
+    "stem": "执行以下计算平均分的代码，控制台输出的结果是？",
+    "code": "total = 100\ncount = 0\ntry:\n    avg = total // count\nexcept ZeroDivisionError:\n    avg = 0\nprint(avg + 10)",
+    "options": [
+      {
+        "key": "A",
+        "text": "0",
+        "hint": "最后一行执行了加10并打印"
+      },
+      {
+        "key": "B",
+        "text": "报错：ZeroDivisionError",
+        "hint": "异常已被except捕获程序不会崩溃"
+      },
+      {
+        "key": "C",
+        "text": "10",
+        "hint": "异常捕获后avg为0加10输出10"
+      },
+      {
+        "key": "D",
+        "text": "110",
+        "hint": "除法未成功avg并未拿到100"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `10`。在 `try` 块中执行 `total // count` 时，由于除数为 0 会引发 `ZeroDivisionError`；该异常被 `except ZeroDivisionError` 成功捕获，程序不会崩溃，而是执行分支内的 `avg = 0`；异常处理完毕后，程序继续向下执行 `try...except` 之外的代码，`print(avg + 10)` 打印出 10。易错点：初学者容易误以为发生异常后程序会直接退出，实际上被捕获后会恢复正常执行流程。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q097",
+    "title": "无异常时跳过except块",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "字符串"
+    ],
+    "stem": "执行以下解析商品单价的代码，控制台输出的结果是？",
+    "code": "raw_price = \"80\"\ntry:\n    price = int(raw_price)\nexcept ValueError:\n    price = 0\nprint(price)",
+    "options": [
+      {
+        "key": "A",
+        "text": "80",
+        "hint": "转换成功且无异常时跳过except"
+      },
+      {
+        "key": "B",
+        "text": "0",
+        "hint": "未发生异常时except分支不会执行"
+      },
+      {
+        "key": "C",
+        "text": "报错：ValueError",
+        "hint": "字符串80可正常转为整数不报错"
+      },
+      {
+        "key": "D",
+        "text": "None",
+        "hint": "price被成功赋值为80而非None"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `80`。在 `try` 块中，`int(\"80\")` 成功将纯数字字符串转换为整数 80，并赋值给 `price`；由于整个 `try` 块执行期间没有发生任何异常，`except ValueError` 分支会被直接跳过，不会执行其中的 `price = 0`；随后程序继续执行，`print(price)` 打印出 80。易错点：初学者容易误以为 `except` 分支总会像兜底赋值一样被执行，实际上只有发生匹配的异常时才会进入。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q098",
+    "title": "捕获列表越界异常",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "列表"
+    ],
+    "stem": "在横线处填入下列哪个异常类型，能正确捕获列表索引越界并输出 0？",
+    "code": "scores = [95, 88, 72]\ntry:\n    val = scores[3]\nexcept ____:\n    val = 0\nprint(val)",
+    "options": [
+      {
+        "key": "A",
+        "text": "KeyError",
+        "hint": "KeyError用于字典查找不存在的键"
+      },
+      {
+        "key": "B",
+        "text": "IndexError",
+        "hint": "列表索引越界会触发IndexError"
+      },
+      {
+        "key": "C",
+        "text": "ValueError",
+        "hint": "ValueError用于传入无效的值"
+      },
+      {
+        "key": "D",
+        "text": "TypeError",
+        "hint": "TypeError用于类型不匹配的运算"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `0`。在 Python 中，列表 `scores` 共有 3 个元素，合法索引为 0、1、2。访问 `scores[3]` 超出范围会引发 `IndexError`（索引越界错误）；填入 `IndexError` 后，异常被 `except IndexError` 成功捕获，执行 `val = 0` 并打印出 0。选项 A 的 `KeyError` 用于字典访问不存在的键；选项 C 的 `ValueError` 用于参数值不合规；选项 D 的 `TypeError` 用于类型不兼容。易错点：初学者容易混淆列表的 `IndexError` 与字典的 `KeyError`。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q099",
+    "title": "未捕获的raise中断程序",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "函数"
+    ],
+    "stem": "运行以下检查分数的代码，控制台输出的结果是？",
+    "code": "def check_score(score):\n    if score < 0:\n        raise ValueError(\"分数不能为负\")\n    return score\n\nres = check_score(-5)\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：ValueError",
+        "hint": "未捕获的raise会中断程序并报错"
+      },
+      {
+        "key": "B",
+        "text": "分数不能为负",
+        "hint": "raise不会像print直接输出文本"
+      },
+      {
+        "key": "C",
+        "text": "-5",
+        "hint": "抛出异常后后续return不会执行"
+      },
+      {
+        "key": "D",
+        "text": "None",
+        "hint": "函数中断退出未完成正常赋值返回"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，会报错 `ValueError`。在函数 `check_score` 中，参数 `-5 < 0` 满足条件，触发了 `raise ValueError(\"分数不能为负\")`；由于调用方没有使用 `try...except` 语句进行捕获，该异常会直接向外抛出中断程序，导致运行时报错 `ValueError`。`raise` 用于主动触发异常中断流程，它不是 `print`（不会直接将字符串打印到控制台），也不是 `return`（不会将字符串作为正常返回值）。易错点：初学者容易误以为 `raise` 里的文本会像 `print` 一样直接输出到控制台。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "异常抛出与自定义",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q100",
+    "title": "单独raise重抛给外层",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "列表"
+    ],
+    "stem": "执行以下处理数据的代码，控制台输出的结果是？",
+    "code": "logs = []\ntry:\n    try:\n        score = int(\"abc\")\n    except ValueError:\n        logs.append(\"记录\")\n        raise\nexcept ValueError:\n    logs.append(\"捕获\")\nprint(\"-\".join(logs))",
+    "options": [
+      {
+        "key": "A",
+        "text": "记录",
+        "hint": "内层单独raise将异常重抛给外层捕获"
+      },
+      {
+        "key": "B",
+        "text": "捕获",
+        "hint": "内层抛出前已先向列表添加了记录"
+      },
+      {
+        "key": "C",
+        "text": "记录-捕获",
+        "hint": "内层记录后重抛由外层捕获并追加"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "外层try捕获了重抛异常程序未崩溃"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `记录-捕获`。在内层 `try` 块中，`int(\"abc\")` 转换失败引发 `ValueError`，被内层的 `except ValueError` 捕获并向列表添加 `\"记录\"`；随后执行单独的 `raise` 语句，它会将当前正在处理的异常重新抛出给外层；外层的 `try...except` 成功捕获该异常并向列表追加 `\"捕获\"`，最终通过 `\"-\".join(logs)` 打印出 `记录-捕获`。易错点：初学者容易误以为内层捕获后异常就结束了，忽略了单独写 `raise` 可以将异常继续向外传播。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "异常抛出与自定义",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q101",
+    "title": "自定义异常类携带属性",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "类与对象"
+    ],
+    "stem": "执行以下库存检查代码，控制台输出的结果是？",
+    "code": "class StockError(Exception):\n    def __init__(self, code, count):\n        self.code = code\n        self.count = count\ntry:\n    raise StockError(\"A01\", 0)\nexcept StockError as e:\n    print(e.code, e.count)",
+    "options": [
+      {
+        "key": "A",
+        "text": "StockError: A01 0",
+        "hint": "print打印属性值不会附带类名"
+      },
+      {
+        "key": "B",
+        "text": "A01 0",
+        "hint": "异常对象正常保存并访问了两个属性"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "自定义异常可正常定义构造方法传参"
+      },
+      {
+        "key": "D",
+        "text": "None None",
+        "hint": "属性已通过构造方法完成赋值绑定"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `A01 0`。`StockError` 继承自 `Exception`，在 `__init__` 构造方法中接收 `code` 和 `count` 并绑定到实例属性上；当执行 `raise StockError(\"A01\", 0)` 时，创建并抛出了包含这两个属性的异常对象；外层 `except StockError as e` 捕获到该实例并赋值给变量 `e`，通过 `e.code` 和 `e.count` 访问属性，`print` 输出以空格分隔的 `A01 0`。易错点：初学者容易误以为异常类不能像普通类那样添加自定义属性，或者误以为打印属性会带上类名。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "异常抛出与自定义",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q102",
+    "title": "return终止后续代码执行",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数"
+    ],
+    "stem": "执行以下计算会员积分的代码，控制台输出的结果是？",
+    "code": "def calc_score(points):\n    total = points + 10\n    return total\n    total = total * 2\n\nresult = calc_score(50)\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "60",
+        "hint": "执行return立即结束函数输出60"
+      },
+      {
+        "key": "B",
+        "text": "120",
+        "hint": "return后的翻倍代码不会被执行"
+      },
+      {
+        "key": "C",
+        "text": "100",
+        "hint": "先加10得到60而非100"
+      },
+      {
+        "key": "D",
+        "text": "None",
+        "hint": "函数已显式返回total值非None"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `60`。函数执行遇到 `return` 语句时会立即结束执行并将结果返回给调用者，`return` 后面的代码不会被执行。在 `calc_score(50)` 中，执行 `return total` 立即返回 60，后面的 `total = total * 2` 被完全跳过，因此最终打印 60。易错点：初学者常误以为函数必须跑完所有行才会返回，或者误以为后续赋值会修改已返回的结果。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "函数定义与返回值",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q103",
+    "title": "return返回表达式结果",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "运算符与表达式"
+    ],
+    "stem": "在横线处填入下列哪行代码，能让最后一行打印出 60？",
+    "code": "def calc_total(price, count):\n    ____\n\ntotal = calc_total(20, 3)\nprint(total)",
+    "options": [
+      {
+        "key": "A",
+        "text": "print(price * count)",
+        "hint": "打印后无返回值导致额外输出None"
+      },
+      {
+        "key": "B",
+        "text": "return price * count",
+        "hint": "通过return将相乘结果返回输出60"
+      },
+      {
+        "key": "C",
+        "text": "price * count",
+        "hint": "缺少return导致函数默认返回None"
+      },
+      {
+        "key": "D",
+        "text": "return price + count",
+        "hint": "加法计算结果为23非预期的60"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，在 Python 中，函数需要通过 `return` 关键字显式将计算结果返回给调用者。填入 `return price * count` 后，函数返回 20 与 3 的乘积 60 并赋给 `total`，最后打印 60。若仅写 `price * count` 或 `print(...)`，函数因没有 `return` 而默认返回 `None`，导致 `total` 为 `None`。易错点：初学者容易误以为写了计算表达式就会自动返回，或者将 `print` 打印混淆为返回值。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "函数定义与返回值",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q104",
+    "title": "多返回值解包赋值",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "解包"
+    ],
+    "stem": "执行以下计算矩形数据的代码，控制台输出的结果是？",
+    "code": "def calc_rect(width, height):\n    area = width * height\n    perimeter = (width + height) * 2\n    return area, perimeter\n\na, p = calc_rect(5, 3)\nprint(a, p)",
+    "options": [
+      {
+        "key": "A",
+        "text": "15 16",
+        "hint": "多返回值打包为元组并依次解包赋值"
+      },
+      {
+        "key": "B",
+        "text": "(15, 16)",
+        "hint": "返回值被两个变量解包接收而非单个元组"
+      },
+      {
+        "key": "C",
+        "text": "16 15",
+        "hint": "解包按返回顺序赋值，a为15而非16"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "两个返回值解包给两个变量不会报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `15 16`。在 Python 中，函数使用 `return area, perimeter` 可以同时返回多个值，它们会被隐式打包成一个元组 `(15, 16)`；使用 `a, p = ...` 接收时，元组会自动解包，按顺序将 15 赋给 `a`、16 赋给 `p`；因此 `print(a, p)` 在控制台输出以空格分隔的 `15 16`。易错点：初学者容易误以为函数只能返回单个值，或者误以为解包接收必须加上圆括号。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "函数定义与返回值",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q105",
+    "title": "函数需先定义后调用",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "异常处理"
+    ],
+    "stem": "执行以下计算总分的代码，控制台输出的结果是？",
+    "code": "score = calc_total(80, 15)\nprint(score)\n\ndef calc_total(base, bonus):\n    return base + bonus",
+    "options": [
+      {
+        "key": "A",
+        "text": "95",
+        "hint": "函数未定义无法计算得出95"
+      },
+      {
+        "key": "B",
+        "text": "None",
+        "hint": "未定义直接调用不会返回None"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "未找到函数名应报NameError"
+      },
+      {
+        "key": "D",
+        "text": "报错：NameError",
+        "hint": "函数未定义先调用报NameError"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，会报错 `NameError`。Python 代码是自顶向下逐行解释执行的。在执行到第一行 `calc_total(80, 15)` 时，该函数尚未通过 `def` 语句进行定义，解释器在当前作用域中找不到名为 `calc_total` 的变量或函数名，因此抛出 `NameError`。易错点：初学者容易受其他语言（如存在函数声明提升的语言）影响，误以为函数写在文件末尾也能在开头直接调用，而在 Python 中必须先定义后调用。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 2,
+    "subtopic": "函数定义与返回值",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q106",
+    "title": "乘号重复拼接字符串",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "运算符与表达式"
+    ],
+    "stem": "执行以下生成对话分隔线的代码，控制台输出的结果是？",
+    "code": "pattern = \"=\" * 3 + \">\"\nprint(pattern)",
+    "options": [
+      {
+        "key": "A",
+        "text": "===>",
+        "hint": "等号重复3次后拼接大于号输出===>"
+      },
+      {
+        "key": "B",
+        "text": "=>=>=>",
+        "hint": "乘法仅作用于等号并非整个模式"
+      },
+      {
+        "key": "C",
+        "text": "===",
+        "hint": "未考虑末尾拼接的大于号"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "字符串与整数支持乘法重复不报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `===>`。在 Python 中，字符串与整数使用乘法运算符 `*` 时，表示将字符串重复对应次数，因此 `\"=\" * 3` 得到包含 3 个等号的字符串 `\"===\"`；接着使用 `+` 运算符与 `\">\"` 完成拼接，得到最终字符串 `\"===>\"`。易错点：初学者容易误以为乘法会应用到后面的 `\">\"` 从而得到 `=>=>=>`，或者误以为字符串不支持乘法运算。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串操作",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q107",
+    "title": "len统计包含空格字符数",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "字符串方法"
+    ],
+    "stem": "执行以下统计书名长度的代码，控制台输出的结果是？",
+    "code": "title = \"Python 3\"\nprint(len(title))",
+    "options": [
+      {
+        "key": "A",
+        "text": "7",
+        "hint": "空格也是合法字符占用1长度"
+      },
+      {
+        "key": "B",
+        "text": "8",
+        "hint": "包含6个字母1空格1数字共8"
+      },
+      {
+        "key": "C",
+        "text": "6",
+        "hint": "len统计全串非仅统计字母"
+      },
+      {
+        "key": "D",
+        "text": "9",
+        "hint": "末尾无额外空格长度并非9"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `8`。内置函数 `len()` 用于计算序列或字符串的长度，字符串中的所有可见字符、空格以及特殊符号都会被计入。在 `\"Python 3\"` 中，包含 6 个字母、1 个空格和 1 个数字 3，总长度为 8。易错点：初学者常忽略字符串内部的空格，误以为 `len()` 只统计英文字母或可见字符数量。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串操作",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q108",
+    "title": "split未匹配返回整串列表",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "字符串方法"
+    ],
+    "stem": "执行以下解析商品分类标签的代码，控制台输出的结果是？",
+    "code": "tags = \"apple,banana,orange\"\nitems = tags.split(\";\")\nprint(len(items))",
+    "options": [
+      {
+        "key": "A",
+        "text": "3",
+        "hint": "原串无分号不会拆分成3项"
+      },
+      {
+        "key": "B",
+        "text": "0",
+        "hint": "未匹配返回含整串单元素列表"
+      },
+      {
+        "key": "C",
+        "text": "1",
+        "hint": "无分隔符返回单元素列表长为1"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "找不到分隔符不报错返回原串"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `1`。`str.split(sep)` 方法在原字符串中查找分隔符进行拆分；如果字符串中不存在指定的分隔符，它不会抛出异常，也不会返回空列表，而是返回一个只包含原字符串本身的单元素列表 `['apple,banana,orange']`。因此列表的长度 `len(items)` 为 1。易错点：初学者容易误以为找不到分隔符时会报错或返回空列表，忽略了未匹配时会保留整个原字符串作为唯一元素。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "字符串操作",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q109",
+    "title": "字符串与整数相加报错",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "异常处理"
+    ],
+    "stem": "执行以下拼接用户排队编号的代码，控制台输出的结果是？",
+    "code": "prefix = \"NO.\"\nnum = 101\ncode_str = prefix + num\nprint(code_str)",
+    "options": [
+      {
+        "key": "A",
+        "text": "NO.101",
+        "hint": "整数不会自动隐式转为字符串"
+      },
+      {
+        "key": "B",
+        "text": "NO.num",
+        "hint": "相加不会使用变量名本身"
+      },
+      {
+        "key": "C",
+        "text": "报错：ValueError",
+        "hint": "类型不匹配报TypeError"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "字符串与整数不能直接相加"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，会报错 `TypeError`。在 Python 中，加号 `+` 用于字符串拼接时要求两边都必须是字符串类型。代码中 `prefix` 是字符串 `\"NO.\"`，而 `num` 是整数 101，Python 不会自动将整数转换为字符串，直接相加会抛出 `TypeError`。正确写法应为 `prefix + str(num)`。易错点：受其他弱类型语言影响，初学者容易误以为整数会自动隐式转换为字符串完成拼接。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 2,
+    "subtopic": "字符串操作",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q110",
+    "title": "给新键赋值添加键值对",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "scores = {\"数学\": 90, \"语文\": 85}\nscores[\"英语\"] = 92\nprint(len(scores), scores[\"英语\"])",
+    "options": [
+      {
+        "key": "A",
+        "text": "3 92",
+        "hint": "给新键赋值新增键值对，长度变为3"
+      },
+      {
+        "key": "B",
+        "text": "2 92",
+        "hint": "新增了键，字典长度应该增加为3"
+      },
+      {
+        "key": "C",
+        "text": "报错：KeyError",
+        "hint": "给不存在的键赋值不会报错而是新增"
+      },
+      {
+        "key": "D",
+        "text": "2 85",
+        "hint": "英语是新增的键，对应的值为92"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `3 92`。在 Python 中，通过 `d[key] = value` 语法对字典赋值时，如果键尚不存在，字典会自动添加该新键值对，长度随之加 1。因此向字典添加 `\"英语\": 92` 后，字典共有 3 个元素，`scores[\"英语\"]` 值为 92。易错点：读取不存在的键会报 `KeyError`，但赋值不存在的键则是直接新增。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "访问与成员检查",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q111",
+    "title": "通过键获取字典对应的值",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "要从字典 info 中取出 \"城市\" 对应的值并输出 \"北京\"，横线处应填写：",
+    "code": "info = {\"城市\": \"北京\", \"温度\": 25}\nval = ____\nprint(val)",
+    "options": [
+      {
+        "key": "A",
+        "text": "info.城市",
+        "hint": "字典不能用点号属性访问键"
+      },
+      {
+        "key": "B",
+        "text": "info[\"城市\"]",
+        "hint": "字典使用中括号加键名访问对应的值"
+      },
+      {
+        "key": "C",
+        "text": "info(\"城市\")",
+        "hint": "字典不是函数，不能用圆括号调用"
+      },
+      {
+        "key": "D",
+        "text": "info[0]",
+        "hint": "字典按键查找，不能用数字下标"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `北京`。在 Python 中，字典通过中括号加键名的方式访问值，即 `d[key]`。选项 A 的 `info.城市` 会报 `AttributeError`（字典键不是属性）；选项 C 的 `info(\"城市\")` 会报 `TypeError`（字典对象不可调用）；选项 D 的 `info[0]` 会查找键为 0 的项，因键不存在而报 `KeyError`。易错点：字典取值必须用中括号语法 `d[key]`。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "访问与成员检查",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q112",
+    "title": "字典键区分大小写",
+    "topic": "字典",
+    "tags": [
+      "字典",
+      "字符串"
+    ],
+    "stem": "执行以下统计成绩的代码，控制台输出的结果是？",
+    "code": "scores = {\"Tom\": 90, \"tom\": 80}\nprint(len(scores), scores[\"Tom\"])",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 80",
+        "hint": "键区分大小写，Tom与tom不会相互覆盖"
+      },
+      {
+        "key": "B",
+        "text": "2 90",
+        "hint": "键区分大小写，长度为2且取Tom的值"
+      },
+      {
+        "key": "C",
+        "text": "2 80",
+        "hint": "查询Tom的值为90，80是tom对应值"
+      },
+      {
+        "key": "D",
+        "text": "1 90",
+        "hint": "大小写不同为不同键，字典长度应为2"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `2 90`。在 Python 中，字符串作为字典的键时严格区分大小写。`\"Tom\"` 与 `\"tom\"` 的字符编码和哈希值均不相同，因此被视为两个完全独立的键，不会发生覆盖。存入字典后包含两个键值对，`len(scores)` 为 2；通过 `scores[\"Tom\"]` 查询得到的值为 90。易错点：初学者容易误以为英文人名大小写指同一对象因而会被自动合并覆盖，但 Python 字典对键的大小写是严格敏感的。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "键的特性与哈希",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q113",
+    "title": "整数与字符串为不同字典键",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "data = {}\ndata[1] = \"num\"\ndata[\"1\"] = \"str\"\nprint(len(data), data[1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 str",
+        "hint": "整数1和字符串'1'是不同键不会覆盖"
+      },
+      {
+        "key": "B",
+        "text": "1 num",
+        "hint": "两个键类型不同，不会视为同一个键"
+      },
+      {
+        "key": "C",
+        "text": "2 str",
+        "hint": "取的是键1对应的值，应为'num'"
+      },
+      {
+        "key": "D",
+        "text": "2 num",
+        "hint": "类型不同为两个独立键，键1的值不变"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `2 num`。在 Python 中，字典判断键是否相同依据的是相等性（`==`）和哈希值（`hash()`）。整数 `1` 和字符串 `\"1\"` 属于不同类型，`1 == \"1\"` 结果为 `False`，因此它们是两个完全独立的键，不会相互覆盖。向字典依次存入后，字典长度为 2，`data[1]` 仍为其对应的值 `\"num\"`。易错点：Python 不会自动将整数键转为字符串，`1` 与 `\"1\"` 是两个不同的键。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "键的特性与哈希",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q114",
+    "title": "元组可以作为字典的键",
+    "topic": "字典",
+    "tags": [
+      "字典",
+      "元组"
+    ],
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "coords = {}\ncoords[(0, 0)] = \"起点\"\ncoords[(1, 2)] = \"终点\"\nprint(len(coords), coords[(0, 0)])",
+    "options": [
+      {
+        "key": "A",
+        "text": "2 起点",
+        "hint": "元组不可变可哈希，能作为有效字典键"
+      },
+      {
+        "key": "B",
+        "text": "1 起点",
+        "hint": "两个坐标元组不同，字典有两个键值对"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "元组不可变，不会报TypeError"
+      },
+      {
+        "key": "D",
+        "text": "报错：KeyError",
+        "hint": "键(0, 0)已存入字典，不会报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `2 起点`。字典的键必须是可哈希的不可变对象。元组是不可变类型，只要元组内的所有元素也都可哈希，元组就可以直接用作字典的键（常用于网格坐标、二维数据等）。代码中分别以 `(0, 0)` 和 `(1, 2)` 为键存入两个值，字典包含 2 个元素，`coords[(0, 0)]` 正确取出 `\"起点\"`。易错点：列表因为可变不能做字典的键，但元组是不可变的，可以做字典的键。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "键的特性与哈希",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q115",
+    "title": "负索引-1获取末尾元素",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "切片"
+    ],
+    "stem": "要获取列表 fruits 中的最后一个元素并打印 \"橙子\"，横线处应填写：",
+    "code": "fruits = [\"苹果\", \"香蕉\", \"橙子\"]\nlast = ____\nprint(last)",
+    "options": [
+      {
+        "key": "A",
+        "text": "fruits[len(fruits)]",
+        "hint": "下标越界，最大有效下标为len-1"
+      },
+      {
+        "key": "B",
+        "text": "fruits[-1]",
+        "hint": "负索引-1表示列表中最后一个元素"
+      },
+      {
+        "key": "C",
+        "text": "fruits[-0]",
+        "hint": "-0等同于0，取出的是第一个元素"
+      },
+      {
+        "key": "D",
+        "text": "fruits[1]",
+        "hint": "下标从0开始，下标1取出的是香蕉"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `橙子`。在 Python 中，序列支持负索引，`-1` 表示倒数第一个元素（即最后一个元素），因此 `fruits[-1]` 可以直接获取末尾的 `\"橙子\"`。选项 A 的 `fruits[len(fruits)]` 索引越界会报 `IndexError`；选项 C 的 `-0` 等同于 `0`，取出的是第一个元素 `\"苹果\"`；选项 D 的下标 1 取出的是第二个元素 `\"香蕉\"`。易错点：Python 负索引从 -1 开始表示末尾，-0 依然是 0。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q116",
+    "title": "列表索引越界报错",
+    "topic": "列表/切片",
+    "tags": [
+      "列表"
+    ],
+    "stem": "运行下列代码会发生什么？",
+    "code": "scores = [85, 92, 78]\nprint(scores[3])",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：KeyError",
+        "hint": "KeyError是字典键不存在报的错"
+      },
+      {
+        "key": "B",
+        "text": "报错：ValueError",
+        "hint": "下标越界是位置超出不是数值无效"
+      },
+      {
+        "key": "C",
+        "text": "报错：IndexError",
+        "hint": "超出列表下标范围会报IndexError"
+      },
+      {
+        "key": "D",
+        "text": "None",
+        "hint": "Python列表越界不会返回None"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，会报错 `IndexError`。列表 `scores` 包含 3 个元素，合法下标为 `0`、`1`、`2`。使用 `scores[3]` 访问下标 3 超出了列表的有效索引范围，Python 会抛出 `IndexError: list index out of range`。易错点：Python 中列表单项索引越界会直接报错 `IndexError`，而不会像部分其他语言那样返回 `None` 或空值；字典查不到键才是 `KeyError`。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q117",
+    "title": "元组不可修改元素",
+    "topic": "元组/引用",
+    "tags": [
+      "元组"
+    ],
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "scores = (90, 85, 95)\nscores[1] = 88\nprint(scores)",
+    "options": [
+      {
+        "key": "A",
+        "text": "(90, 88, 95)",
+        "hint": "元组不支持通过索引修改元素"
+      },
+      {
+        "key": "B",
+        "text": "(90, 85, 95)",
+        "hint": "修改元组元素会抛出异常中断执行"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "元组是不可变类型，不支持修改元素"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "不支持修改元素抛出的是TypeError"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，会报错 `TypeError`。在 Python 中，元组（tuple）是不可变数据类型，创建后不能修改其中的元素。尝试通过下标赋值 `scores[1] = 88` 会引发 `TypeError: 'tuple' object does not support item assignment`。易错点：初学者容易将元组与列表混淆，列表支持通过索引修改元素，而元组不支持。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "元组基础",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q118",
+    "title": "元组解包赋值给多个变量",
+    "topic": "元组/引用",
+    "tags": [
+      "元组",
+      "解包"
+    ],
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "point = (3, 5)\nx, y = point\nprint(x + y)",
+    "options": [
+      {
+        "key": "A",
+        "text": "8",
+        "hint": "元组解包分别赋值给x和y，3+5=8"
+      },
+      {
+        "key": "B",
+        "text": "(3, 5)",
+        "hint": "x和y分别获得3和5，相加得8"
+      },
+      {
+        "key": "C",
+        "text": "15",
+        "hint": "代码执行的是加法运算3+5"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "变量数与元组元素数相同，解包正常"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `8`。在 Python 中，可以将元组中的元素解包（unpack）赋值给等量的变量。语句 `x, y = point` 会将 `point` 中的第一个元素 3 赋给 `x`，第二个元素 5 赋给 `y`。因此 `x + y` 的计算结果为 `3 + 5 = 8`。易错点：解包时左侧变量数量必须与右侧元组元素数量严格相等，否则会报 `ValueError`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "元组基础",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q119",
+    "title": "函数内直接读取全局变量",
+    "topic": "作用域/变量",
+    "tags": [
+      "作用域",
+      "函数"
+    ],
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "discount = 15\n\ndef get_price(price):\n    return price - discount\n\nprint(get_price(100))",
+    "options": [
+      {
+        "key": "A",
+        "text": "100",
+        "hint": "读取全局变量后相减计算，结果为85"
+      },
+      {
+        "key": "B",
+        "text": "报错：NameError",
+        "hint": "函数内部可以直接读取已定义的全局变量"
+      },
+      {
+        "key": "C",
+        "text": "报错：UnboundLocalError",
+        "hint": "未对变量赋值的纯读取不会报此错误"
+      },
+      {
+        "key": "D",
+        "text": "85",
+        "hint": "函数直接读取全局变量，100-15=85"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `85`。在 Python 中，函数内部可以直接读取模块级的全局变量，无需使用 `global` 关键字声明。执行 `price - discount` 时，Python 在函数局部作用域未找到 `discount`，便会向上查找全局作用域中的 `discount = 15`，因此计算 `100 - 15 = 85`。易错点：只有在函数内部对全局变量进行修改或重新赋值时才需要 `global` 声明，仅读取则不需要。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "全局与局部变量",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q120",
+    "title": "函数形参在函数外部无效",
+    "topic": "作用域/变量",
+    "tags": [
+      "作用域",
+      "函数"
+    ],
+    "stem": "运行以下代码，控制台输出的结果是？",
+    "code": "def make_label(title):\n    return f\"【{title}】\"\n\nmake_label(\"Python\")\nprint(title)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Python",
+        "hint": "形参是局部变量，不会泄露到全局作用域"
+      },
+      {
+        "key": "B",
+        "text": "报错：NameError",
+        "hint": "形参仅在函数内有效，外部访问报未定义"
+      },
+      {
+        "key": "C",
+        "text": "【Python】",
+        "hint": "title是形参名，并非函数的返回值"
+      },
+      {
+        "key": "D",
+        "text": "None",
+        "hint": "外部未定义变量直接报错，不会取None"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，会报错 `NameError`。函数的形参 `title` 属于函数内部的局部变量，其作用域仅限于函数体内。调用 `make_label(\"Python\")` 时，`title` 在函数执行期间有效；函数执行结束后局部作用域随即销毁。在函数外部直接访问未定义的全局变量 `title`，会抛出 `NameError: name 'title' is not defined`。易错点：向函数传入实参不会自动在外部创建同名变量。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 1,
+    "subtopic": "全局与局部变量",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q121",
+    "title": "不同对象的实例属性互不影响",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "执行以下面向对象代码，控制台打印的结果是？",
+    "code": "class Student:\n    def __init__(self, name, score):\n        self.name = name\n        self.score = score\n\ns1 = Student(\"小明\", 80)\ns2 = Student(\"小红\", 90)\ns1.score = 95\nprint(s1.score, s2.score)",
+    "options": [
+      {
+        "key": "A",
+        "text": "95 90",
+        "hint": "修改s1的属性完全不影响s2的属性"
+      },
+      {
+        "key": "B",
+        "text": "95 95",
+        "hint": "实例属性属于各自对象，不会被共享修改"
+      },
+      {
+        "key": "C",
+        "text": "80 90",
+        "hint": "s1.score已被成功重新赋值为95"
+      },
+      {
+        "key": "D",
+        "text": "报错：AttributeError",
+        "hint": "实例属性允许在外部直接修改"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `95 90`。在面向对象编程中，在 `__init__` 中通过 `self.score = score` 绑定的变量属于实例属性，每个实例对象都拥有自己独立的属性空间。执行 `s1.score = 95` 仅仅修改了 `s1` 这一实例的属性值，对另一个独立对象 `s2` 的属性没有丝毫影响。易错点：容易将实例属性误认为类属性，类属性才会被所有实例共享。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "类属性与实例属性",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
+  },
+  {
+    "id": "q122",
+    "title": "方法内用self访问实例属性",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "在横线处填入下列哪项，能让控制台输出 品牌:比亚迪？",
+    "code": "class Car:\n    def __init__(self, brand):\n        self.brand = brand\n\n    def show(self):\n        return \"品牌:\" + ____\n\nmy_car = Car(\"比亚迪\")\nprint(my_car.show())",
+    "options": [
+      {
+        "key": "A",
+        "text": "brand",
+        "hint": "show方法中没有局部变量brand"
+      },
+      {
+        "key": "B",
+        "text": "Car.brand",
+        "hint": "brand是实例属性而非类属性"
+      },
+      {
+        "key": "C",
+        "text": "self.brand",
+        "hint": "在实例方法中通过self访问实例属性"
+      },
+      {
+        "key": "D",
+        "text": "this.brand",
+        "hint": "Python应使用self访问实例属性"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `品牌:比亚迪`。在 Python 的类方法中，访问实例对象的属性必须通过首个参数 `self`（即 `self.brand`）。如果直接写 `brand`，由于 `show` 方法内部没有局部变量 `brand`，会报错 `NameError`；如果写 `Car.brand`，由于 `brand` 是实例属性而非类属性，会报错 `AttributeError`；而 `this` 是其他编程语言的关键字，在 Python 中未定义会报 `NameError`。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 1,
+    "subtopic": "类属性与实例属性",
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-11T21:33:23+08:00",
+    "editNote": ""
   }
 ]
