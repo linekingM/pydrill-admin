@@ -1,0 +1,184 @@
+[
+  {
+    "id": "loop",
+    "name": "循环",
+    "weight": 5,
+    "tier": "must",
+    "notes": "for/while、break/continue、嵌套循环"
+  },
+  {
+    "id": "list",
+    "name": "列表",
+    "weight": 5,
+    "tier": "must",
+    "notes": ""
+  },
+  {
+    "id": "str",
+    "name": "字符串",
+    "weight": 4,
+    "tier": "must",
+    "notes": ""
+  },
+  {
+    "id": "if",
+    "name": "条件分支",
+    "weight": 4,
+    "tier": "must",
+    "notes": "if/elif/else"
+  },
+  {
+    "id": "slice",
+    "name": "切片",
+    "weight": 4,
+    "tier": "must",
+    "notes": "序列切片步长等"
+  },
+  {
+    "id": "dict",
+    "name": "字典",
+    "weight": 4,
+    "tier": "must",
+    "notes": ""
+  },
+  {
+    "id": "func",
+    "name": "函数",
+    "weight": 4,
+    "tier": "must",
+    "notes": "定义与调用、返回值"
+  },
+  {
+    "id": "mutable_ref",
+    "name": "可变对象与引用",
+    "weight": 4,
+    "tier": "must",
+    "notes": "别名、is/==、可变默认参数相关坑"
+  },
+  {
+    "id": "ops",
+    "name": "运算符与表达式",
+    "weight": 3,
+    "tier": "common",
+    "notes": ""
+  },
+  {
+    "id": "assign",
+    "name": "变量与赋值",
+    "weight": 3,
+    "tier": "common",
+    "notes": ""
+  },
+  {
+    "id": "tuple",
+    "name": "元组",
+    "weight": 3,
+    "tier": "common",
+    "notes": ""
+  },
+  {
+    "id": "default_arg",
+    "name": "默认参数",
+    "weight": 3,
+    "tier": "common",
+    "notes": ""
+  },
+  {
+    "id": "scope",
+    "name": "作用域",
+    "weight": 3,
+    "tier": "common",
+    "notes": "global/nonlocal/闭包"
+  },
+  {
+    "id": "range",
+    "name": "range",
+    "weight": 3,
+    "tier": "common",
+    "notes": ""
+  },
+  {
+    "id": "enumerate",
+    "name": "enumerate",
+    "weight": 2,
+    "tier": "common",
+    "notes": ""
+  },
+  {
+    "id": "str_methods",
+    "name": "字符串方法",
+    "weight": 3,
+    "tier": "common",
+    "notes": "split/join/find/replace 等"
+  },
+  {
+    "id": "list_methods",
+    "name": "列表方法",
+    "weight": 3,
+    "tier": "common",
+    "notes": "append/extend/pop/sort 等"
+  },
+  {
+    "id": "set",
+    "name": "集合",
+    "weight": 2,
+    "tier": "rare",
+    "notes": ""
+  },
+  {
+    "id": "comprehension",
+    "name": "推导式",
+    "weight": 2,
+    "tier": "rare",
+    "notes": ""
+  },
+  {
+    "id": "exception",
+    "name": "异常处理",
+    "weight": 2,
+    "tier": "rare",
+    "notes": ""
+  },
+  {
+    "id": "unpack",
+    "name": "解包",
+    "weight": 2,
+    "tier": "rare",
+    "notes": ""
+  },
+  {
+    "id": "truthiness",
+    "name": "None与真假值",
+    "weight": 2,
+    "tier": "rare",
+    "notes": ""
+  },
+  {
+    "id": "class",
+    "name": "类与对象",
+    "weight": 1,
+    "tier": "deferred",
+    "notes": "暂缓作主标签"
+  },
+  {
+    "id": "file_io",
+    "name": "文件读写",
+    "weight": 1,
+    "tier": "deferred",
+    "notes": ""
+  },
+  {
+    "id": "import",
+    "name": "模块导入",
+    "weight": 1,
+    "tier": "deferred",
+    "notes": ""
+  },
+  {
+    "id": "generator",
+    "name": "生成器与迭代器",
+    "weight": 1,
+    "tier": "deferred",
+    "notes": ""
+  }
+]

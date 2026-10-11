@@ -1,0 +1,2582 @@
+[
+  {
+    "id": "q001",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "循环"
+    ],
+    "stem": "以下代码输出什么？",
+    "code": "w = \"Hello\"\nnw = \"\"\nfor c in w:\n    if c == \"e\":\n        continue\n    if c == \"l\":\n        nw = nw + \"x\"\n    else:\n        nw = nw + c\nprint(nw)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Helxlxo",
+        "hint": "e 被跳过；l 是换成 x，不是在后面加 x"
+      },
+      {
+        "key": "B",
+        "text": "Hxxo",
+        "hint": "跳过 e，两个 l 都换成 x"
+      },
+      {
+        "key": "C",
+        "text": "Hxlo",
+        "hint": "两个 l 都会换成 x，不是只换一个"
+      },
+      {
+        "key": "D",
+        "text": "Hexxo",
+        "hint": "遇到 e 会 continue，e 不会留下"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `Hxxo`。循环逐个取出字符：`H` 原样拼进 `nw`；遇到 `e` 时执行 `continue`，本轮剩下的代码全部跳过，所以 `e` 不会被加进去；后面两个 `l` 都满足 `c == \"l\"`，各拼一个 `x`；最后的 `o` 原样拼入，得到 `Hxxo`。易错点：`continue` 只是跳过“这一轮”，循环还会继续；而且每个 `l` 都会被替换，不是只换第一个。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q002",
+    "topic": "元组/引用",
+    "tags": [
+      "元组",
+      "可变对象与引用"
+    ],
+    "stem": "下面的 Python 代码片段，执行后会输出什么？",
+    "code": "my_tuple = (10, 20, [30, 40])\nmy_tuple[2][0] = 35\nprint(my_tuple)",
+    "options": [
+      {
+        "key": "A",
+        "text": "(10, 20, [35, 40])",
+        "hint": "改的是里面的列表，元组引用没变"
+      },
+      {
+        "key": "B",
+        "text": "代码会报错 TypeError",
+        "hint": "嵌套列表仍可改，不会 TypeError"
+      },
+      {
+        "key": "C",
+        "text": "(10, 20, [30, 40])",
+        "hint": "列表第 0 项已经改成了 35"
+      },
+      {
+        "key": "D",
+        "text": "代码会报错 SyntaxError",
+        "hint": "这是合法赋值，不会 SyntaxError"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `(10, 20, [35, 40])`。元组是不可变容器，指其元素的引用地址不可变；但第 3 个元素是可变列表，`my_tuple[2][0] = 35` 修改的是列表内部的值，并没有改变元组持有的列表引用。易错点：容易误以为元组内所有嵌套元素都无法修改而误选 TypeError。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q003",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "默认参数"
+    ],
+    "stem": "以下代码的输出是什么？",
+    "code": "def add_item(item, my_list=[]):\n    my_list.append(item)\n    return my_list\n\nlist1 = add_item(1)\nlist2 = add_item(2)\nprint(list1, list2)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[1] [2]",
+        "hint": "默认列表只建一次，不是每次新建"
+      },
+      {
+        "key": "B",
+        "text": "[1] [1, 2]",
+        "hint": "两次调用共享同一列表，list1 也会变"
+      },
+      {
+        "key": "C",
+        "text": "[1, 2] [1, 2]",
+        "hint": "默认列表只建一次，两次都往里加"
+      },
+      {
+        "key": "D",
+        "text": "代码会因为默认参数错误而报错",
+        "hint": "这样写合法，只是共享同一个列表"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `[1, 2] [1, 2]`。Python 函数默认参数在 `def` 定义时只求值一次，未传参时会一直共享同一个默认列表。第 1 次调用追加 1，第 2 次追加 2，`list1` 与 `list2` 最终指向同一个列表 `[1, 2]`。易错点：容易误以为每次调用都会新建一个空列表。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q004",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "循环"
+    ],
+    "stem": "执行这段代码后，控制台打印的结果是？",
+    "code": "chars = \"python\"\nresult = \"\"\nfor c in chars:\n    if c == \"h\":\n        break\n    result += c\nelse:\n    result += \"!\"\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "pyth!",
+        "hint": "break 后 else 不执行，也没有 h"
+      },
+      {
+        "key": "B",
+        "text": "pyth",
+        "hint": "遇到 h 就 break，h 本身不拼入"
+      },
+      {
+        "key": "C",
+        "text": "pyt!",
+        "hint": "被 break 打断后，感叹号不会加上"
+      },
+      {
+        "key": "D",
+        "text": "pyt",
+        "hint": "遇到 h 就 break，else 不会执行"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `pyt`。遍历字符串 `\"python\"` 时，前三个字符依次拼入 `result`；遇到 `'h'` 时触发 `break` 跳出循环。在 Python 中，`for...else` 的 `else` 块只有在循环正常结束、未被 `break` 打断时才会执行。易错点：容易误以为 `else` 像 `finally` 一样总会执行。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q005",
+    "topic": "元组/引用",
+    "tags": [
+      "元组",
+      "可变对象与引用"
+    ],
+    "stem": "执行以下代码，最后一行打印的是？",
+    "code": "nums = (1, 2)\nref = nums\nnums += (3, 4)\nprint(ref, nums)",
+    "options": [
+      {
+        "key": "A",
+        "text": "(1, 2) (1, 2, 3, 4)",
+        "hint": "+= 生成新元组，ref 仍指向旧的"
+      },
+      {
+        "key": "B",
+        "text": "(1, 2, 3, 4) (1, 2, 3, 4)",
+        "hint": "ref 还指着原来的二元组"
+      },
+      {
+        "key": "C",
+        "text": "(1, 2) (1, 2)",
+        "hint": "nums 已经绑定成新的四元组"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "元组可以 +=，不会报 TypeError"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `(1, 2) (1, 2, 3, 4)`。变量 `ref` 和 `nums` 最初指向同一个元组；由于元组不可变，`nums += (3, 4)` 会拼接生成新元组并重新绑定给 `nums`，原元组不受影响，`ref` 仍指向 `(1, 2)`。易错点：容易误以为元组不可变会导致 `+=` 报错，或像列表那样影响别名。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q006",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "默认参数"
+    ],
+    "stem": "以下代码执行后，print 输出的内容是？",
+    "code": "n = 5\n\ndef calc(x, factor=n):\n    return x * factor\n\nn = 10\nprint(calc(2), calc(2, 3))",
+    "options": [
+      {
+        "key": "A",
+        "text": "20 6",
+        "hint": "默认值在 def 时已固定为 5"
+      },
+      {
+        "key": "B",
+        "text": "20 10",
+        "hint": "默认值是定义时的 5，第二次用的是 3"
+      },
+      {
+        "key": "C",
+        "text": "10 10",
+        "hint": "第二次传入了 3，2×3 应该是 6"
+      },
+      {
+        "key": "D",
+        "text": "10 6",
+        "hint": "默认 factor 在定义时就是 5"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `10 6`。函数默认参数在 `def` 定义时就已求值固定（`factor=5`），后续修改变量 `n = 10` 不会影响默认参数。调用 `calc(2)` 使用默认值计算得 10；调用 `calc(2, 3)` 传入实参 3 覆盖默认值计算得 6。易错点：容易误以为默认参数在调用时才动态查找变量。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q007",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "切片"
+    ],
+    "stem": "执行以下代码，终端输出的结果是？",
+    "code": "nums = [1, 2, 3, 4, 5]\nres = nums[4:1:-1]\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[5, 4, 3, 2]",
+        "hint": "结束下标 1 不含，没有元素 2"
+      },
+      {
+        "key": "B",
+        "text": "[5, 4, 3]",
+        "hint": "从下标 4 取到 1 之前，不含 1"
+      },
+      {
+        "key": "C",
+        "text": "[4, 3, 2]",
+        "hint": "起点是下标 4，会包含 5"
+      },
+      {
+        "key": "D",
+        "text": "[]",
+        "hint": "步长为负时，前大后小才有值"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `[5, 4, 3]`。切片 `nums[4:1:-1]` 中步长为 -1 表示反向提取，从索引 4 开始，到索引 1 结束。根据切片“含头不含尾”的规则，不包含索引 1 处的元素 2，因此依次取出索引 4、3、2 对应的 `[5, 4, 3]`。易错点：容易误以为结束索引包含在内，或误以为前大后小返回空列表。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q008",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "可变对象与引用"
+    ],
+    "stem": "执行以下代码后，最后一行打印的结果是？",
+    "code": "a = [1, 2]\nb = a\nc = a[:]\nb.append(3)\nprint(a, c)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[1, 2] [1, 2]",
+        "hint": "b 和 a 是同一列表，append 会改到 a"
+      },
+      {
+        "key": "B",
+        "text": "[1, 2, 3] [1, 2, 3]",
+        "hint": "c 是切片副本，不会跟着变长"
+      },
+      {
+        "key": "C",
+        "text": "[1, 2, 3] [1, 2]",
+        "hint": "b 与 a 同引用，c 是切片副本"
+      },
+      {
+        "key": "D",
+        "text": "[1, 2] [1, 2, 3]",
+        "hint": "改的是原列表，副本 c 不会变"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `[1, 2, 3] [1, 2]`。`b = a` 只是引用赋值，两者指向同一个列表；而 `c = a[:]` 通过切片创建了一个新浅拷贝。调用 `b.append(3)` 修改原列表，`a` 随之变为 `[1, 2, 3]`，而拷贝 `c` 不受影响仍为 `[1, 2]`。易错点：容易混淆引用赋值与切片浅拷贝的区别。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q009",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "下面的 Python 代码片段，执行后会输出什么？",
+    "code": "d = {}\nd[1] = \"apple\"\nd[True] = \"banana\"\nd[1.0] = \"cherry\"\nprint(len(d), d[1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "3 cherry",
+        "hint": "1、True 和 1.0 会被当成同一个键"
+      },
+      {
+        "key": "B",
+        "text": "3 apple",
+        "hint": "只剩 1 个键，值也被覆盖成 cherry"
+      },
+      {
+        "key": "C",
+        "text": "1 apple",
+        "hint": "键只有一个，值已经是 cherry"
+      },
+      {
+        "key": "D",
+        "text": "1 cherry",
+        "hint": "1、True、1.0 相等，算同一个键"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `1 cherry`。在 Python 里 `1 == True == 1.0`，而且三者的哈希值相同，字典会把它们当成同一个键。所以第二、三次赋值都只是在覆盖同一个键的值：键仍然保留最早放进去的 `1`，值最后变成 `\"cherry\"`，字典长度是 1。易错点：字典判断“是不是同一个键”看的是哈希值和 `==`，不是看类型是否相同。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q010",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "运行以下代码片段，最终输出的结果是？",
+    "code": "info = {\"name\": \"Alice\"}\nv1 = info.get(\"age\", 18)\nv2 = info.setdefault(\"age\", 20)\nprint(v1, v2, len(info))",
+    "options": [
+      {
+        "key": "A",
+        "text": "18 18 2",
+        "hint": "setdefault 写入并返回的是 20"
+      },
+      {
+        "key": "B",
+        "text": "18 20 2",
+        "hint": "get 只读取，setdefault 才会写入"
+      },
+      {
+        "key": "C",
+        "text": "18 20 1",
+        "hint": "setdefault 会把 age 写进字典"
+      },
+      {
+        "key": "D",
+        "text": "None 20 2",
+        "hint": "缺键时 get 返回 18，不是 None"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `18 20 2`。`dict.get(\"age\", 18)` 仅返回默认值 18，不会修改字典；而 `dict.setdefault(\"age\", 20)` 当键不存在时，除了返回默认值 20，还会将键值对写入字典，使字典长度变为 2。易错点：容易误以为 `get` 也会写入默认值，或混淆两者对字典的修改机制。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q011",
+    "topic": "作用域/变量",
+    "tags": [
+      "作用域",
+      "变量与赋值"
+    ],
+    "stem": "执行以下代码，程序运行的结果是？",
+    "code": "x = 10\n\ndef test():\n    print(x)\n    x = 20\n\ntest()",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：UnboundLocalError",
+        "hint": "函数里有赋值，x 被当成局部变量"
+      },
+      {
+        "key": "B",
+        "text": "10",
+        "hint": "print 时局部 x 还没赋值"
+      },
+      {
+        "key": "C",
+        "text": "20",
+        "hint": "还没执行到赋值就已经报错"
+      },
+      {
+        "key": "D",
+        "text": "报错：ValueError",
+        "hint": "抛出的是 UnboundLocalError"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，程序抛出 `UnboundLocalError`。函数体里有赋值语句 `x = 20`，Python 在编译这个函数时就把 `x` 认定为局部变量（不管赋值写在前还是写在后）。执行到 `print(x)` 时，这个局部变量还没有被赋值，于是报错，并不会退回去读取全局的 10。易错点：变量是不是局部的，是由函数里有没有赋值静态决定的；想改全局变量要先写 `global x`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q012",
+    "topic": "作用域/变量",
+    "tags": [
+      "作用域",
+      "推导式"
+    ],
+    "stem": "以下代码执行后，print 输出的内容是？",
+    "code": "funcs = [lambda: i for i in range(3)]\nresults = [f() for f in funcs]\nprint(results)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[0, 1, 2]",
+        "hint": "lambda 读的是循环结束后的 i"
+      },
+      {
+        "key": "B",
+        "text": "[0, 0, 0]",
+        "hint": "循环结束时 i 是 2，不是 0"
+      },
+      {
+        "key": "C",
+        "text": "[3, 3, 3]",
+        "hint": "range(3) 结束时 i 停在 2"
+      },
+      {
+        "key": "D",
+        "text": "[2, 2, 2]",
+        "hint": "闭包晚绑定，调用时 i 已是 2"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `[2, 2, 2]`。这是闭包晚绑定现象。列表推导式中的 lambda 没有在定义时立即捕获 `i` 的当前值，而是保存了变量引用。推导式循环结束后 `i` 的最终值为 2；随后依次调用函数时，读取到的都是当前值 2。易错点：容易误以为闭包会在循环定义时立即固定当时的值而误选 A。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q013",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "执行以下面向对象代码，控制台打印的结果是？",
+    "code": "class Player:\n    items = []\n\n    def __init__(self, name):\n        self.name = name\n\np1 = Player(\"A\")\np2 = Player(\"B\")\np1.items.append(\"sword\")\nprint(p1.items, p2.items)",
+    "options": [
+      {
+        "key": "A",
+        "text": "['sword'] []",
+        "hint": "items 是大家共享的类属性列表"
+      },
+      {
+        "key": "B",
+        "text": "[] ['sword']",
+        "hint": "改的是共享列表，p1 也能看见"
+      },
+      {
+        "key": "C",
+        "text": "['sword'] ['sword']",
+        "hint": "类属性列表被两个实例共享"
+      },
+      {
+        "key": "D",
+        "text": "报错：AttributeError",
+        "hint": "类上就有 items，不会报错"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `['sword'] ['sword']`。类定义中的 `items = []` 是类属性，被所有实例共享。`p1.items.append(\"sword\")` 是就地修改共享的类属性列表，并未给 `p1` 创建独立实例属性，因此 `p2.items` 也能看到修改结果。易错点：容易将可变的类属性误认为是各实例独立拥有的属性而误选 A。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q014",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "执行以下面向对象代码，最后一行打印的是？",
+    "code": "class A:\n    def get_name(self):\n        return \"A\"\n    def hello(self):\n        return \"hello \" + self.get_name()\n\nclass B(A):\n    def get_name(self):\n        return \"B\"\n\nobj = B()\nprint(obj.hello())",
+    "options": [
+      {
+        "key": "A",
+        "text": "hello A",
+        "hint": "self 是 B，会调用 B 重写的方法"
+      },
+      {
+        "key": "B",
+        "text": "hello B",
+        "hint": "self.get_name 走的是子类重写版"
+      },
+      {
+        "key": "C",
+        "text": "hello None",
+        "hint": "get_name 返回的是字符串 B"
+      },
+      {
+        "key": "D",
+        "text": "报错：AttributeError",
+        "hint": "B 继承了 hello，调用不会报错"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `hello B`。子类 `B` 继承父类 `A` 并重写了 `get_name`。调用继承来的 `obj.hello()` 时，方法内的 `self` 指向子类实例 `obj`；因此 `self.get_name()` 触发多态，调用子类重写的方法返回 `\"B\"`。易错点：容易误以为父类方法内只会调用父类自身定义的方法而误选 A。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q015",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理"
+    ],
+    "stem": "执行下面的异常处理代码，最终输出的结果是？",
+    "code": "steps = []\ntry:\n    steps.append(\"try\")\nexcept ValueError:\n    steps.append(\"except\")\nelse:\n    steps.append(\"else\")\nfinally:\n    steps.append(\"finally\")\nprint(\"-\".join(steps))",
+    "options": [
+      {
+        "key": "A",
+        "text": "try-else-finally",
+        "hint": "没异常：try、else、finally 都执行"
+      },
+      {
+        "key": "B",
+        "text": "try-finally",
+        "hint": "没有异常时，else 也会执行"
+      },
+      {
+        "key": "C",
+        "text": "try-except-finally",
+        "hint": "没有 ValueError，except 不会走"
+      },
+      {
+        "key": "D",
+        "text": "try-else",
+        "hint": "finally 无论有没有异常都会执行"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `try-else-finally`。在异常处理结构中：`try` 块正常执行未发生异常，跳过 `except`；`else` 块只有在 `try` 块没有发生异常时才会执行；而 `finally` 块无论是否有异常都必定执行。因此三者依次执行。易错点：容易忽略 `else` 块，误以为没有异常时只执行 `try` 和 `finally`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q016",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理"
+    ],
+    "stem": "执行以下包含 finally 的函数代码，控制台输出的是？",
+    "code": "def test():\n    try:\n        return \"A\"\n    except Exception:\n        return \"B\"\n    finally:\n        return \"C\"\n\nprint(test())",
+    "options": [
+      {
+        "key": "A",
+        "text": "A",
+        "hint": "finally 里的 return 会盖掉 A"
+      },
+      {
+        "key": "B",
+        "text": "B",
+        "hint": "没有异常，except 分支不会走"
+      },
+      {
+        "key": "C",
+        "text": "C",
+        "hint": "finally 返回 C，盖过 try 的 A"
+      },
+      {
+        "key": "D",
+        "text": "报错：SyntaxError",
+        "hint": "finally 里 return 不是语法错误"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `C`。`try` 里的 `return \"A\"` 会先把返回值暂存起来，但在函数真正退出之前，`finally` 一定会执行；`finally` 里又写了 `return \"C\"`，它会覆盖掉之前暂存的 \"A\"，所以最终返回 \"C\"。这里没有发生异常，`except` 分支根本不会执行。易错点：`try` 里的 `return` 不会跳过 `finally`。实际写代码时不要在 `finally` 里 `return`（会吞掉返回值和异常，Python 3.14 起还会给出 SyntaxWarning）。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q017",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串"
+    ],
+    "stem": "运行这段代码会发生什么？",
+    "code": "s = \"hello\"\ns[0] = \"H\"\nprint(s)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Hello",
+        "hint": "字符串不可变，不能按下标赋值"
+      },
+      {
+        "key": "B",
+        "text": "hello",
+        "hint": "赋值那行就报错，到不了print"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "字符串不支持按下标赋值"
+      },
+      {
+        "key": "D",
+        "text": "报错：IndexError",
+        "hint": "下标0存在，报的是TypeError"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，程序抛出 `TypeError`。Python 的字符串是不可变类型，不支持通过下标赋值来修改其中的字符。执行 `s[0] = \"H\"` 时会立刻抛出 `TypeError`，程序不会执行到 `print`。如果想得到 `\"Hello\"`，需要用 `s = \"H\" + s[1:]` 拼接出一个新字符串。易错点：容易误以为字符串和列表一样可以按下标修改。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q018",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "字符串方法"
+    ],
+    "stem": "以下代码执行后，print 输出的内容是？",
+    "code": "s = \"hello\"\ns.replace(\"l\", \"L\")\nprint(s)",
+    "options": [
+      {
+        "key": "A",
+        "text": "hello",
+        "hint": "replace返回新串，原串不变"
+      },
+      {
+        "key": "B",
+        "text": "heLLo",
+        "hint": "没接住返回值，s还是原来的"
+      },
+      {
+        "key": "C",
+        "text": "heLlo",
+        "hint": "replace默认替换全部，但没接住"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "replace用法合法，不会报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `hello`。`str.replace()` 不会修改原字符串，而是返回一个新的字符串。这里调用了 `s.replace(\"l\", \"L\")` 却没有把返回值赋回给 `s`，所以 `s` 仍然是原来的 `\"hello\"`。正确写法是 `s = s.replace(\"l\", \"L\")`。易错点：容易误以为 `replace` 会就地修改字符串，忘记字符串是不可变的。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q019",
+    "topic": "字符串/循环",
+    "tags": [
+      "循环",
+      "range"
+    ],
+    "stem": "执行以下嵌套循环代码，最后一行打印的是？",
+    "code": "for i in range(3):\n    for j in range(3):\n        if j == 1:\n            break\nprint(i, j)",
+    "options": [
+      {
+        "key": "A",
+        "text": "0 1",
+        "hint": "外层循环会继续，i最终是2"
+      },
+      {
+        "key": "B",
+        "text": "2 0",
+        "hint": "break时j已经是1，不是0"
+      },
+      {
+        "key": "C",
+        "text": "0 0",
+        "hint": "外层循环不会被break打断"
+      },
+      {
+        "key": "D",
+        "text": "2 1",
+        "hint": "break只跳出内层，外层走完"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `2 1`。内层循环每次在 `j == 1` 时执行 `break`，但 `break` 只会跳出内层循环，外层循环继续正常执行。外层循环走完三轮后 `i` 停在 2；每一轮内层循环都在 `j == 1` 时跳出，`j` 停在 1。循环结束后变量 `i` 和 `j` 仍然存在。易错点：容易误以为 `break` 会跳出所有层循环。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q020",
+    "topic": "元组/引用",
+    "tags": [
+      "元组"
+    ],
+    "stem": "以下代码执行后，print 输出的是？",
+    "code": "t = (1)\nprint(type(t).__name__)",
+    "options": [
+      {
+        "key": "A",
+        "text": "tuple",
+        "hint": "没有逗号，括号只是分组运算"
+      },
+      {
+        "key": "B",
+        "text": "int",
+        "hint": "(1)是整数，(1,)才是元组"
+      },
+      {
+        "key": "C",
+        "text": "list",
+        "hint": "圆括号不会创建列表"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "这是合法表达式，不会报错"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `int`。在 Python 中，`(1)` 只是一个加了圆括号的整数表达式，等价于 `1`。要创建单元素元组，必须在元素后面加逗号：`(1,)`。这是因为圆括号在 Python 中既可以表示元组，也可以表示数学分组，而逗号才是元组的关键标志。易错点：容易误以为加了圆括号就是元组。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q021",
+    "topic": "元组/引用",
+    "tags": [
+      "列表",
+      "可变对象与引用"
+    ],
+    "stem": "执行这段代码后，控制台打印的结果是？",
+    "code": "grid = [[0] * 3] * 2\ngrid[0][1] = 5\nprint(grid)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[[0, 5, 0], [0, 0, 0]]",
+        "hint": "两行是同一列表，改一行都变"
+      },
+      {
+        "key": "B",
+        "text": "[[5, 0, 0], [5, 0, 0]]",
+        "hint": "改的是下标1位置，不是下标0"
+      },
+      {
+        "key": "C",
+        "text": "[[0, 5, 0], [0, 5, 0]]",
+        "hint": "*2复制的是引用，两行共享"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "列表支持下标赋值，不会报错"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `[[0, 5, 0], [0, 5, 0]]`。`[[0] * 3] * 2` 先创建一个 `[0, 0, 0]` 列表，然后 `* 2` 并不是复制两份独立列表，而是让外层列表的两个元素都指向同一个内部列表。修改 `grid[0][1] = 5` 时，`grid[1]` 也跟着变了，因为它们是同一个对象。易错点：容易误以为 `* 2` 会创建两个独立的列表副本。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q022",
+    "topic": "元组/引用",
+    "tags": [
+      "列表",
+      "可变对象与引用"
+    ],
+    "stem": "执行以下代码，print 的结果是？",
+    "code": "a = [1, 2, 3]\nb = [1, 2, 3]\nprint(a == b, a is b)",
+    "options": [
+      {
+        "key": "A",
+        "text": "True False",
+        "hint": "值相等但不是同一个对象"
+      },
+      {
+        "key": "B",
+        "text": "True True",
+        "hint": "两个列表独立创建，不是同一个"
+      },
+      {
+        "key": "C",
+        "text": "False False",
+        "hint": "内容一样，==比较值返回True"
+      },
+      {
+        "key": "D",
+        "text": "False True",
+        "hint": "值相等时==返回True"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `True False`。`==` 比较的是两个对象的值是否相等，`a` 和 `b` 内容相同所以返回 `True`。`is` 比较的是两个变量是否指向内存中的同一个对象，这里 `a` 和 `b` 是分别创建的两个列表，虽然内容一样但不是同一个对象，所以返回 `False`。易错点：容易混淆 `==`（值相等）和 `is`（同一对象）的区别。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q023",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "None与真假值"
+    ],
+    "stem": "执行以下代码后，最后一行 print 的结果是？",
+    "code": "def greet(name):\n    name.upper()\n\nresult = greet(\"Alice\")\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "None",
+        "hint": "没有return，函数默认返回None"
+      },
+      {
+        "key": "B",
+        "text": "ALICE",
+        "hint": "函数没有return，返回的是None"
+      },
+      {
+        "key": "C",
+        "text": "Alice",
+        "hint": "返回值是None，不是传入的参数"
+      },
+      {
+        "key": "D",
+        "text": "报错：NameError",
+        "hint": "result有值None，不会报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `None`。函数 `greet` 内部调用了 `name.upper()`，但没有 `return` 语句。在 Python 中，函数如果没有显式 `return`，会默认返回 `None`。所以 `result = greet(\"Alice\")` 之后 `result` 的值是 `None`，`print(result)` 输出 `None`。易错点：容易忘记没有 `return` 的函数返回的不是最后一个表达式的值，而是 `None`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q024",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "默认参数"
+    ],
+    "stem": "运行以下代码，最终输出的结果是？",
+    "code": "def add(a, b=1, c=2):\n    return a + b + c\n\nprint(add(10, c=5))",
+    "options": [
+      {
+        "key": "A",
+        "text": "13",
+        "hint": "c传了5，不再用默认值2"
+      },
+      {
+        "key": "B",
+        "text": "15",
+        "hint": "b没传会用默认值1，不是0"
+      },
+      {
+        "key": "C",
+        "text": "16",
+        "hint": "跳过b用关键字指定c，b还是1"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "跳过b直接给c传值是合法的"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `16`。调用 `add(10, c=5)` 时，`a` 接收位置参数 10，`b` 没有传入所以使用默认值 1，`c` 通过关键字参数被指定为 5。所以 `a + b + c` 等于 `10 + 1 + 5 = 16`。Python 允许跳过有默认值的参数，直接用关键字指定后面的参数。易错点：容易误以为跳过 `b` 直接给 `c` 赋值会报错，或者误以为 `c=5` 会赋给 `b`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q025",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "可变对象与引用"
+    ],
+    "stem": "执行这段代码后，控制台打印的结果是？",
+    "code": "def modify(lst):\n    lst.append(4)\n    lst = [0]\n\nnums = [1, 2, 3]\nmodify(nums)\nprint(nums)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[0]",
+        "hint": "赋值只改了局部变量，外面不变"
+      },
+      {
+        "key": "B",
+        "text": "[1, 2, 3, 4]",
+        "hint": "append改了原列表，赋值改局部名"
+      },
+      {
+        "key": "C",
+        "text": "[1, 2, 3]",
+        "hint": "append已经修改了原列表"
+      },
+      {
+        "key": "D",
+        "text": "报错：UnboundLocalError",
+        "hint": "lst是参数，不会报此错"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `[1, 2, 3, 4]`。函数参数 `lst` 和外部 `nums` 最初指向同一个列表。`lst.append(4)` 就地修改了这个列表，外部也能看到变化。但 `lst = [0]` 只是让局部变量 `lst` 指向了一个新列表，并不会影响外部的 `nums`。易错点：容易混淆就地修改（如 `append`）和重新赋值——前者影响外部，后者只改局部变量。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q026",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "切片"
+    ],
+    "stem": "执行以下代码后，控制台输出的结果是？",
+    "code": "a = [1, 2, 3, 4, 5]\nprint(a[10:])",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：IndexError",
+        "hint": "切片越界不报错，返回空列表"
+      },
+      {
+        "key": "B",
+        "text": "[5]",
+        "hint": "超出范围的切片返回空列表"
+      },
+      {
+        "key": "C",
+        "text": "None",
+        "hint": "切片返回列表，不是None"
+      },
+      {
+        "key": "D",
+        "text": "[]",
+        "hint": "切片越界不报错，返回空列表"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `[]`。Python 的切片操作不会因为下标越界而报错。当起始位置超出列表长度时，切片会返回一个空列表。这和直接用下标访问不同：`a[10]` 会抛出 `IndexError`，但 `a[10:]` 会安全地返回 `[]`。易错点：容易把切片和下标访问的越界行为搞混。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q027",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "列表方法"
+    ],
+    "stem": "执行这段代码，最后一行打印的是？",
+    "code": "nums = [3, 1, 4, 1, 5]\nresult = nums.sort()\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[1, 1, 3, 4, 5]",
+        "hint": "sort()返回None，不是排好的列表"
+      },
+      {
+        "key": "B",
+        "text": "None",
+        "hint": "sort()就地排序，返回值是None"
+      },
+      {
+        "key": "C",
+        "text": "[3, 1, 4, 1, 5]",
+        "hint": "sort()确实会排序，但返回None"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "sort()可以正常调用，不报错"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `None`。列表的 `sort()` 方法是就地排序，它会修改原列表但返回 `None`。所以 `result = nums.sort()` 之后，`nums` 变成了 `[1, 1, 3, 4, 5]`，但 `result` 是 `None`。如果想得到排好序的新列表，应该用 `sorted(nums)`。易错点：容易误以为 `sort()` 会返回排好序的列表。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q028",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "列表方法"
+    ],
+    "stem": "运行以下代码，print 的结果是？",
+    "code": "a = [1, 2, 3]\na.append([4, 5])\nprint(len(a), a[-1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "5 5",
+        "hint": "append把整个列表当一个元素加"
+      },
+      {
+        "key": "B",
+        "text": "4 5",
+        "hint": "a[-1]是[4,5]，不是5"
+      },
+      {
+        "key": "C",
+        "text": "4 [4, 5]",
+        "hint": "append加整个列表作为一个元素"
+      },
+      {
+        "key": "D",
+        "text": "5 [4, 5]",
+        "hint": "append只加一个元素，长度变4"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `4 [4, 5]`。`append` 把参数作为一个整体追加到列表末尾，所以 `a` 变成 `[1, 2, 3, [4, 5]]`，长度为 4，最后一个元素是 `[4, 5]`。如果想把 4 和 5 分别加入列表，应该用 `extend([4, 5])`，这样长度才会变成 5。易错点：容易混淆 `append` 和 `extend` 的区别。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q029",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "运行这段代码会发生什么？",
+    "code": "d = {}\nd[[1, 2]] = \"hello\"\nprint(d)",
+    "options": [
+      {
+        "key": "A",
+        "text": "{[1, 2]: 'hello'}",
+        "hint": "列表不可哈希，不能当字典键"
+      },
+      {
+        "key": "B",
+        "text": "报错：KeyError",
+        "hint": "不是KeyError是TypeError"
+      },
+      {
+        "key": "C",
+        "text": "{}",
+        "hint": "赋值那行就会报错"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "列表可变不可哈希，不能做键"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，程序抛出 `TypeError`。字典的键必须是可哈希的类型。列表是可变类型，不可哈希，所以不能用作字典的键。执行 `d[[1, 2]] = \"hello\"` 时会抛出 `TypeError`。如果需要用类似结构做键，可以改用元组 `d[(1, 2)] = \"hello\"`。易错点：字典的键必须是可哈希的，列表、字典这类可变容器都不能当键。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q030",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "以下代码执行后，print 的结果是？",
+    "code": "d = {\"a\": 1, \"b\": 2, \"c\": 3}\nprint(\"b\" in d, 2 in d)",
+    "options": [
+      {
+        "key": "A",
+        "text": "True False",
+        "hint": "in判断的是键，2不是键"
+      },
+      {
+        "key": "B",
+        "text": "True True",
+        "hint": "in只查键不查值，2不是键"
+      },
+      {
+        "key": "C",
+        "text": "False True",
+        "hint": "\"b\"是键，in能找到它"
+      },
+      {
+        "key": "D",
+        "text": "False False",
+        "hint": "\"b\"是键，in能找到它"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `True False`。字典的 `in` 运算符判断的是键是否存在，而不是值。`\"b\" in d` 检查 `\"b\"` 是否是字典的键，结果是 `True`。`2 in d` 检查 `2` 是否是键，字典的键是 `\"a\"`、`\"b\"`、`\"c\"`，没有 `2`，所以是 `False`。如果要判断值是否存在，应该用 `2 in d.values()`。易错点：容易误以为 `in` 同时检查键和值。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q031",
+    "topic": "字典",
+    "tags": [
+      "字典"
+    ],
+    "stem": "执行以下代码，最后一行打印的结果是？",
+    "code": "d = {\"x\": 1, \"y\": 2}\nd.update({\"y\": 99, \"z\": 3})\nprint(d[\"y\"], len(d))",
+    "options": [
+      {
+        "key": "A",
+        "text": "2 3",
+        "hint": "update会把y覆盖成99"
+      },
+      {
+        "key": "B",
+        "text": "99 3",
+        "hint": "update覆盖已有键，新增没有的"
+      },
+      {
+        "key": "C",
+        "text": "99 4",
+        "hint": "y被覆盖不是新增，只有3个键"
+      },
+      {
+        "key": "D",
+        "text": "2 4",
+        "hint": "update会把y的值改成99"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `99 3`。`dict.update()` 会用新字典中的键值对更新原字典：如果键已存在就覆盖值，如果键不存在就新增。这里 `\"y\"` 已存在，值从 2 被覆盖为 99；`\"z\"` 不存在，被新增进去。最终字典有 `\"x\"`、`\"y\"`、`\"z\"` 三个键，长度为 3。易错点：容易误以为 `update` 会保留旧值或把同名键都保留下来。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q032",
+    "topic": "作用域/变量",
+    "tags": [
+      "作用域"
+    ],
+    "stem": "执行以下代码后，print 输出的内容是？",
+    "code": "x = 1\ndef outer():\n    x = 10\n    def inner():\n        nonlocal x\n        x = 20\n    inner()\n    print(x)\nouter()",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "nonlocal改的是outer里的x"
+      },
+      {
+        "key": "B",
+        "text": "20",
+        "hint": "nonlocal把outer的x改成20"
+      },
+      {
+        "key": "C",
+        "text": "10",
+        "hint": "inner通过nonlocal改了x"
+      },
+      {
+        "key": "D",
+        "text": "报错：SyntaxError",
+        "hint": "nonlocal的用法完全正确"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `20`。`nonlocal x` 声明 `inner` 中的 `x` 指向外层函数 `outer` 中的局部变量 `x`，而不是创建新的局部变量。执行 `inner()` 后，`outer` 中的 `x` 被修改为 20，所以 `print(x)` 输出 20。注意 `nonlocal` 不会影响全局变量，模块级的 `x = 1` 不受影响。易错点：容易混淆 `nonlocal` 和 `global` 的作用范围。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q033",
+    "topic": "作用域/变量",
+    "tags": [
+      "循环",
+      "变量与赋值"
+    ],
+    "stem": "执行以下代码后，控制台打印的结果是？",
+    "code": "for i in range(5):\n    pass\nprint(i)",
+    "options": [
+      {
+        "key": "A",
+        "text": "0",
+        "hint": "循环结束后i停在最后的值"
+      },
+      {
+        "key": "B",
+        "text": "5",
+        "hint": "range(5)到4就停了"
+      },
+      {
+        "key": "C",
+        "text": "报错：NameError",
+        "hint": "for变量在循环后仍可用"
+      },
+      {
+        "key": "D",
+        "text": "4",
+        "hint": "i最后一次取到的值是4"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `4`。在 Python 中，`for` 循环的循环变量在循环结束后仍然存在，并且保持最后一次迭代时的值。`range(5)` 产生 0 到 4，循环结束后 `i` 的值停在 4。这和 C/Java 等语言不同，那些语言的循环变量在循环外不可用。易错点：容易误以为 `i` 在循环结束后就不存在了，或者误以为 `range(5)` 的最后一个值是 5。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q034",
+    "topic": "作用域/变量",
+    "tags": [
+      "作用域",
+      "推导式"
+    ],
+    "stem": "运行这段代码，print 的结果是？",
+    "code": "x = \"before\"\nresult = [x for x in range(3)]\nprint(x)",
+    "options": [
+      {
+        "key": "A",
+        "text": "before",
+        "hint": "列表推导式变量不会泄漏到外面"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "推导式里的x不影响外面的x"
+      },
+      {
+        "key": "C",
+        "text": "[0, 1, 2]",
+        "hint": "print的是x，不是result"
+      },
+      {
+        "key": "D",
+        "text": "报错：NameError",
+        "hint": "外面的x一直存在，不会报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `before`。在 Python 3 中，列表推导式有自己独立的作用域，推导式里的循环变量 `x` 不会覆盖外部同名变量。所以虽然推导式里 `x` 遍历了 0、1、2，外面的 `x` 仍然是 `\"before\"`。这和 Python 2 不同，Python 2 的列表推导式会把循环变量泄漏到外部。易错点：容易误以为推导式里的 `x` 和外面的 `x` 是同一个变量。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q035",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "执行以下代码后，print 的结果是？",
+    "code": "class Dog:\n    count = 0\n    def __init__(self, name):\n        self.name = name\n        Dog.count += 1\n\na = Dog(\"A\")\nb = Dog(\"B\")\nprint(a.count, Dog.count)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 2",
+        "hint": "Dog.count是类变量，a也读到它"
+      },
+      {
+        "key": "B",
+        "text": "0 2",
+        "hint": "a.count没被遮蔽，能读到类变量"
+      },
+      {
+        "key": "C",
+        "text": "1 1",
+        "hint": "创建了两个实例，计数器是2"
+      },
+      {
+        "key": "D",
+        "text": "2 2",
+        "hint": "类变量计数，实例也读到类变量"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `2 2`。每次创建实例时 `Dog.count += 1` 修改的是类变量 `count`，两次之后 `Dog.count` 变成 2。由于没有给实例单独赋值 `a.count = ...`，通过 `a.count` 访问时会沿着查找链找到类变量，所以 `a.count` 和 `Dog.count` 都是 2。易错点：容易误以为实例只能看到自己创建时的计数值。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q036",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "运行以下代码，控制台输出的是？",
+    "code": "class Cat:\n    def speak():\n        return \"meow\"\n\nc = Cat()\nprint(c.speak())",
+    "options": [
+      {
+        "key": "A",
+        "text": "meow",
+        "hint": "实例调用会自动传入self"
+      },
+      {
+        "key": "B",
+        "text": "None",
+        "hint": "还没走到return就报错了"
+      },
+      {
+        "key": "C",
+        "text": "报错：TypeError",
+        "hint": "方法没写self，多传了一个参数"
+      },
+      {
+        "key": "D",
+        "text": "报错：AttributeError",
+        "hint": "Cat有speak，不报此错"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，程序抛出 `TypeError`。定义 `speak()` 时没有写 `self` 参数，但通过实例 `c.speak()` 调用时，Python 会自动把实例 `c` 作为第一个参数传入。`speak` 不接受任何参数，却收到了一个，所以报 `TypeError`。正确写法是 `def speak(self):`。易错点：容易忘记实例方法的第一个参数必须是 `self`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q037",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象"
+    ],
+    "stem": "执行以下代码后，print 输出的是？",
+    "code": "class Box:\n    def __init__(self, val):\n        self.val = val\n    def __str__(self):\n        return \"Box:\" + str(self.val)\n\nb = Box(42)\nprint(b)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Box:42",
+        "hint": "__str__决定print的输出内容"
+      },
+      {
+        "key": "B",
+        "text": "42",
+        "hint": "print走__str__，不是打val"
+      },
+      {
+        "key": "C",
+        "text": "Box(42)",
+        "hint": "输出由__str__的返回值决定"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "print会正确调用__str__"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `Box:42`。当使用 `print` 打印一个对象时，Python 会调用该对象的 `__str__` 方法来获取字符串表示。这里 `Box` 类定义了 `__str__`，返回 `\"Box:\" + str(self.val)`，所以 `print(b)` 输出 `Box:42`。如果没有定义 `__str__`，`print` 会输出类似 `<__main__.Box object at 0x...>` 的默认表示。易错点：容易忘记 `print` 会自动调用 `__str__`，以为会输出对象的默认地址表示。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q038",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理"
+    ],
+    "stem": "执行这段代码后，控制台打印的结果是？",
+    "code": "try:\n    x = int(\"abc\")\n    print(\"ok\")\nexcept ValueError:\n    print(\"caught\")",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：ValueError",
+        "hint": "except已经捕获了这个异常"
+      },
+      {
+        "key": "B",
+        "text": "报错：TypeError",
+        "hint": "int()转换失败是ValueError"
+      },
+      {
+        "key": "C",
+        "text": "caught",
+        "hint": "异常后跳到except，不回try"
+      },
+      {
+        "key": "D",
+        "text": "ok",
+        "hint": "int(\"abc\")会抛异常，到不了ok"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `caught`。`int(\"abc\")` 无法把非数字字符串转成整数，会抛出 `ValueError`。异常发生后，`try` 块中剩余的代码（`print(\"ok\")`）不会执行，程序直接跳到 `except ValueError` 分支，执行 `print(\"caught\")`。易错点：容易误以为异常被捕获后还会回到 `try` 里继续执行后面的代码。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q039",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "类与对象"
+    ],
+    "stem": "执行以下代码，输出的结果是？",
+    "code": "class MyErr(ValueError):\n    pass\n\ntry:\n    raise MyErr(\"oops\")\nexcept ValueError:\n    print(\"caught\")",
+    "options": [
+      {
+        "key": "A",
+        "text": "报错：MyErr",
+        "hint": "它是ValueError子类，能被捕获"
+      },
+      {
+        "key": "B",
+        "text": "caught",
+        "hint": "父类except能捕获子类异常"
+      },
+      {
+        "key": "C",
+        "text": "报错：ValueError",
+        "hint": "except已经成功捕获了它"
+      },
+      {
+        "key": "D",
+        "text": "报错：NameError",
+        "hint": "MyErr已定义，不报NameError"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `caught`。`MyErr` 继承自 `ValueError`，是它的子类。`except ValueError` 不仅能捕获 `ValueError` 本身，还能捕获它的所有子类。所以 `raise MyErr(\"oops\")` 抛出的异常会被 `except ValueError` 成功捕获，执行 `print(\"caught\")`。易错点：容易误以为 `except` 只能精确匹配异常类，不知道父类可以捕获子类异常。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q040",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理"
+    ],
+    "stem": "运行这段代码，最终输出的内容是？",
+    "code": "def f():\n    try:\n        return 1\n    except:\n        return 2\n    else:\n        return 3\n\nprint(f())",
+    "options": [
+      {
+        "key": "A",
+        "text": "3",
+        "hint": "try里有return，else不会执行"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "没有异常，except不会执行"
+      },
+      {
+        "key": "C",
+        "text": "报错：SyntaxError",
+        "hint": "语法正确，只是else不会执行"
+      },
+      {
+        "key": "D",
+        "text": "1",
+        "hint": "try里直接return，跳过else"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `1`。`try` 块中执行 `return 1` 后函数就准备返回了。虽然没有异常发生，按理 `else` 块会在 `try` 正常结束后执行，但这里 `try` 里的 `return` 让控制流直接离开，`else` 块来不及执行。没有 `finally` 来拦截返回值，所以函数直接返回 1。易错点：容易误以为 `else` 在没有异常时总会执行，但 `try` 里的 `return` 会跳过 `else`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q041",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "切片"
+    ],
+    "stem": "运行以下代码，控制台打印的结果是？",
+    "code": "text = \"Python\"\nprint(text[1:4])",
+    "options": [
+      {
+        "key": "A",
+        "text": "yth",
+        "hint": "切片左闭右开，包含下标1到3"
+      },
+      {
+        "key": "B",
+        "text": "ytho",
+        "hint": "切片不包含下标4，没有字母o"
+      },
+      {
+        "key": "C",
+        "text": "pyth",
+        "hint": "下标从0开始，1对应字母y"
+      },
+      {
+        "key": "D",
+        "text": "Pyt",
+        "hint": "下标1是y不是P，且右端开区间"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `yth`。字符串切片 `[start:stop]` 遵循“左闭右开”原则，即包含起始下标 `start`，但不包含结束下标 `stop`。在代码中，`text = \"Python\"`，下标 0 对应 `'P'`、1 对应 `'y'`、2 对应 `'t'`、3 对应 `'h'`、4 对应 `'o'`。切片 `text[1:4]` 取出下标 1、2、3 对应的字符，拼接后得到 `\"yth\"`。易错点：容易误以为结束下标 4 对应的字符 `'o'` 也会被包含在内。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q042",
+    "topic": "字符串/循环",
+    "tags": [
+      "循环",
+      "range"
+    ],
+    "stem": "执行下列代码后，print 输出的内容是？",
+    "code": "result = \"\"\nfor i in range(1, 7, 2):\n    result += str(i)\nprint(result)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1357",
+        "hint": "range左闭右开，不会取到7"
+      },
+      {
+        "key": "B",
+        "text": "135",
+        "hint": "步长为2且不含7，依次取1、3、5"
+      },
+      {
+        "key": "C",
+        "text": "123456",
+        "hint": "指定了步长2，每次增加2而不是1"
+      },
+      {
+        "key": "D",
+        "text": "13",
+        "hint": "5小于7，循环还会执行一轮"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `135`。`range(start, stop, step)` 生成整数序列，起始值为 `start`，每次递增 `step`，且不包含 `stop`。这里 `range(1, 7, 2)` 生成的数字依次为 1、3、5（下一个数 7 已达到结束边界，不被包含）。循环中每次将数字转为字符串拼接到 `result` 末尾，最终得到 `\"135\"`。易错点：容易误认为 `range` 的结束值会被包含在内，或者忽略了第三个参数步长。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q043",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "字符串方法"
+    ],
+    "stem": "下面这段代码的输出结果是？",
+    "code": "text = \"hello\"\nprint(text.find(\"w\"))",
+    "options": [
+      {
+        "key": "A",
+        "text": "False",
+        "hint": "find返回整数下标而非布尔值"
+      },
+      {
+        "key": "B",
+        "text": "报错：ValueError",
+        "hint": "找不到时find返回-1不报错"
+      },
+      {
+        "key": "C",
+        "text": "-1",
+        "hint": "子串不存在时，find返回-1"
+      },
+      {
+        "key": "D",
+        "text": "0",
+        "hint": "0表示在开头找到，不是未找到"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `-1`。在 Python 中，`str.find()` 方法用于在字符串中查找子串首次出现的位置。如果子串存在，返回其第一个字符对应的索引下标；如果子串不存在，则返回 `-1`，而不会抛出异常。在本题中，`\"w\"` 并不在 `\"hello\"` 中，因此返回 `-1`。易错点：容易将 `find()` 与 `index()` 混淆，`index()` 在找不到子串时会抛出 `ValueError`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q044",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "字符串方法"
+    ],
+    "stem": "运行这段代码，终端会显示什么？",
+    "code": "words = [\"cat\", \"dog\", \"bird\"]\nprint(\"-\".join(words))",
+    "options": [
+      {
+        "key": "A",
+        "text": "cat-dog-bird-",
+        "hint": "join只在元素间插入，末尾不加"
+      },
+      {
+        "key": "B",
+        "text": "-cat-dog-bird-",
+        "hint": "两端不会添加连接符"
+      },
+      {
+        "key": "C",
+        "text": "catdogbird",
+        "hint": "连接符-会插入在每个元素之间"
+      },
+      {
+        "key": "D",
+        "text": "cat-dog-bird",
+        "hint": "连接符只插入在相邻元素之间"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `cat-dog-bird`。`str.join(iterable)` 方法通过指定的分隔符将可迭代对象中的元素拼接为一个新字符串。分隔符只会插入在相邻的元素之间，序列的开头和结尾不会添加该分隔符。因此 `\"-\".join([\"cat\", \"dog\", \"bird\"])` 得到的结果是 `\"cat-dog-bird\"`。易错点：初学者常误以为每个元素后面都会跟着一个分隔符，导致误选末尾带短横线的选项。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q045",
+    "topic": "字符串/循环",
+    "tags": [
+      "循环",
+      "enumerate"
+    ],
+    "stem": "执行以下代码，最终输出的内容是哪一项？",
+    "code": "res = \"\"\nfor i, ch in enumerate(\"abc\", start=1):\n    res += str(i) + ch\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1a2b3c",
+        "hint": "start=1让计数从1开始累加"
+      },
+      {
+        "key": "B",
+        "text": "0a1b2c",
+        "hint": "指定了start=1，序号从1开始"
+      },
+      {
+        "key": "C",
+        "text": "1b2c",
+        "hint": "start改的是序号，不是跳过首字符"
+      },
+      {
+        "key": "D",
+        "text": "123",
+        "hint": "循环拼接了序号与字符两部分"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `1a2b3c`。`enumerate(iterable, start=0)` 用于同时获取可迭代对象的索引和元素，默认起始索引为 0。当传入 `start=1` 时，计数器从 1 开始递增，但遍历仍然从可迭代对象的第一个元素开始。因此三轮循环分别拿到 `(1, 'a')`、`(2, 'b')`、`(3, 'c')`，拼接后输出 `1a2b3c`。易错点：容易误以为默认从 0 开始而忽略 `start=1`，或者误以为 `start=1` 是从第二个元素开始切片。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q046",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支"
+    ],
+    "stem": "运行以下代码，控制台会输出什么？",
+    "code": "score = 85\nif score >= 60:\n    grade = \"Pass\"\nelif score >= 80:\n    grade = \"Good\"\nelse:\n    grade = \"Fail\"\nprint(grade)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Pass",
+        "hint": "命中首个真分支即跳出，不看elif"
+      },
+      {
+        "key": "B",
+        "text": "Good",
+        "hint": "已先满足首个if，不再走elif"
+      },
+      {
+        "key": "C",
+        "text": "Fail",
+        "hint": "85大于60，不会执行else"
+      },
+      {
+        "key": "D",
+        "text": "Pass Good",
+        "hint": "if与elif互斥，不会同时输出"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `Pass`。在 `if-elif-else` 结构中，Python 会自上而下依次判断各个条件，一旦某个分支条件为真，执行其代码块后便立即跳出整个分支结构，不再评估后续的 `elif` 或 `else`。虽然 `score = 85` 也满足 `score >= 80`，但因为前面的 `score >= 60` 已经成立并执行，所以 `grade` 的值为 `\"Pass\"`。易错点：初学者容易认为条件都会被检查或命中更具体的条件，实际只会执行最先满足的分支。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q047",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "运算符与表达式"
+    ],
+    "stem": "执行下列代码后，终端打印的结果是？",
+    "code": "x = 5\nif 1 < x < 5:\n    res = \"open\"\nelif 1 < x <= 5:\n    res = \"closed\"\nelse:\n    res = \"out\"\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "open",
+        "hint": "5不小于5，首个分支条件为假"
+      },
+      {
+        "key": "B",
+        "text": "closed",
+        "hint": "链式比较两边皆成立，进入elif"
+      },
+      {
+        "key": "C",
+        "text": "out",
+        "hint": "elif条件成立，不会进入else"
+      },
+      {
+        "key": "D",
+        "text": "报错：SyntaxError",
+        "hint": "Python支持链式比较，语法合法"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `closed`。Python 支持链式比较，`1 < x < 5` 等价于 `1 < x and x < 5`。当 `x = 5` 时，由于 `5 < 5` 为假，首个 `if` 分支不成立；随后的 `elif 1 < x <= 5` 等价于 `1 < x and x <= 5`，两项比较均为真，因此执行该分支，`res` 被赋值为 `\"closed\"`。易错点：链式比较中容易漏看严格小于 `<` 与小于等于 `<=` 的边界区别。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q048",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "运算符与表达式"
+    ],
+    "stem": "下面这段代码的输出结果是？",
+    "code": "a = 0\nb = 3\nval = a or b\nif val:\n    print(val)\nelse:\n    print(\"none\")",
+    "options": [
+      {
+        "key": "A",
+        "text": "True",
+        "hint": "or返回操作数的值，不是布尔值"
+      },
+      {
+        "key": "B",
+        "text": "0",
+        "hint": "左边为0为假，or会求值并返回右边"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "0为假故or返回3，并在if中为真"
+      },
+      {
+        "key": "D",
+        "text": "none",
+        "hint": "val值为3为真，不会进入else"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `3`。在 Python 中，逻辑运算符 `or` 具有短路特性，并且它返回的是决定逻辑结果的操作数本身，而不是布尔值 `True` 或 `False`。表达式 `0 or 3` 中，左侧的 `0` 为假，因而继续求值右侧的 `3` 并将其作为整个表达式的返回值，所以 `val` 为 `3`。在随后的 `if val:` 中，非零数字 `3` 被判定为真，执行 `print(val)` 输出 `3`。易错点：很多初学者误以为逻辑运算 `or` 一定会返回布尔值 `True`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q049",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "None与真假值"
+    ],
+    "stem": "执行以下代码，print 输出的内容是？",
+    "code": "a = []\nb = \"0\"\nif a:\n    msg = \"list\"\nelif b:\n    msg = \"string\"\nelse:\n    msg = \"empty\"\nprint(msg)",
+    "options": [
+      {
+        "key": "A",
+        "text": "list",
+        "hint": "空列表在布尔判断中被视为假"
+      },
+      {
+        "key": "B",
+        "text": "empty",
+        "hint": "非空字符串为真，不会走else"
+      },
+      {
+        "key": "C",
+        "text": "0",
+        "hint": "print输出的是msg变量的值"
+      },
+      {
+        "key": "D",
+        "text": "string",
+        "hint": "空列表为假，非空字符串0为真"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `string`。在 Python 的条件判断中，容器和对象的“真假值”规则是：空容器（如空列表 `[]`、空字符串 `\"\"`）以及数字 `0`、`None` 会被当作 `False`；而非空对象会被当作 `True`。因此，`if a:` 中空列表 `[]` 为假，跳过该分支；而在 `elif b:` 中，`b` 是包含字符 `'0'` 的非空字符串，其布尔值为真，因此执行分支将 `msg` 赋值为 `\"string\"`。易错点：初学者容易将字符串 `\"0\"` 与数字 `0` 混淆，只要字符串非空（即使内容是 `\"0\"` 或 `\"False\"`），在条件分支中都为真。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q050",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "字符串"
+    ],
+    "stem": "观察下列代码，其运行后的输出是？",
+    "code": "target = \"py\"\nwords = [\"python\", \"pydrill\"]\nif target in words:\n    ans = 1\nelif target in \"python\":\n    ans = 2\nelse:\n    ans = 3\nprint(ans)",
+    "options": [
+      {
+        "key": "A",
+        "text": "2",
+        "hint": "列表查元素未中，字符串查子串命中"
+      },
+      {
+        "key": "B",
+        "text": "1",
+        "hint": "列表中没有独立元素py，条件为假"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "py是python的子串，走elif"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "in运算在列表和字符串中均合法"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `2`。关键字 `in` 在用于列表时，检查的是目标是否为该列表中的某一个“完整元素”。列表 `words` 中包含的是 `\"python\"` 和 `\"pydrill\"`，并不存在独立元素 `\"py\"`，因此 `target in words` 为假；而当 `in` 用于字符串时，检查的是目标是否为“子字符串”，`\"py\"` 确实是 `\"python\"` 的前缀子串，因此 `target in \"python\"` 为真，执行 `elif` 分支将 `ans` 赋值为 `2`。易错点：列表的 `in` 是匹配元素本身，不会深入检查列表中字符串元素的内部子串。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q051",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "None与真假值"
+    ],
+    "stem": "运行下面的代码片段，最后输出的是？",
+    "code": "n = 7\nif n % 2:\n    kind = \"odd\"\nelse:\n    kind = \"even\"\nprint(kind)",
+    "options": [
+      {
+        "key": "A",
+        "text": "even",
+        "hint": "7%2余1为真，不会进入else"
+      },
+      {
+        "key": "B",
+        "text": "odd",
+        "hint": "7%2结果为1，非零在if中为真"
+      },
+      {
+        "key": "C",
+        "text": "1",
+        "hint": "print输出的是kind变量不是余数"
+      },
+      {
+        "key": "D",
+        "text": "True",
+        "hint": "kind存储的是字符串odd不是布尔"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `odd`。表达式 `n % 2` 计算 `7` 除以 `2` 的余数，结果为整数 `1`。在 Python 中，条件表达式不一定必须是布尔类型，非零整数在布尔上下文中会被隐式转换为真（`True`），而 `0` 为假（`False`）。因此 `if 1:` 判定为真，执行 `if` 块将 `kind` 赋值为 `\"odd\"`。易错点：初学者容易误以为 `if n % 2` 是在检查“能否被 2 整除”（即偶数），实际上余数为 1 代表奇数时条件才为真。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q052",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支"
+    ],
+    "stem": "执行以下代码后，控制台显示的结果是？",
+    "code": "x = 2\ncount = 0\nif x > 3:\n    count += 1\n    if x > 1:\n        count += 1\nelse:\n    count += 10\nprint(count)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "外层条件不满足，跳过整个if块"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "外层未命中，内层条件根本不执行"
+      },
+      {
+        "key": "C",
+        "text": "10",
+        "hint": "外层条件为假，直接执行else分支"
+      },
+      {
+        "key": "D",
+        "text": "11",
+        "hint": "内层的加1代码随外层跳过而不执行"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `10`。此代码为嵌套 `if` 结构。外层条件为 `x > 3`，当 `x = 2` 时条件为假。因为外层条件不成立，整个缩进在其内部的代码块（包括 `count += 1` 以及内层的 `if x > 1:` 判断）全部被直接跳过，程序跳转到与外层 `if` 对齐的 `else` 分支执行 `count += 10`。最终 `count` 的值为 `10`。易错点：虽然 `x = 2` 满足内层条件 `x > 1`，但内层判断位于外层代码块中，外层不成立时内层根本没有机会执行。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q053",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "运算符与表达式"
+    ],
+    "stem": "这段代码执行后，终端会打印出什么？",
+    "code": "n = 3\nres = \"yes\" if n > 5 else \"no\"\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "yes",
+        "hint": "条件n>5为假，取else对应的值"
+      },
+      {
+        "key": "B",
+        "text": "False",
+        "hint": "三元表达式返回指定的值而非布尔"
+      },
+      {
+        "key": "C",
+        "text": "报错：SyntaxError",
+        "hint": "这是合法的三元条件表达式写法"
+      },
+      {
+        "key": "D",
+        "text": "no",
+        "hint": "条件为假时返回else后的表达式值"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `no`。Python 的条件表达式语法为 `真值 if 条件 else 假值`。程序首先求值中间的条件表达式 `n > 5`。当 `n = 3` 时，`3 > 5` 为假（`False`），因此表达式计算并返回 `else` 后面的值 `\"no\"`，将其赋值给 `res`。易错点：初学者容易混淆三元表达式中“真值”与“假值”的前后位置，记住 `if` 前面的是条件为真时的值，`else` 后面的是条件为假时的值。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q054",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "字符串"
+    ],
+    "stem": "运行以下代码，最终输出的结果是哪一项？",
+    "code": "role = \"Admin\"\nif role == \"admin\":\n    res = \"direct\"\nelif role.lower() == \"admin\":\n    res = \"lower\"\nelse:\n    res = \"other\"\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "lower",
+        "hint": "直接比较因大小写为假，转小写后相等"
+      },
+      {
+        "key": "B",
+        "text": "direct",
+        "hint": "Python字符串比较严格区分大小写"
+      },
+      {
+        "key": "C",
+        "text": "other",
+        "hint": "elif条件已经成立，不会执行else"
+      },
+      {
+        "key": "D",
+        "text": "Admin",
+        "hint": "res被赋予的是分支内的文本"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `lower`。在 Python 中，字符串的比较是区分大小写的，`\"Admin\"` 与 `\"admin\"` 的首字母 ASCII 编码不同（`'A'` 为 65，`'a'` 为 97），因此 `role == \"admin\"` 为假，跳过首个 `if`。在 `elif` 中，`role.lower()` 将字符串转换为全小写的 `\"admin\"`，满足 `role.lower() == \"admin\"`，因此执行该分支并将 `res` 赋值为 `\"lower\"`。易错点：初学者容易忽视 Python 字符串比较的区分大小写特性，误以为首个 `if` 就会匹配成功。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q055",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "运算符与表达式"
+    ],
+    "stem": "执行下列 Python 代码，控制台输出的内容是？",
+    "code": "logged_in = True\nis_admin = False\nif not logged_in and is_admin:\n    role = \"guest\"\nelse:\n    role = \"member\"\nprint(role)",
+    "options": [
+      {
+        "key": "A",
+        "text": "guest",
+        "hint": "not只修饰前项，整体为假走else"
+      },
+      {
+        "key": "B",
+        "text": "member",
+        "hint": "not优于and，条件为假走else"
+      },
+      {
+        "key": "C",
+        "text": "admin",
+        "hint": "代码分支中未给role赋值admin"
+      },
+      {
+        "key": "D",
+        "text": "False",
+        "hint": "role接收的是字符串而非布尔值"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `member`。在 Python 的逻辑运算符中，优先级顺序为 `not` 高于 `and` 高于 `or`。因此 `not logged_in and is_admin` 等价于 `(not logged_in) and is_admin`。代入变量：`not True` 得到 `False`，随后 `False and False` 的结果仍为 `False`。条件不满足，程序进入 `else` 分支，将 `role` 赋值为 `\"member\"`。易错点：容易误将 `not a and b` 误解为 `not (a and b)`，实际上 `not` 只修饰紧随其后的第一个操作数。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q056",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "字符串"
+    ],
+    "stem": "运行下面的代码，打印出来的是哪一个？",
+    "code": "word = \"Alice\"\nprint(word[:3])",
+    "options": [
+      {
+        "key": "A",
+        "text": "Ali",
+        "hint": "省略起点即从下标0取到3前"
+      },
+      {
+        "key": "B",
+        "text": "Alic",
+        "hint": "右端不含，下标3的c不在里面"
+      },
+      {
+        "key": "C",
+        "text": "lic",
+        "hint": "省略的起点是0，第一个是A"
+      },
+      {
+        "key": "D",
+        "text": "ice",
+        "hint": "[:3]是前三个，不是后三个"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `Ali`。`\"Alice\"` 的下标依次是 0:`A`、1:`l`、2:`i`、3:`c`、4:`e`。`word[:3]` 没写起始下标，就从 0 开始，取到下标 3 之前，得到 `A`、`l`、`i`，也就是 `Ali`。易错点：结束下标不包含，`c` 不会出现；`[:3]` 取的是开头三个字符。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q057",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "列表"
+    ],
+    "stem": "执行这段代码后，终端上看到的是？",
+    "code": "nums = [10, 20, 30, 40]\nprint(nums[:-1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "[40]",
+        "hint": "[:-1]会切掉末项，不是只留它"
+      },
+      {
+        "key": "B",
+        "text": "[10, 20, 30]",
+        "hint": "终点-1表示不含最后一个元素"
+      },
+      {
+        "key": "C",
+        "text": "[20, 30, 40]",
+        "hint": "去掉的是末尾，开头的10还在"
+      },
+      {
+        "key": "D",
+        "text": "[10, 20, 30, 40]",
+        "hint": "写了-1，最后一个不会保留"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `[10, 20, 30]`。`nums[:-1]` 的 `-1` 是结束下标，表示取到倒数第一个之前。最后一项 `40` 正好在下标 -1，不会被选中，所以结果是 `[10, 20, 30]`。易错点：`nums[-1]` 才是单独拿出 `40`；写成 `[:-1]` 是留下前面的部分。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q058",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "运算符与表达式"
+    ],
+    "stem": "下面的切片带有步长，输出是什么？",
+    "code": "nums = [1, 2, 3, 4, 5, 6]\nprint(nums[::2])",
+    "options": [
+      {
+        "key": "A",
+        "text": "[2, 4, 6]",
+        "hint": "默认从下标0开始，先取到1"
+      },
+      {
+        "key": "B",
+        "text": "[1, 2, 3, 4, 5, 6]",
+        "hint": "步长为2时会隔一个取一个"
+      },
+      {
+        "key": "C",
+        "text": "[1, 3, 5]",
+        "hint": "起点是0，之后下标每次加2"
+      },
+      {
+        "key": "D",
+        "text": "[1, 2]",
+        "hint": "::2里的2是步长不是个数"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `[1, 3, 5]`。`nums[::2]` 省略了起止，步长是 2：从下标 0 开始，之后每次把下标加 2，依次落到 0、2、4，对应的值是 `1`、`3`、`5`。易错点：步长 2 的意思是隔一个取一个，不是只保留前两个，也不是从第二个数开始取。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q059",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "字符串"
+    ],
+    "stem": "这段代码执行后，得到的字符串是？",
+    "code": "word = \"hello\"\nprint(word[::-1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "hello",
+        "hint": "步长-1会从末尾倒着取字符"
+      },
+      {
+        "key": "B",
+        "text": "olh",
+        "hint": "步长是-1，相邻字符都会留下"
+      },
+      {
+        "key": "C",
+        "text": "oellh",
+        "hint": "这是逐字倒序，不是只换首尾"
+      },
+      {
+        "key": "D",
+        "text": "olleh",
+        "hint": "起止省略且步长-1，整串反转"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `olleh`。`word[::-1]` 没有写起点和终点，步长是 -1，于是从最后一个字符走到第一个，每次退一格。`\"hello\"` 倒过来就是 `olleh`。易错点：步长 -1 会带上每一个字符；这也不是只把首尾两个字母对调。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q060",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "列表"
+    ],
+    "stem": "做完切片赋值再打印，结果是哪一项？",
+    "code": "nums = [1, 2, 3, 4]\nnums[1:3] = [9]\nprint(nums)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[1, 9, 4]",
+        "hint": "下标1和2换成一个9，4还在"
+      },
+      {
+        "key": "B",
+        "text": "[1, 9, 3, 4]",
+        "hint": "1:3整段都被换掉，3不保留"
+      },
+      {
+        "key": "C",
+        "text": "报错：ValueError",
+        "hint": "切片赋值允许两边长度不同"
+      },
+      {
+        "key": "D",
+        "text": "[1, 9]",
+        "hint": "末尾的4不在被替换的那段里"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `[1, 9, 4]`。`nums[1:3]` 选中下标 1 和 2，也就是 `2` 和 `3`。切片赋值把这一整段换成右边的序列，右边只有一个 `9`，于是两个位置缩成一个，列表变成 `[1, 9, 4]`。易错点：左右长度可以不一样，这里不会报错；下标 3 的 `4` 不在被替换的范围内。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q061",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "列表"
+    ],
+    "stem": "执行 del 之后，print 打出的列表是？",
+    "code": "pets = [\"cat\", \"dog\", \"fox\", \"owl\"]\ndel pets[1:3]\nprint(pets)",
+    "options": [
+      {
+        "key": "A",
+        "text": "['dog', 'fox']",
+        "hint": "打印的是删完以后剩下的列表"
+      },
+      {
+        "key": "B",
+        "text": "['cat', 'owl']",
+        "hint": "删掉下标1和2，首尾都还在"
+      },
+      {
+        "key": "C",
+        "text": "['cat', 'fox', 'owl']",
+        "hint": "1:3含两个元素，会删掉两个"
+      },
+      {
+        "key": "D",
+        "text": "['cat', 'dog']",
+        "hint": "删的是中间的dog和fox"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `['cat', 'owl']`。`pets` 的下标是 0:`cat`、1:`dog`、2:`fox`、3:`owl`。`del pets[1:3]` 删掉下标 1 和 2，也就是 `dog` 和 `fox`。`cat` 和 `owl` 留着，所以打印 `['cat', 'owl']`。易错点：右端下标 3 不包含；打印的是删除之后的列表，不是被删掉的那一段。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q062",
+    "topic": "切片",
+    "tags": [
+      "切片"
+    ],
+    "stem": "对这个元组做切片，输出是什么？",
+    "code": "t = (1, 2, 3, 4)\nprint(t[1:3])",
+    "options": [
+      {
+        "key": "A",
+        "text": "[2, 3]",
+        "hint": "元组切片的结果仍然是元组"
+      },
+      {
+        "key": "B",
+        "text": "(2, 3, 4)",
+        "hint": "结束下标3不含，元素4不在内"
+      },
+      {
+        "key": "C",
+        "text": "(2, 3)",
+        "hint": "取下标1和2，类型仍是元组"
+      },
+      {
+        "key": "D",
+        "text": "报错：TypeError",
+        "hint": "元组可以切片，读取不会报错"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，输出 `(2, 3)`。元组可以切片，规则和列表相同。`t[1:3]` 取出下标 1 和 2 的 `2` 和 `3`，得到的新序列仍然是元组 `(2, 3)`。易错点：切片不会把元组变成列表；只读取切片也不会因为元组不可变而报错。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q063",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "range"
+    ],
+    "stem": "先把 range 变成列表再切片，打印什么？",
+    "code": "nums = list(range(1, 11))\nprint(nums[2:8:2])",
+    "options": [
+      {
+        "key": "A",
+        "text": "[2, 4, 6]",
+        "hint": "切的是元素的值，不是下标数字"
+      },
+      {
+        "key": "B",
+        "text": "[3, 4, 5, 6, 7, 8]",
+        "hint": "步长为2，只会取2、4、6位"
+      },
+      {
+        "key": "C",
+        "text": "[1, 3, 5, 7, 9]",
+        "hint": "起点下标是2，第一个值是3"
+      },
+      {
+        "key": "D",
+        "text": "[3, 5, 7]",
+        "hint": "下标2、4、6对应的值是3、5、7"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，输出 `[3, 5, 7]`。`list(range(1, 11))` 得到 `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`。再做 `[2:8:2]`，从下标 2 取到下标 8 之前，步长 2，命中下标 2、4、6，对应的值是 `3`、`5`、`7`。易错点：切片里的数字是下标和步长，不是直接把 2、4、6 当成结果。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q064",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "循环"
+    ],
+    "stem": "这段循环结束后，打印出的数是多少？",
+    "code": "nums = [1, 2, 3, 4, 5]\ntotal = 0\nfor n in nums[1:4]:\n    total += n\nprint(total)",
+    "options": [
+      {
+        "key": "A",
+        "text": "9",
+        "hint": "切片得到2、3、4，加起来是9"
+      },
+      {
+        "key": "B",
+        "text": "15",
+        "hint": "循环只走切片，不是整个列表"
+      },
+      {
+        "key": "C",
+        "text": "14",
+        "hint": "结束下标4不含，5不会加进去"
+      },
+      {
+        "key": "D",
+        "text": "10",
+        "hint": "切片从下标1开始，不含开头的1"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，输出 `9`。`nums[1:4]` 先得到 `[2, 3, 4]`，循环只遍历这三个数。`total` 从 0 开始，依次加上 2、3、4，最后是 9。易错点：开头的 `1` 不在这段切片里，下标 4 上的 `5` 也不包含。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  },
+  {
+    "id": "q065",
+    "topic": "切片",
+    "tags": [
+      "切片",
+      "字符串"
+    ],
+    "stem": "下面三行代码执行后，输出是什么？",
+    "code": "word = \"garden\"\ntail = word[-3:]\nprint(tail[0])",
+    "options": [
+      {
+        "key": "A",
+        "text": "g",
+        "hint": "[0]取的是新字符串，不是原串"
+      },
+      {
+        "key": "B",
+        "text": "d",
+        "hint": "末三位是den，它的首位是d"
+      },
+      {
+        "key": "C",
+        "text": "den",
+        "hint": "后面还有[0]，只输出一个字符"
+      },
+      {
+        "key": "D",
+        "text": "n",
+        "hint": "新字符串的首位是d，n在末尾"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，输出 `d`。`\"garden\"` 末尾三个字符是下标 3、4、5 上的 `d`、`e`、`n`，所以 `tail` 是 `\"den\"`。`tail[0]` 再取这个新字符串的第一个字符，结果是 `d`。易错点：后面的 `[0]` 是对着切出来的 `tail`，不是原字符串开头的 `g`。",
+    "animationId": null,
+    "status": "verified",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": null,
+    "editNote": ""
+  }
+]

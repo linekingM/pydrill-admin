@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PyDrill 题库管理台 (Admin 纯静态版)</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="app-header">
+    <div class="header-inner">
+      <div class="brand">
+        <h1>
+          PyDrill 题库审查管理台
+          <span class="badge-v2">纯静态版</span>
+        </h1>
+        <p>免服务端 · 本地草稿 · 实时审查 · 原地编辑 · 导入导出</p>
+      </div>
+
+      <div class="header-stats" id="headerStats">
+        <span class="stat-pill active" data-status="all" id="statAll">全部 0</span>
+        <span class="stat-pill verified" data-status="verified" id="statVerified">已通过 0</span>
+        <span class="stat-pill needs-review" data-status="needs_review" id="statNeedsReview">待重审 0</span>
+        <span class="stat-pill" data-status="draft" id="statDraft">草稿 0</span>
+      </div>
+
+      <div class="header-actions">
+        <span class="draft-indicator" id="draftIndicator">📄 加载中...</span>
+        <button class="btn btn-sm" id="btnClearDraft" title="清除保存在浏览器中的工作副本">
+          🗑️ 清除本地草稿
+        </button>
+        <button class="btn btn-sm" id="btnToggleTagPanel">
+          🏷️ 标签看板 <span id="tagPanelArrow">▼</span>
+        </button>
+        <button class="btn btn-sm" id="btnOpenImportModal">
+          📥 导入数据
+        </button>
+        <button class="btn btn-sm" id="btnExportFull" title="下载内存中完整题库 JSON">
+          📦 导出整库
+        </button>
+        <button class="btn btn-sm btn-primary" id="btnRefresh" title="重新从本地或草稿载入">
+          🔄 重新加载
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 离线/跨域文件加载失败引导横幅 -->
+    <div class="offline-banner" id="offlineBanner" style="display: none;">
+      <div class="banner-icon">⚠️</div>
+      <div class="banner-content">
+        <div class="banner-title">无法自动加载题库快照 (./data/questions.json)</div>
+        <div class="banner-desc">
+          常见于直接双击 HTML 文件时受到浏览器本地文件安全协议（<code>file://</code> CORS）限制。
+          您可以直接选择本地 <code>question-bank-v2/questions.json</code> 文件载入整库，或将本目录挂载至任何静态服务器 / GitHub Pages。
+        </div>
+      </div>
+      <div class="banner-actions">
+        <label class="btn btn-primary" style="cursor: pointer;">
+          📁 从本地文件载入整库
+          <input type="file" id="localFileInput" accept=".json" style="display: none;">
+        </label>
+      </div>
+    </div>
+
+    <!-- 标签看板 (实时内存计算) -->
+    <section class="card-panel" id="tagPanel">
+      <div class="panel-title-bar">
+        <div class="panel-title">
+          <span>📊 知识点标签权重与分布看板 (实时内存计算)</span>
+          <span class="form-tip" id="tagSummaryTip">计算中...</span>
+        </div>
+        <div style="display: flex; gap: 8px;">
+          <button class="btn btn-sm" id="btnClearTagFilter">清空标签筛选</button>
+        </div>
+      </div>
+      <div class="form-tip" style="margin-bottom: 8px;">
+        💡 点击标签卡片可快速筛选；橙色为欠频优先出题，灰蓝色为已超份额。按住 Ctrl 或连续点击可组合交集筛选。
+      </div>
+      <div class="tag-stats-grid" id="tagStatsGrid">
+        <!-- 标签卡片动态插入 -->
+      </div>
+    </section>
+
+    <!-- 筛选与搜索工具条 -->
+    <section class="card-panel toolbar">
+      <div class="toolbar-row">
+        <div class="filter-group">
+          <span class="filter-label">状态:</span>
+          <button class="btn btn-sm active status-filter-btn" data-status="all">全部</button>
+          <button class="btn btn-sm status-filter-btn" data-status="needs_review">待重审</button>
+          <button class="btn btn-sm status-filter-btn" data-status="draft">草稿</button>
+          <button class="btn btn-sm status-filter-btn" data-status="verified">已通过</button>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="searchInput" class="search-input" placeholder="按 题号 (如 q001)、题干、代码、选项、解析、改动备注搜索...">
+        </div>
+
+        <button class="btn btn-sm" id="btnResetAllFilters">重置全部筛选</button>
+      </div>
+
+      <!-- 标签组合筛选栏 -->
+      <div class="active-tags-bar" id="activeTagsBar" style="display: none;">
+        <span class="filter-label">已选组合标签 (必须同时包含):</span>
+        <div id="selectedTagChips" style="display: flex; gap: 6px; flex-wrap: wrap;"></div>
+        <span class="form-tip" style="margin-left: auto;" id="matchCountTip"></span>
+      </div>
+
+      <div class="toolbar-footer-row">
+        <span id="resultCountText">正在载入题目列表...</span>
+        <div class="export-actions">
+          <button class="btn btn-sm" id="btnExportFiltered" title="导出当前筛选出的题目为 JSON">
+            📤 导出当前筛选 (<span id="filteredExportCount">0</span>题)
+          </button>
+          <button class="btn btn-sm" id="btnExportFullToolbar" title="导出内存中全部题目为 JSON">
+            📦 导出整库
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- 题目卡片列表 -->
+    <section class="question-list" id="questionList">
+      <!-- 动态加载卡片 -->
+    </section>
+  </main>
+
+  <!-- 原地编辑模态框 -->
+  <div class="modal-overlay" id="editModal" style="display: none;">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2 id="editModalTitle">✏️ 原地编辑题目</h2>
+        <button class="btn btn-sm" id="btnCloseEditModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+          <div class="form-group" style="width: 140px;">
+            <label class="form-label">题号 ID</label>
+            <input type="text" id="editQid" class="form-control" readonly style="background: var(--surface-alt); font-weight: bold;">
+          </div>
+          <div class="form-group" style="flex: 1; min-width: 180px;">
+            <label class="form-label">旧分类 Topic</label>
+            <input type="text" id="editTopic" class="form-control" placeholder="如: 字符串/循环">
+          </div>
+          <div class="form-group" style="width: 160px;">
+            <label class="form-label">动画 ID (可空)</label>
+            <input type="text" id="editAnimationId" class="form-control" placeholder="null 或 动画编号">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <span>知识点标签 Tags (必须在 tags.json 内，限 1–2 个)</span>
+            <span class="form-tip" id="editTagCountTip">已选 0 个</span>
+          </label>
+          <div class="tag-selector-box" id="editTagSelector">
+            <!-- 标签选择芯片 -->
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">题干 Stem</label>
+          <textarea id="editStem" class="form-control" rows="2" placeholder="请输入题干描述"></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="form-label">
+            <span>Python 代码 Code</span>
+            <button class="btn btn-sm" id="btnCopyCodeInModal">📋 复制代码</button>
+          </div>
+          <textarea id="editCode" class="form-control code-editor" placeholder="# 请输入 Python 代码片段"></textarea>
+          <div class="form-tip" style="margin-top: 4px;">
+            💡 静态版无法在浏览器直接执行 Python；请复制代码到本地终端使用 python3 验证输出。
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <span>四选项 Options 与 正确答案 Answer</span>
+            <span class="form-tip">单选 A/B/C/D 设定正确答案</span>
+          </label>
+          <div class="options-edit-grid">
+            <div class="opt-edit-row">
+              <label class="opt-radio-wrap">
+                <input type="radio" name="editAnswer" value="A"> A
+              </label>
+              <input type="text" id="editOptTextA" class="form-control" style="flex: 2;" placeholder="选项 A 文本">
+              <input type="text" id="editOptHintA" class="form-control" style="flex: 3;" placeholder="选项 A 提示 (hint)">
+            </div>
+            <div class="opt-edit-row">
+              <label class="opt-radio-wrap">
+                <input type="radio" name="editAnswer" value="B"> B
+              </label>
+              <input type="text" id="editOptTextB" class="form-control" style="flex: 2;" placeholder="选项 B 文本">
+              <input type="text" id="editOptHintB" class="form-control" style="flex: 3;" placeholder="选项 B 提示 (hint)">
+            </div>
+            <div class="opt-edit-row">
+              <label class="opt-radio-wrap">
+                <input type="radio" name="editAnswer" value="C"> C
+              </label>
+              <input type="text" id="editOptTextC" class="form-control" style="flex: 2;" placeholder="选项 C 文本">
+              <input type="text" id="editOptHintC" class="form-control" style="flex: 3;" placeholder="选项 C 提示 (hint)">
+            </div>
+            <div class="opt-edit-row">
+              <label class="opt-radio-wrap">
+                <input type="radio" name="editAnswer" value="D"> D
+              </label>
+              <input type="text" id="editOptTextD" class="form-control" style="flex: 2;" placeholder="选项 D 文本">
+              <input type="text" id="editOptHintD" class="form-control" style="flex: 3;" placeholder="选项 D 提示 (hint)">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">解析 Explanation</label>
+          <textarea id="editExplanation" class="form-control" rows="3" placeholder="答案解析说明"></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">
+            <span>改动备注 Edit Note (可填可空)</span>
+            <span class="form-tip">保存后 status 将自动变更为 needs_review，revision 将累加 +1</span>
+          </label>
+          <input type="text" id="editNote" class="form-control" placeholder="如: 修复边界判断、更新提示语">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="btnCancelEdit">取消</button>
+        <button class="btn btn-primary" id="btnSaveEdit">💾 保存修改 (自动+1版本并待审)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 导入数据模态框 -->
+  <div class="modal-overlay" id="importModal" style="display: none;">
+    <div class="modal-card" style="max-width: 650px;">
+      <div class="modal-header">
+        <h2>📥 导入题库 JSON</h2>
+        <button class="btn btn-sm" id="btnCloseImportModal">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-group">
+          <label class="form-label">1. 选择本地 JSON 文件</label>
+          <div class="file-drop-zone">
+            <input type="file" id="importFileInput" accept=".json">
+            <div id="importFileSummary" style="margin-top: 8px; font-size: 13px; color: var(--ink-secondary);">
+              请选择包含题目数组的 <code>.json</code> 文件 (如 questions.json、导出文件)
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label">2. 选择导入模式</label>
+          <div class="import-mode-options">
+            <label class="import-mode-card">
+              <div style="display: flex; gap: 8px; align-items: flex-start;">
+                <input type="radio" name="importMode" value="merge_full" checked>
+                <div>
+                  <div class="mode-title">合并进整库（按 ID 覆盖/追加） <span class="badge-recommend">推荐默认</span></div>
+                  <div class="mode-desc">
+                    对导入文件中的每一题：若题号在整库中已存在则覆盖更新；若不存在则追加进整库末尾。导入后自动重算全库标签看板。
+                  </div>
+                </div>
+              </div>
+            </label>
+
+            <label class="import-mode-card">
+              <div style="display: flex; gap: 8px; align-items: flex-start;">
+                <input type="radio" name="importMode" value="merge_filtered">
+                <div>
+                  <div class="mode-title">导入到当前筛选结果 (仅更新当前匹配的 <span id="importFilterCount">0</span> 题)</div>
+                  <div class="mode-desc">
+                    仅更新当前筛选集合中已有的题号；不在筛选范围内的题号将被忽略跳过；不会追加新题号（防止静默扩大题库范围）。
+                  </div>
+                </div>
+              </div>
+            </label>
+          </div>
+        </div>
+
+        <!-- 导入执行结果报告 -->
+        <div id="importReportBox" class="import-report-box" style="display: none;"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" id="btnCancelImport">取消</button>
+        <button class="btn btn-primary" id="btnExecuteImport" disabled>🚀 执行导入</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast 容器 -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
