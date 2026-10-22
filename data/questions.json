@@ -2945,41 +2945,41 @@
     "title": "deepcopy深拷贝列表",
     "topic": "元组/引用",
     "stem": "在横线处填入下列哪项，能让控制台输出 2？",
-    "code": "import copy\n\nscores = [[90, 85], [88, 92]]\nnew_scores = ____(scores)\nnew_scores[0].append(95)\nprint(len(scores[0]))",
+    "code": "import copy\n\nscores = [[90, 85], [88, 92]]\nnew_scores = ____\nnew_scores[0].append(95)\nprint(len(scores[0]))",
     "options": [
       {
         "key": "A",
-        "text": "copy.copy",
-        "hint": "copy.copy是浅拷贝，内层仍共享"
+        "text": "copy.copy(scores)",
+        "hint": "浅拷贝：只复制外层，内层列表仍共享"
       },
       {
         "key": "B",
-        "text": "copy.deep_copy",
-        "hint": "深拷贝函数名不带下划线，会报错"
+        "text": "list(scores[:])",
+        "hint": "切片和 list() 都是浅拷贝，内层仍共享"
       },
       {
         "key": "C",
-        "text": "copy.deepcopy",
+        "text": "copy.deepcopy(scores)",
         "hint": "深拷贝完全独立，原列表不受影响"
       },
       {
         "key": "D",
-        "text": "copy.shallow_copy",
-        "hint": "copy模块无此函数，会报错"
+        "text": "[row for row in scores]",
+        "hint": "推导式只是把同一批内层列表放进新列表"
       }
     ],
     "answer": "C",
-    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 不影响 `scores` 中的内层嵌套列表，必须进行深拷贝。`copy.deepcopy()` 会递归复制所有层级的对象，生成完全独立的副本；而 `copy.copy()` 只是浅拷贝，内层列表仍然是同一个引用。标准库 `copy` 模块中没有 `deep_copy` 和 `shallow_copy` 这两个函数，调用会报 `AttributeError`。易错点：容易误以为浅拷贝能完全隔离嵌套结构，或记错深拷贝函数名拼写。",
+    "explanation": "答案是 C，输出 `2`。要让修改 `new_scores` 的内层列表不影响 `scores`，必须深拷贝。`copy.deepcopy()` 会递归复制所有层级，得到完全独立的副本。A 的 `copy.copy()`、B 的切片加 `list()`、D 的列表推导式都只是浅拷贝：外层是新列表，但里面的 `[90, 85]` 还是同一个对象，`append(95)` 后 `scores[0]` 长度变成 3。易错点：以为“新建了一个列表”就等于完全复制。",
     "tags": [
       "可变对象与引用",
       "模块导入"
     ],
     "animationId": null,
-    "status": "verified",
+    "status": "needs_review",
     "revised": true,
-    "revision": 2,
-    "lastEditedAt": "2026-10-11T20:01:27+08:00",
-    "editNote": "调整选项使长度接近且正确答案不是最长，用常见命名混淆项替换短选项。",
+    "revision": 3,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：code,options,explanation",
     "type": "代码补全",
     "difficulty": 2,
     "subtopic": "同一性与拷贝"
@@ -4181,8 +4181,8 @@
     "options": [
       {
         "key": "A",
-        "text": "80",
-        "hint": "转换成功且无异常时跳过except"
+        "text": "None",
+        "hint": "price被成功赋值为80而非None"
       },
       {
         "key": "B",
@@ -4196,21 +4196,21 @@
       },
       {
         "key": "D",
-        "text": "None",
-        "hint": "price被成功赋值为80而非None"
+        "text": "80",
+        "hint": "转换成功且无异常时跳过except"
       }
     ],
-    "answer": "A",
-    "explanation": "答案是 A，输出 `80`。在 `try` 块中，`int(\"80\")` 成功将纯数字字符串转换为整数 80，并赋值给 `price`；由于整个 `try` 块执行期间没有发生任何异常，`except ValueError` 分支会被直接跳过，不会执行其中的 `price = 0`；随后程序继续执行，`print(price)` 打印出 80。易错点：初学者容易误以为 `except` 分支总会像兜底赋值一样被执行，实际上只有发生匹配的异常时才会进入。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `80`。在 `try` 块中，`int(\"80\")` 成功将纯数字字符串转换为整数 80，并赋值给 `price`；由于整个 `try` 块执行期间没有发生任何异常，`except ValueError` 分支会被直接跳过，不会执行其中的 `price = 0`；随后程序继续执行，`print(price)` 打印出 80。易错点：初学者容易误以为 `except` 分支总会像兜底赋值一样被执行，实际上只有发生匹配的异常时才会进入。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "异常捕获与匹配",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q098",
@@ -4258,47 +4258,47 @@
   },
   {
     "id": "q099",
-    "title": "未捕获的raise中断程序",
+    "title": "自定义异常被父类捕获",
     "topic": "异常处理",
     "tags": [
       "异常处理",
       "函数"
     ],
     "stem": "运行以下检查分数的代码，控制台输出的结果是？",
-    "code": "def check_score(score):\n    if score < 0:\n        raise ValueError(\"分数不能为负\")\n    return score\n\nres = check_score(-5)\nprint(res)",
+    "code": "class ScoreError(Exception):\n    pass\n\ndef check_score(score):\n    if score < 0:\n        raise ScoreError(\"分数不能为负\")\n    return score\n\ntry:\n    check_score(-5)\nexcept Exception as e:\n    print(type(e).__name__)",
     "options": [
       {
         "key": "A",
-        "text": "报错：ValueError",
-        "hint": "未捕获的raise会中断程序并报错"
+        "text": "分数不能为负",
+        "hint": "打印的是类型名，不是消息"
       },
       {
         "key": "B",
-        "text": "分数不能为负",
-        "hint": "raise不会像print直接输出文本"
+        "text": "报错：ScoreError",
+        "hint": "ScoreError 继承 Exception，会被捕获"
       },
       {
         "key": "C",
-        "text": "-5",
-        "hint": "抛出异常后后续return不会执行"
+        "text": "Exception",
+        "hint": "type(e) 是实际抛出的子类"
       },
       {
         "key": "D",
-        "text": "None",
-        "hint": "函数中断退出未完成正常赋值返回"
+        "text": "ScoreError",
+        "hint": "被父类 except 接住，类型仍是 ScoreError"
       }
     ],
-    "answer": "A",
-    "explanation": "答案是 A，会报错 `ValueError`。在函数 `check_score` 中，参数 `-5 < 0` 满足条件，触发了 `raise ValueError(\"分数不能为负\")`；由于调用方没有使用 `try...except` 语句进行捕获，该异常会直接向外抛出中断程序，导致运行时报错 `ValueError`。`raise` 用于主动触发异常中断流程，它不是 `print`（不会直接将字符串打印到控制台），也不是 `return`（不会将字符串作为正常返回值）。易错点：初学者容易误以为 `raise` 里的文本会像 `print` 一样直接输出到控制台。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `ScoreError`。自定义异常 `ScoreError` 继承自 `Exception`，所以 `except Exception` 能接住它，程序不会崩溃。但 `e` 仍然是当初抛出的那个 `ScoreError` 对象，`type(e).__name__` 得到的是它自己的类名，而不是父类名。易错点：以为被父类捕获后类型就变成了父类。",
     "animationId": null,
-    "type": "报错判断",
+    "type": "输出判断",
     "difficulty": 1,
     "subtopic": "异常抛出与自定义",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：title,code,options,answer,explanation,type"
   },
   {
     "id": "q100",
@@ -4362,8 +4362,8 @@
       },
       {
         "key": "B",
-        "text": "A01 0",
-        "hint": "异常对象正常保存并访问了两个属性"
+        "text": "None None",
+        "hint": "属性已通过构造方法完成赋值绑定"
       },
       {
         "key": "C",
@@ -4372,21 +4372,21 @@
       },
       {
         "key": "D",
-        "text": "None None",
-        "hint": "属性已通过构造方法完成赋值绑定"
+        "text": "A01 0",
+        "hint": "异常对象正常保存并访问了两个属性"
       }
     ],
-    "answer": "B",
-    "explanation": "答案是 B，输出 `A01 0`。`StockError` 继承自 `Exception`，在 `__init__` 构造方法中接收 `code` 和 `count` 并绑定到实例属性上；当执行 `raise StockError(\"A01\", 0)` 时，创建并抛出了包含这两个属性的异常对象；外层 `except StockError as e` 捕获到该实例并赋值给变量 `e`，通过 `e.code` 和 `e.count` 访问属性，`print` 输出以空格分隔的 `A01 0`。易错点：初学者容易误以为异常类不能像普通类那样添加自定义属性，或者误以为打印属性会带上类名。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `A01 0`。`StockError` 继承自 `Exception`，在 `__init__` 构造方法中接收 `code` 和 `count` 并绑定到实例属性上；当执行 `raise StockError(\"A01\", 0)` 时，创建并抛出了包含这两个属性的异常对象；外层 `except StockError as e` 捕获到该实例并赋值给变量 `e`，通过 `e.code` 和 `e.count` 访问属性，`print` 输出以空格分隔的 `A01 0`。易错点：初学者容易误以为异常类不能像普通类那样添加自定义属性，或者误以为打印属性会带上类名。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 2,
     "subtopic": "异常抛出与自定义",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q102",
@@ -4400,8 +4400,8 @@
     "options": [
       {
         "key": "A",
-        "text": "60",
-        "hint": "执行return立即结束函数输出60"
+        "text": "None",
+        "hint": "函数已显式返回total值非None"
       },
       {
         "key": "B",
@@ -4415,21 +4415,21 @@
       },
       {
         "key": "D",
-        "text": "None",
-        "hint": "函数已显式返回total值非None"
+        "text": "60",
+        "hint": "执行return立即结束函数输出60"
       }
     ],
-    "answer": "A",
-    "explanation": "答案是 A，输出 `60`。函数执行遇到 `return` 语句时会立即结束执行并将结果返回给调用者，`return` 后面的代码不会被执行。在 `calc_score(50)` 中，执行 `return total` 立即返回 60，后面的 `total = total * 2` 被完全跳过，因此最终打印 60。易错点：初学者常误以为函数必须跑完所有行才会返回，或者误以为后续赋值会修改已返回的结果。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `60`。函数执行遇到 `return` 语句时会立即结束执行并将结果返回给调用者，`return` 后面的代码不会被执行。在 `calc_score(50)` 中，执行 `return total` 立即返回 60，后面的 `total = total * 2` 被完全跳过，因此最终打印 60。易错点：初学者常误以为函数必须跑完所有行才会返回，或者误以为后续赋值会修改已返回的结果。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "函数定义与返回值",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q103",
@@ -4449,8 +4449,8 @@
       },
       {
         "key": "B",
-        "text": "return price * count",
-        "hint": "通过return将相乘结果返回输出60"
+        "text": "return price + count",
+        "hint": "加法计算结果为23非预期的60"
       },
       {
         "key": "C",
@@ -4459,65 +4459,65 @@
       },
       {
         "key": "D",
-        "text": "return price + count",
-        "hint": "加法计算结果为23非预期的60"
+        "text": "return price * count",
+        "hint": "通过return将相乘结果返回输出60"
       }
     ],
-    "answer": "B",
-    "explanation": "答案是 B，在 Python 中，函数需要通过 `return` 关键字显式将计算结果返回给调用者。填入 `return price * count` 后，函数返回 20 与 3 的乘积 60 并赋给 `total`，最后打印 60。若仅写 `price * count` 或 `print(...)`，函数因没有 `return` 而默认返回 `None`，导致 `total` 为 `None`。易错点：初学者容易误以为写了计算表达式就会自动返回，或者将 `print` 打印混淆为返回值。",
+    "answer": "D",
+    "explanation": "答案是 D，在 Python 中，函数需要通过 `return` 关键字显式将计算结果返回给调用者。填入 `return price * count` 后，函数返回 20 与 3 的乘积 60 并赋给 `total`，最后打印 60。若仅写 `price * count` 或 `print(...)`，函数因没有 `return` 而默认返回 `None`，导致 `total` 为 `None`。易错点：初学者容易误以为写了计算表达式就会自动返回，或者将 `print` 打印混淆为返回值。",
     "animationId": null,
     "type": "代码补全",
     "difficulty": 1,
     "subtopic": "函数定义与返回值",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q104",
-    "title": "多返回值解包赋值",
+    "title": "提前return结束函数",
     "topic": "函数/默认参数",
     "tags": [
       "函数",
       "解包"
     ],
-    "stem": "执行以下计算矩形数据的代码，控制台输出的结果是？",
-    "code": "def calc_rect(width, height):\n    area = width * height\n    perimeter = (width + height) * 2\n    return area, perimeter\n\na, p = calc_rect(5, 3)\nprint(a, p)",
+    "stem": "执行以下代码，控制台输出的结果是？",
+    "code": "def first_even(nums):\n    for n in nums:\n        if n % 2 == 0:\n            return n\n    return -1\n\nprint(first_even([3, 7, 8, 10]), first_even([1, 5]))",
     "options": [
       {
         "key": "A",
-        "text": "15 16",
-        "hint": "多返回值打包为元组并依次解包赋值"
+        "text": "8 10",
+        "hint": "return 后函数立即结束，不会再找 10"
       },
       {
         "key": "B",
-        "text": "(15, 16)",
-        "hint": "返回值被两个变量解包接收而非单个元组"
+        "text": "-1 -1",
+        "hint": "第一组里有偶数 8，会提前返回"
       },
       {
         "key": "C",
-        "text": "16 15",
-        "hint": "解包按返回顺序赋值，a为15而非16"
+        "text": "10 -1",
+        "hint": "找到第一个偶数就返回，不是最后一个"
       },
       {
         "key": "D",
-        "text": "报错：ValueError",
-        "hint": "两个返回值解包给两个变量不会报错"
+        "text": "8 -1",
+        "hint": "遇到 8 就 return；第二组没有偶数走到 -1"
       }
     ],
-    "answer": "A",
-    "explanation": "答案是 A，输出 `15 16`。在 Python 中，函数使用 `return area, perimeter` 可以同时返回多个值，它们会被隐式打包成一个元组 `(15, 16)`；使用 `a, p = ...` 接收时，元组会自动解包，按顺序将 15 赋给 `a`、16 赋给 `p`；因此 `print(a, p)` 在控制台输出以空格分隔的 `15 16`。易错点：初学者容易误以为函数只能返回单个值，或者误以为解包接收必须加上圆括号。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `8 -1`。`return` 一执行，函数就立即结束，循环也不会再继续。第一次调用遇到 8 是偶数，直接返回 8，后面的 10 根本不会被检查；第二次调用列表里没有偶数，循环正常走完，执行最后的 `return -1`。易错点：以为循环会跑完再返回，或者以为放在循环后面的 `return -1` 总会执行。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 2,
     "subtopic": "函数定义与返回值",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：title,stem,code,options,answer,explanation"
   },
   {
     "id": "q105",
@@ -4625,13 +4625,13 @@
       },
       {
         "key": "B",
-        "text": "8",
-        "hint": "包含6个字母1空格1数字共8"
+        "text": "6",
+        "hint": "len统计全串非仅统计字母"
       },
       {
         "key": "C",
-        "text": "6",
-        "hint": "len统计全串非仅统计字母"
+        "text": "8",
+        "hint": "包含6个字母1空格1数字共8"
       },
       {
         "key": "D",
@@ -4639,17 +4639,17 @@
         "hint": "末尾无额外空格长度并非9"
       }
     ],
-    "answer": "B",
-    "explanation": "答案是 B，输出 `8`。内置函数 `len()` 用于计算序列或字符串的长度，字符串中的所有可见字符、空格以及特殊符号都会被计入。在 `\"Python 3\"` 中，包含 6 个字母、1 个空格和 1 个数字 3，总长度为 8。易错点：初学者常忽略字符串内部的空格，误以为 `len()` 只统计英文字母或可见字符数量。",
+    "answer": "C",
+    "explanation": "答案是 C，输出 `8`。内置函数 `len()` 用于计算序列或字符串的长度，字符串中的所有可见字符、空格以及特殊符号都会被计入。在 `\"Python 3\"` 中，包含 6 个字母、1 个空格和 1 个数字 3，总长度为 8。易错点：初学者常忽略字符串内部的空格，误以为 `len()` 只统计英文字母或可见字符数量。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "字符串操作",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q108",
@@ -4751,8 +4751,8 @@
     "options": [
       {
         "key": "A",
-        "text": "3 92",
-        "hint": "给新键赋值新增键值对，长度变为3"
+        "text": "2 85",
+        "hint": "英语是新增的键，对应的值为92"
       },
       {
         "key": "B",
@@ -4766,21 +4766,21 @@
       },
       {
         "key": "D",
-        "text": "2 85",
-        "hint": "英语是新增的键，对应的值为92"
+        "text": "3 92",
+        "hint": "给新键赋值新增键值对，长度变为3"
       }
     ],
-    "answer": "A",
-    "explanation": "答案是 A，输出 `3 92`。在 Python 中，通过 `d[key] = value` 语法对字典赋值时，如果键尚不存在，字典会自动添加该新键值对，长度随之加 1。因此向字典添加 `\"英语\": 92` 后，字典共有 3 个元素，`scores[\"英语\"]` 值为 92。易错点：读取不存在的键会报 `KeyError`，但赋值不存在的键则是直接新增。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `3 92`。在 Python 中，通过 `d[key] = value` 语法对字典赋值时，如果键尚不存在，字典会自动添加该新键值对，长度随之加 1。因此向字典添加 `\"英语\": 92` 后，字典共有 3 个元素，`scores[\"英语\"]` 值为 92。易错点：读取不存在的键会报 `KeyError`，但赋值不存在的键则是直接新增。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "访问与成员检查",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q111",
@@ -4843,8 +4843,8 @@
       },
       {
         "key": "B",
-        "text": "2 90",
-        "hint": "键区分大小写，长度为2且取Tom的值"
+        "text": "1 90",
+        "hint": "大小写不同为不同键，字典长度应为2"
       },
       {
         "key": "C",
@@ -4853,21 +4853,21 @@
       },
       {
         "key": "D",
-        "text": "1 90",
-        "hint": "大小写不同为不同键，字典长度应为2"
+        "text": "2 90",
+        "hint": "键区分大小写，长度为2且取Tom的值"
       }
     ],
-    "answer": "B",
-    "explanation": "答案是 B，输出 `2 90`。在 Python 中，字符串作为字典的键时严格区分大小写。`\"Tom\"` 与 `\"tom\"` 的字符编码和哈希值均不相同，因此被视为两个完全独立的键，不会发生覆盖。存入字典后包含两个键值对，`len(scores)` 为 2；通过 `scores[\"Tom\"]` 查询得到的值为 90。易错点：初学者容易误以为英文人名大小写指同一对象因而会被自动合并覆盖，但 Python 字典对键的大小写是严格敏感的。",
+    "answer": "D",
+    "explanation": "答案是 D，输出 `2 90`。在 Python 中，字符串作为字典的键时严格区分大小写。`\"Tom\"` 与 `\"tom\"` 的字符编码和哈希值均不相同，因此被视为两个完全独立的键，不会发生覆盖。存入字典后包含两个键值对，`len(scores)` 为 2；通过 `scores[\"Tom\"]` 查询得到的值为 90。易错点：初学者容易误以为英文人名大小写指同一对象因而会被自动合并覆盖，但 Python 字典对键的大小写是严格敏感的。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "键的特性与哈希",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q113",
@@ -5088,47 +5088,47 @@
   },
   {
     "id": "q118",
-    "title": "元组解包赋值给多个变量",
+    "title": "单元素元组要加逗号",
     "topic": "元组/引用",
     "tags": [
       "元组",
       "解包"
     ],
     "stem": "运行以下代码，控制台打印的结果是？",
-    "code": "point = (3, 5)\nx, y = point\nprint(x + y)",
+    "code": "a = (5)\nb = (5,)\nprint(type(a).__name__, type(b).__name__)",
     "options": [
       {
         "key": "A",
-        "text": "8",
-        "hint": "元组解包分别赋值给x和y，3+5=8"
+        "text": "tuple tuple",
+        "hint": "(5) 里的括号只是普通括号"
       },
       {
         "key": "B",
-        "text": "(3, 5)",
-        "hint": "x和y分别获得3和5，相加得8"
+        "text": "int int",
+        "hint": "加了逗号才构成元组"
       },
       {
         "key": "C",
-        "text": "15",
-        "hint": "代码执行的是加法运算3+5"
+        "text": "int tuple",
+        "hint": "逗号才是元组的关键，(5) 仍是整数"
       },
       {
         "key": "D",
-        "text": "报错：ValueError",
-        "hint": "变量数与元组元素数相同，解包正常"
+        "text": "tuple int",
+        "hint": "两者顺序搞反了"
       }
     ],
-    "answer": "A",
-    "explanation": "答案是 A，输出 `8`。在 Python 中，可以将元组中的元素解包（unpack）赋值给等量的变量。语句 `x, y = point` 会将 `point` 中的第一个元素 3 赋给 `x`，第二个元素 5 赋给 `y`。因此 `x + y` 的计算结果为 `3 + 5 = 8`。易错点：解包时左侧变量数量必须与右侧元组元素数量严格相等，否则会报 `ValueError`。",
+    "answer": "C",
+    "explanation": "答案是 C，输出 `int tuple`。真正创建元组的是逗号，而不是括号。`(5)` 中的括号只起分组作用，结果还是整数 5；`(5,)` 带了逗号，才是只有一个元素的元组。易错点：以为用括号包起来就是元组，写单元素元组时忘了加逗号。",
     "animationId": null,
     "type": "输出判断",
     "difficulty": 1,
     "subtopic": "元组基础",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：title,code,options,answer,explanation"
   },
   {
     "id": "q119",
@@ -5192,13 +5192,13 @@
       },
       {
         "key": "B",
-        "text": "报错：NameError",
-        "hint": "形参仅在函数内有效，外部访问报未定义"
+        "text": "【Python】",
+        "hint": "title是形参名，并非函数的返回值"
       },
       {
         "key": "C",
-        "text": "【Python】",
-        "hint": "title是形参名，并非函数的返回值"
+        "text": "报错：NameError",
+        "hint": "形参仅在函数内有效，外部访问报未定义"
       },
       {
         "key": "D",
@@ -5206,17 +5206,17 @@
         "hint": "外部未定义变量直接报错，不会取None"
       }
     ],
-    "answer": "B",
-    "explanation": "答案是 B，会报错 `NameError`。函数的形参 `title` 属于函数内部的局部变量，其作用域仅限于函数体内。调用 `make_label(\"Python\")` 时，`title` 在函数执行期间有效；函数执行结束后局部作用域随即销毁。在函数外部直接访问未定义的全局变量 `title`，会抛出 `NameError: name 'title' is not defined`。易错点：向函数传入实参不会自动在外部创建同名变量。",
+    "answer": "C",
+    "explanation": "答案是 C，会报错 `NameError`。函数的形参 `title` 属于函数内部的局部变量，其作用域仅限于函数体内。调用 `make_label(\"Python\")` 时，`title` 在函数执行期间有效；函数执行结束后局部作用域随即销毁。在函数外部直接访问未定义的全局变量 `title`，会抛出 `NameError: name 'title' is not defined`。易错点：向函数传入实参不会自动在外部创建同名变量。",
     "animationId": null,
     "type": "报错判断",
     "difficulty": 1,
     "subtopic": "全局与局部变量",
-    "status": "verified",
+    "status": "needs_review",
     "revised": false,
-    "revision": 0,
-    "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "revision": 1,
+    "lastEditedAt": "2026-10-22T13:37:34+08:00",
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
   },
   {
     "id": "q121",
