@@ -41,7 +41,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "循环控制"
+    "subtopic": "循环控制",
+    "addedAt": "未知",
+    "source": "种子题（建站前已有，生成方式未知）"
   },
   {
     "id": "q002",
@@ -85,7 +87,9 @@
     "editNote": "报错选项统一为「报错：TypeError/SyntaxError」",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "引用与可变性"
+    "subtopic": "引用与可变性",
+    "addedAt": "未知",
+    "source": "种子题（建站前已有，生成方式未知）"
   },
   {
     "id": "q003",
@@ -129,7 +133,9 @@
     "editNote": "D选项换成可信干扰项 [1] [2, 1]",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "默认参数机制"
+    "subtopic": "默认参数机制",
+    "addedAt": "未知",
+    "source": "种子题（建站前已有，生成方式未知）"
   },
   {
     "id": "q004",
@@ -173,7 +179,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "循环控制"
+    "subtopic": "循环控制",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q005",
@@ -217,7 +225,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "元组基础"
+    "subtopic": "元组基础",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q006",
@@ -261,7 +271,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "默认参数机制"
+    "subtopic": "默认参数机制",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q007",
@@ -305,7 +317,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q008",
@@ -349,7 +363,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "列表修改与拷贝"
+    "subtopic": "列表修改与拷贝",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q009",
@@ -392,7 +408,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "键的特性与哈希"
+    "subtopic": "键的特性与哈希",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q010",
@@ -435,7 +453,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "常用字典方法"
+    "subtopic": "常用字典方法",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q011",
@@ -479,7 +499,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 2,
-    "subtopic": "全局与局部变量"
+    "subtopic": "全局与局部变量",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q012",
@@ -523,7 +545,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "嵌套作用域与闭包"
+    "subtopic": "嵌套作用域与闭包",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q013",
@@ -566,7 +590,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "类属性与实例属性"
+    "subtopic": "类属性与实例属性",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q014",
@@ -609,7 +635,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "继承与特殊方法"
+    "subtopic": "继承与特殊方法",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q015",
@@ -652,7 +680,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "流程控制与清理"
+    "subtopic": "流程控制与清理",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q016",
@@ -695,7 +725,9 @@
     "editNote": "解析补充 Python 3.14 finally内return的SyntaxWarning",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "流程控制与清理"
+    "subtopic": "流程控制与清理",
+    "addedAt": "2026-10-06",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q017",
@@ -738,7 +770,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "字符串操作"
+    "subtopic": "字符串操作",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q018",
@@ -782,7 +816,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "字符串操作"
+    "subtopic": "字符串操作",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q019",
@@ -826,7 +862,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "循环控制"
+    "subtopic": "循环控制",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q020",
@@ -869,7 +907,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "元组基础"
+    "subtopic": "元组基础",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q021",
@@ -913,7 +953,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "同一性与拷贝"
+    "subtopic": "同一性与拷贝",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q022",
@@ -957,7 +999,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "同一性与拷贝"
+    "subtopic": "同一性与拷贝",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q023",
@@ -1001,7 +1045,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "函数定义与返回值"
+    "subtopic": "函数定义与返回值",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q024",
@@ -1045,7 +1091,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "参数传递与调用"
+    "subtopic": "参数传递与调用",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q025",
@@ -1089,7 +1137,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "参数传递与调用"
+    "subtopic": "参数传递与调用",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q026",
@@ -1133,7 +1183,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q027",
@@ -1177,7 +1229,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "列表修改与拷贝"
+    "subtopic": "列表修改与拷贝",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q028",
@@ -1221,7 +1275,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "列表修改与拷贝"
+    "subtopic": "列表修改与拷贝",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q029",
@@ -1264,7 +1320,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "键的特性与哈希"
+    "subtopic": "键的特性与哈希",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q030",
@@ -1307,7 +1365,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "访问与成员检查"
+    "subtopic": "访问与成员检查",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q031",
@@ -1350,7 +1410,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "常用字典方法"
+    "subtopic": "常用字典方法",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q032",
@@ -1393,7 +1455,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "嵌套作用域与闭包"
+    "subtopic": "嵌套作用域与闭包",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q033",
@@ -1437,7 +1501,9 @@
     "editNote": "难度2→1",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "变量生命周期"
+    "subtopic": "变量生命周期",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q034",
@@ -1481,7 +1547,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "变量生命周期"
+    "subtopic": "变量生命周期",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q035",
@@ -1524,7 +1592,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "类属性与实例属性"
+    "subtopic": "类属性与实例属性",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q036",
@@ -1567,7 +1637,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "方法定义与调用"
+    "subtopic": "方法定义与调用",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q037",
@@ -1610,7 +1682,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "继承与特殊方法"
+    "subtopic": "继承与特殊方法",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q038",
@@ -1653,7 +1727,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "异常捕获与匹配"
+    "subtopic": "异常捕获与匹配",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q039",
@@ -1697,7 +1773,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "异常捕获与匹配"
+    "subtopic": "异常捕获与匹配",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q040",
@@ -1740,7 +1818,9 @@
     "editNote": "改为异常抛出：print(e)只输出消息文本",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "异常抛出与自定义"
+    "subtopic": "异常抛出与自定义",
+    "addedAt": "2026-10-07",
+    "source": "Antigravity · claude-opus-4-6-thinking"
   },
   {
     "id": "q041",
@@ -1784,7 +1864,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "字符串操作"
+    "subtopic": "字符串操作",
+    "addedAt": "2026-10-09",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q042",
@@ -1828,7 +1910,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "循环控制"
+    "subtopic": "循环控制",
+    "addedAt": "2026-10-09",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q043",
@@ -1872,7 +1956,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "字符串操作"
+    "subtopic": "字符串操作",
+    "addedAt": "2026-10-09",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q044",
@@ -1916,7 +2002,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "字符串操作"
+    "subtopic": "字符串操作",
+    "addedAt": "2026-10-09",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q045",
@@ -1960,7 +2048,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "循环控制"
+    "subtopic": "循环控制",
+    "addedAt": "2026-10-09",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q046",
@@ -2000,7 +2090,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q047",
@@ -2041,7 +2133,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q048",
@@ -2082,7 +2176,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q049",
@@ -2123,7 +2219,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q050",
@@ -2164,7 +2262,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q051",
@@ -2205,7 +2305,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q052",
@@ -2245,7 +2347,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q053",
@@ -2286,7 +2390,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q054",
@@ -2327,7 +2433,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q055",
@@ -2368,7 +2476,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": null,
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-10",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q056",
@@ -2412,7 +2522,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q057",
@@ -2456,7 +2568,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q058",
@@ -2500,7 +2614,9 @@
     "editNote": "错误选项换成初学者常误选的答案",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q059",
@@ -2544,7 +2660,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q060",
@@ -2588,7 +2706,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "列表修改与拷贝"
+    "subtopic": "列表修改与拷贝",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q061",
@@ -2632,7 +2752,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "列表修改与拷贝"
+    "subtopic": "列表修改与拷贝",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q062",
@@ -2675,7 +2797,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q063",
@@ -2719,7 +2843,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q064",
@@ -2763,7 +2889,9 @@
     "editNote": "难度3→1",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q065",
@@ -2807,7 +2935,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "切片索引与步长"
+    "subtopic": "切片索引与步长",
+    "addedAt": "2026-10-10",
+    "source": "Grok Build · grok-4.7"
   },
   {
     "id": "q066",
@@ -2850,7 +2980,9 @@
     "editNote": "换新角度：元组index返回首次出现下标",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "元组基础"
+    "subtopic": "元组基础",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q067",
@@ -2894,7 +3026,9 @@
     "editNote": "改考 a+=[x] 原地修改与 a=a+[x] 新建列表的区别",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "引用与可变性"
+    "subtopic": "引用与可变性",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q068",
@@ -2938,7 +3072,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "元组基础"
+    "subtopic": "元组基础",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q069",
@@ -2982,7 +3118,9 @@
     "editNote": "按公开题库同步小辛入库时的修改：code,options,explanation",
     "type": "代码补全",
     "difficulty": 2,
-    "subtopic": "同一性与拷贝"
+    "subtopic": "同一性与拷贝",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q070",
@@ -3026,7 +3164,9 @@
     "editNote": "与q022考查独立列表不同，改考别名赋值与就地修改后，==与is均为True。",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "引用与可变性"
+    "subtopic": "引用与可变性",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q071",
@@ -3070,7 +3210,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "函数定义与返回值"
+    "subtopic": "函数定义与返回值",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q072",
@@ -3114,7 +3256,9 @@
     "editNote": "难度1→2",
     "type": "报错判断",
     "difficulty": 2,
-    "subtopic": "参数传递与调用"
+    "subtopic": "参数传递与调用",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q073",
@@ -3158,7 +3302,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "默认参数机制"
+    "subtopic": "默认参数机制",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q074",
@@ -3202,7 +3348,9 @@
     "editNote": "换新角度：循环内return立即结束函数（函数定义与返回值）",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "函数定义与返回值"
+    "subtopic": "函数定义与返回值",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q075",
@@ -3246,7 +3394,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "参数传递与调用"
+    "subtopic": "参数传递与调用",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q076",
@@ -3290,7 +3440,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "访问与成员检查"
+    "subtopic": "访问与成员检查",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q077",
@@ -3334,7 +3486,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "访问与成员检查"
+    "subtopic": "访问与成员检查",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q078",
@@ -3377,7 +3531,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "常用字典方法"
+    "subtopic": "常用字典方法",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q079",
@@ -3421,7 +3577,9 @@
     "editNote": "",
     "type": "代码补全",
     "difficulty": 3,
-    "subtopic": "常用字典方法"
+    "subtopic": "常用字典方法",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q080",
@@ -3465,7 +3623,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "键的特性与哈希"
+    "subtopic": "键的特性与哈希",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q081",
@@ -3509,7 +3669,9 @@
     "editNote": "",
     "type": "代码补全",
     "difficulty": 1,
-    "subtopic": "全局与局部变量"
+    "subtopic": "全局与局部变量",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q082",
@@ -3553,7 +3715,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "变量生命周期"
+    "subtopic": "变量生命周期",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q083",
@@ -3597,7 +3761,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "全局与局部变量"
+    "subtopic": "全局与局部变量",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q084",
@@ -3640,7 +3806,9 @@
     "editNote": "将变量名 sum 全部改为 total，避免遮蔽内置函数，并同步更新代码、提示和解析。",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "嵌套作用域与闭包"
+    "subtopic": "嵌套作用域与闭包",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q085",
@@ -3684,7 +3852,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "嵌套作用域与闭包"
+    "subtopic": "嵌套作用域与闭包",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q086",
@@ -3728,7 +3898,9 @@
     "editNote": "",
     "type": "代码补全",
     "difficulty": 1,
-    "subtopic": "方法定义与调用"
+    "subtopic": "方法定义与调用",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q087",
@@ -3772,7 +3944,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 2,
-    "subtopic": "类属性与实例属性"
+    "subtopic": "类属性与实例属性",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q088",
@@ -3815,7 +3989,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 1,
-    "subtopic": "继承与特殊方法"
+    "subtopic": "继承与特殊方法",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q089",
@@ -3858,7 +4034,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "继承与特殊方法"
+    "subtopic": "继承与特殊方法",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q090",
@@ -3902,7 +4080,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "方法定义与调用"
+    "subtopic": "方法定义与调用",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q091",
@@ -3946,7 +4126,9 @@
     "editNote": "",
     "type": "代码补全",
     "difficulty": 1,
-    "subtopic": "异常抛出与自定义"
+    "subtopic": "异常抛出与自定义",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q092",
@@ -3990,7 +4172,9 @@
     "editNote": "",
     "type": "报错判断",
     "difficulty": 1,
-    "subtopic": "异常捕获与匹配"
+    "subtopic": "异常捕获与匹配",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q093",
@@ -4034,7 +4218,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 2,
-    "subtopic": "流程控制与清理"
+    "subtopic": "流程控制与清理",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q094",
@@ -4078,7 +4264,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "异常捕获与匹配"
+    "subtopic": "异常捕获与匹配",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q095",
@@ -4122,7 +4310,9 @@
     "editNote": "",
     "type": "输出判断",
     "difficulty": 3,
-    "subtopic": "异常抛出与自定义"
+    "subtopic": "异常抛出与自定义",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q096",
@@ -4166,7 +4356,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q097",
@@ -4210,7 +4402,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q098",
@@ -4254,7 +4448,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q099",
@@ -4298,7 +4494,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：title,code,options,answer,explanation,type"
+    "editNote": "按公开题库同步小辛入库时的修改：title,code,options,answer,explanation,type",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q100",
@@ -4342,7 +4540,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q101",
@@ -4386,7 +4586,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q102",
@@ -4429,7 +4631,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q103",
@@ -4473,7 +4677,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q104",
@@ -4517,7 +4723,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：title,stem,code,options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：title,stem,code,options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q105",
@@ -4561,7 +4769,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q106",
@@ -4605,7 +4815,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q107",
@@ -4649,7 +4861,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q108",
@@ -4693,7 +4907,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q109",
@@ -4737,7 +4953,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q110",
@@ -4780,7 +4998,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q111",
@@ -4823,7 +5043,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q112",
@@ -4867,7 +5089,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q113",
@@ -4910,7 +5134,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q114",
@@ -4954,7 +5180,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q115",
@@ -4998,7 +5226,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q116",
@@ -5041,7 +5271,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q117",
@@ -5084,7 +5316,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q118",
@@ -5128,7 +5362,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：title,code,options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：title,code,options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q119",
@@ -5172,7 +5408,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q120",
@@ -5216,7 +5454,9 @@
     "revised": false,
     "revision": 1,
     "lastEditedAt": "2026-10-22T13:37:34+08:00",
-    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation"
+    "editNote": "按公开题库同步小辛入库时的修改：options,answer,explanation",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q121",
@@ -5259,7 +5499,9 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
   },
   {
     "id": "q122",
@@ -5302,6 +5544,2259 @@
     "revised": false,
     "revision": 0,
     "lastEditedAt": "2026-10-11T21:33:23+08:00",
-    "editNote": ""
+    "editNote": "",
+    "addedAt": "2026-10-11",
+    "source": "Antigravity · gemini-3.8-flash-high"
+  },
+  {
+    "id": "q123",
+    "title": "修改元组内的可变列表",
+    "topic": "元组/引用",
+    "tags": [
+      "元组",
+      "可变对象与引用"
+    ],
+    "stem": "下面的Python代码片段，执行后会输出什么？",
+    "code": "my_tuple = (10, 20, [30, 40])\nmy_tuple[2][0] = 35\nprint(my_tuple)",
+    "options": [
+      {
+        "key": "A",
+        "text": "(10, 20, [35, 40])",
+        "hint": "元组包含的列表是可变对象，可就地修改其内部元素"
+      },
+      {
+        "key": "B",
+        "text": "代码报错 TypeError",
+        "hint": "并没有重新赋值元组本身的元素，不会报TypeError"
+      },
+      {
+        "key": "C",
+        "text": "(10, 20, [30, 40])",
+        "hint": "列表元素已被就地修改为35"
+      },
+      {
+        "key": "D",
+        "text": "代码报错 SyntaxError",
+        "hint": "连续索引语法合法，没有语法错误"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，元组（tuple）本身是不可变序列，不能直接对元组本身的元素重新赋值（例如执行 my_tuple[2] = ... 会抛出 TypeError）。但在本题中，my_tuple[2] 指向的是一个列表（list），列表属于可变对象。my_tuple[2][0] = 35 是在就地修改这个列表内部的元素，而没有改变元组中存储的引用地址（元组依然指向同一个列表对象），因此该操作是合法的，最终输出 (10, 20, [35, 40])。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "引用与可变性",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图1）。【重复】与现有 q002（修改元组内嵌套列表）代码完全相同",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      1
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q124",
+    "title": "比较运算符is与==的区别",
+    "topic": "元组/引用",
+    "tags": [
+      "运算符与表达式",
+      "可变对象与引用"
+    ],
+    "stem": "在Python中，`is` 和 `==` 是两个常用的比较运算符。请问下面这段代码的输出结果是什么？",
+    "code": "a = [1, 2, 3]\nb = [1, 2, 3]\nc = a\n\nprint(a == b, a is b, a is c)",
+    "options": [
+      {
+        "key": "A",
+        "text": "True False True",
+        "hint": "==比较值相等，is比较是否为同一个内存对象"
+      },
+      {
+        "key": "B",
+        "text": "True True True",
+        "hint": "a和b是分别创建的独立列表对象，a is b为False"
+      },
+      {
+        "key": "C",
+        "text": "False False True",
+        "hint": "a与b的元素内容完全相同，a == b为True"
+      },
+      {
+        "key": "D",
+        "text": "True True False",
+        "hint": "c = a为引用赋值，c与a指向同一对象，a is c为True"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，运算符 `==` 比较的是两个对象的值/内容是否相等，因为列表 a 和 b 包含相同的元素 [1, 2, 3]，所以 a == b 为 True。运算符 `is` 比较的是两个对象的身份标识（即内存地址是否相同，id(x) == id(y)），列表 a 和 b 是分别独立创建的两个列表对象，占用不同的内存地址，所以 a is b 为 False。而赋值语句 c = a 是将 a 的引用赋给 c，二者指向内存中的同一个列表对象，因此 a is c 为 True。最终输出 True False True。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "同一性与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图2）。【近似重复】与 q022（==比较值与is比较引用）考点相同，多了 a is c",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      2
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q125",
+    "title": "圆括号分组与列表乘法",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "运算符与表达式"
+    ],
+    "stem": "下面这段代码的输出是什么？",
+    "code": "a = ([-1] * 3)\na[0] = 1\n\nprint(a)",
+    "options": [
+      {
+        "key": "A",
+        "text": "([1], [-1], [-1])",
+        "hint": "圆括号内无逗号不构成元组，且乘法生成的是一维列表"
+      },
+      {
+        "key": "B",
+        "text": "[1, -1, -1]",
+        "hint": "圆括号仅为普通分组括号，a是列表[-1,-1,-1]，修改a[0]为1"
+      },
+      {
+        "key": "C",
+        "text": "[1, 1, 1]",
+        "hint": "列表元素为不可变整数，修改a[0]不会影响其他位置"
+      },
+      {
+        "key": "D",
+        "text": "代码会报错 TypeError",
+        "hint": "a是列表而非元组，支持按索引赋值修改"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，在表达式 a = ([-1] * 3) 中，外层的圆括号内部没有逗号，因此它仅仅充当表达式的优先级/分组括号，并不会创建元组；[-1] * 3 表示将列表重复 3 次，生成一个包含三个整数的一维列表 [-1, -1, -1]，因此 a 是一个列表对象。随后执行 a[0] = 1，将列表索引 0 处的元素修改为 1。由于列表元素是不可变的整数而非嵌套可变引用，修改 a[0] 只改变第 0 位的值，最终 a 的内容为 [1, -1, -1]。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图3）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      3
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q126",
+    "title": "逻辑运算符的短路求值",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "运算符与表达式"
+    ],
+    "stem": "以下代码会向控制台输出什么内容？",
+    "code": "def check(val):\n    print(f\"Checking {val}\")\n    return val > 5\n\ncheck(10) or check(1)\ncheck(3) and check(8)",
+    "options": [
+      {
+        "key": "A",
+        "text": "Checking 10\nChecking 3",
+        "hint": "or左边为真短路跳过右边；and左边为假短路跳过右边"
+      },
+      {
+        "key": "B",
+        "text": "Checking 10\nChecking 1\nChecking 3\nChecking 8",
+        "hint": "误以为逻辑运算符会执行两边的表达式"
+      },
+      {
+        "key": "C",
+        "text": "Checking 10\nChecking 3\nChecking 8",
+        "hint": "check(3)返回False，and运算短路跳过check(8)"
+      },
+      {
+        "key": "D",
+        "text": "Checking 10\nChecking 1\nChecking 3",
+        "hint": "check(10)返回True，or运算短路跳过check(1)"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，Python 中的逻辑运算符 `or` 和 `and` 遵循短路求值（Short-circuit evaluation）规则：\n1. 在 `check(10) or check(1)` 中，先调用 `check(10)`，打印 `Checking 10` 并返回 `True`（因为 10 > 5）。由于 `or` 运算只要左操作数为真，整体结果就已经确定为真，因此 Python 会短路跳过右侧的 `check(1)`，不予执行。\n2. 在 `check(3) and check(8)` 中，先调用 `check(3)`，打印 `Checking 3` 并返回 `False`（因为 3 > 5 为假）。由于 `and` 运算只要左操作数为假，整体结果就已经确定为假，因此 Python 会短路跳过右侧的 `check(8)`，不予执行。\n因此，控制台只依次输出了 `Checking 10` 和 `Checking 3`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": null,
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图4）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      4
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q127",
+    "title": "sorted与sort及切片",
+    "topic": "列表/切片",
+    "tags": [
+      "列表方法",
+      "切片"
+    ],
+    "stem": "下列代码段的执行结果是什么？",
+    "code": "nums = [3, 1, 4, 1, 5, 9, 2]\nsorted_nums = sorted(nums)\nresult = nums.sort()\nfinal_list = sorted_nums[2:5] + [result]\nprint(final_list)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[2, 3, 4, 1, 1, 2, 3, 4, 5, 9]",
+        "hint": "nums.sort()为就地排序并返回None，而非返回新列表"
+      },
+      {
+        "key": "B",
+        "text": "程序会因为TypeError而中断",
+        "hint": "[result]是单元素列表[None]，两个列表可以相加拼接"
+      },
+      {
+        "key": "C",
+        "text": "[4, 1, 5, None]",
+        "hint": "切片作用于排序后的sorted_nums，而非原列表nums"
+      },
+      {
+        "key": "D",
+        "text": "[2, 3, 4, None]",
+        "hint": "sorted返回新列表，切片得到[2, 3, 4]，sort()返回None拼接得[2, 3, 4, None]"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，\n1. `sorted(nums)` 返回一个新的升序排好序的列表，因此 `sorted_nums` 为 `[1, 1, 2, 3, 4, 5, 9]`。\n2. `nums.sort()` 是列表对象的就地排序方法，它直接修改原列表，其返回值为 `None`，所以 `result = None`。\n3. `sorted_nums[2:5]` 对排序后的列表切片，取索引 2、3、4 的元素，对应的值依次为 2、3、4，结果为 `[2, 3, 4]`。\n4. `[result]` 是一个只包含一个元素 `None` 的列表 `[None]`。两个列表相加进行拼接：`[2, 3, 4] + [None]`，最终得到 `[2, 3, 4, None]`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图5）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      5
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q128",
+    "title": "列表切片索引与步长",
+    "topic": "列表/切片",
+    "tags": [
+      "切片",
+      "列表"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "my_list = [10, 20, 30, 40, 50, 60, 70, 80]\nprint(my_list[1:7:2])",
+    "options": [
+      {
+        "key": "A",
+        "text": "[20, 40, 60]",
+        "hint": "起始索引1（值20），终止索引7（不含），步长2，取索引1、3、5"
+      },
+      {
+        "key": "B",
+        "text": "[20, 30, 40, 50, 60, 70]",
+        "hint": "步长为2，元素不会连续选取"
+      },
+      {
+        "key": "C",
+        "text": "[20, 40, 60, 80]",
+        "hint": "切片区间为前闭后开，索引7处的80不被包含"
+      },
+      {
+        "key": "D",
+        "text": "[10, 30, 50, 70]",
+        "hint": "起始索引为1对应元素20，而不是从索引0（值10）开始"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，切片语法为 `list[start:stop:step]`：\n- `start = 1`：起始索引为 1，对应元素为 20。\n- `stop = 7`：终止索引为 7（左闭右开，不包含索引 7 处的元素 80）。\n- `step = 2`：步长为 2，每次索引递增 2。\n因此，依次抽取的索引为 1、3、5，对应的元素分别是 `my_list[1] = 20`、`my_list[3] = 40`、`my_list[5] = 60`。最终切片结果为 `[20, 40, 60]`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图6）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      6
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q129",
+    "title": "列表修改pop与insert",
+    "topic": "列表/切片",
+    "tags": [
+      "列表方法",
+      "列表"
+    ],
+    "stem": "仔细追踪下列代码中 my_list 的状态变化，最终的输出结果是什么？",
+    "code": "my_list = [-1, 0, 1, 2]\nremoved_val = my_list.pop(1)\nmy_list.insert(2, removed_val)\nmy_list.remove(-1)\nprint(my_list)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[0, 2, 1]",
+        "hint": "未正确追踪pop(1)弹出的值与insert插入的位置"
+      },
+      {
+        "key": "B",
+        "text": "[-1, 1, 0]",
+        "hint": "remove(-1)删除了元素-1，列表中不再含有-1"
+      },
+      {
+        "key": "C",
+        "text": "[0, 0, 1, 2]",
+        "hint": "pop会移除元素而非原样保留"
+      },
+      {
+        "key": "D",
+        "text": "[1, 0, 2]",
+        "hint": "pop(1)弹出0后列表为[-1,1,2]，索引2处插入0得[-1,1,0,2]，删去-1得[1,0,2]"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，逐步追踪列表状态：\n1. 初始状态：`my_list = [-1, 0, 1, 2]`。\n2. `removed_val = my_list.pop(1)`：弹出并返回索引 1 处的元素 `0`，此时 `removed_val = 0`，`my_list` 变为 `[-1, 1, 2]`。\n3. `my_list.insert(2, removed_val)`：在索引 2 处插入值 `0`，原索引 2 处的元素 `2` 后移，`my_list` 变为 `[-1, 1, 0, 2]`。\n4. `my_list.remove(-1)`：移除列表中值为 `-1` 的第一个匹配项，`my_list` 变为 `[1, 0, 2]`。\n因此，最终打印出的结果为 `[1, 0, 2]`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图7）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      7
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q130",
+    "title": "函数形参修改与重赋值",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "可变对象与引用"
+    ],
+    "stem": "分析以下函数调用对列表的影响，最终的输出结果是什么？",
+    "code": "def process_list(items):\n    items.append(40)\n    items = [100, 200]\n\ndata = [10, 20, 30]\nprocess_list(data)\nprint(data)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[10, 20, 30]",
+        "hint": "items.append(40)已就地修改了实参指向的列表"
+      },
+      {
+        "key": "B",
+        "text": "[100, 200]",
+        "hint": "items = [100, 200]只改变了函数内局部引用的指向，不影响外部变量"
+      },
+      {
+        "key": "C",
+        "text": "[10, 20, 30, 100, 200]",
+        "hint": "重新赋值不会将新列表拼接到原列表后"
+      },
+      {
+        "key": "D",
+        "text": "[10, 20, 30, 40]",
+        "hint": "append就地修改生效，而重新赋值仅改变局部变量引用"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，在 Python 中，函数参数传递机制为“对象引用传递”：\n1. 调用 `process_list(data)` 时，形参 `items` 与实参 `data` 引用同一个列表对象 `[10, 20, 30]`。\n2. 执行 `items.append(40)` 时，是通过该引用就地修改原列表对象，列表内容变为 `[10, 20, 30, 40]`。\n3. 接着执行 `items = [100, 200]`，这是对局部变量 `items` 的重新赋值，让它指向了一个新的列表对象，而不会影响外部变量 `data` 所绑定的原列表对象。\n函数执行完毕退出后，外部变量 `data` 仍然指向原列表对象，其内容已被修改为 `[10, 20, 30, 40]`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "参数传递与调用",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图8）。【近似重复】与 q025（形参就地修改与重新赋值）结构几乎相同",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      8
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q131",
+    "title": "空集合与空字典的创建",
+    "topic": "字典",
+    "tags": [
+      "字典",
+      "集合"
+    ],
+    "stem": "在Python中，关于创建空集合和字典，下列说法正确的是？",
+    "code": "",
+    "options": [
+      {
+        "key": "A",
+        "text": "s = {} 可以创建一个空集合",
+        "hint": "{}创建的是空字典，创建空集合必须使用set()"
+      },
+      {
+        "key": "B",
+        "text": "s = set() 会创建一个包含一个 None 元素的集合",
+        "hint": "set()创建的是没有任何元素的空集合"
+      },
+      {
+        "key": "C",
+        "text": "d = {} 和 d = dict() 都会创建空字典",
+        "hint": "字面量{}和dict()构造函数都可以用来创建空字典"
+      },
+      {
+        "key": "D",
+        "text": "d 是一个非空字典，s = set(d) 会产生语法错误",
+        "hint": "set(d)完全合法，会将字典的所有键提取构成集合"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，在 Python 中：\n- 空花括号 `{}` 默认被用于创建空字典（`dict`），因为字典的历史更早且使用更频繁。要创建一个空集合（`set`），必须使用构造函数 `set()`，所以 A 错误。\n- `set()` 不传参时会创建一个长度为 0 的真正空集合，并不包含 `None`，所以 B 错误。\n- `{}` 与 `dict()` 均是创建空字典的标准方式，所以 C 正确。\n- 对字典调用 `set(d)` 是一种常见且合法的操作，它会遍历字典的键并将所有键放入新集合中，不会产生任何语法或运行时错误，所以 D 错误。",
+    "animationId": null,
+    "type": "概念理解",
+    "difficulty": 1,
+    "subtopic": "键的特性与哈希",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图9）。【格式】无代码的概念题 提取备注：无代码的概念理解题",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      9
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q132",
+    "title": "大文件读取与字符串清洗",
+    "topic": "文件读写",
+    "tags": [
+      "文件读写",
+      "字符串方法"
+    ],
+    "stem": "上面是一个可寻找生日在圆周率小数点后几位并打印其位置的简易函数，用含小数点后一亿位的圆周率文件查询。假设文件中的数字可能被空格或换行符分隔；文件内容以3.1415开头。兼顾准确性和执行效率，应该选择哪个选项填入下划线处？",
+    "code": "import re\n\ndef find_birthday_in_pi(file_path, birthday):\n    with open(file_path, 'r', encoding='utf-8') as f:\n        # __________ 请在选项中选择最佳代码片段填入此处 __________\n        \n        # 去掉开头的无关字符\n        if pi_digits.startswith(\"3.\"):\n            pi_digits = pi_digits[2:]\n        # 开始查找\n        position = pi_digits.find(birthday)\n        \n        if position != -1:\n            print(f\"找到了！在小数点后第 {position + 1} 位。\")\n        else:\n            print(\"未找到。\")",
+    "options": [
+      {
+        "key": "A",
+        "text": "content = f.read()\npi_digits = content.replace(' ', '').strip()",
+        "hint": "replace无法去除中间的换行符，且strip仅去除首尾空白"
+      },
+      {
+        "key": "B",
+        "text": "pi_digits = \"\"\nfor line in f:\n    cleaned_line = line.replace(' ', '').strip()\n    pi_digits += cleaned_line",
+        "hint": "在大字符串上使用+=循环拼接会导致频繁的内存重新分配，效率极低"
+      },
+      {
+        "key": "C",
+        "text": "content = f.read()\npi_digits = re.sub(r\"\\D\", \"\", content)",
+        "hint": "正则\\D会误删小数点导致startswith(\"3.\")失效，使首位3无法被去除"
+      },
+      {
+        "key": "D",
+        "text": "lines = [line.replace(' ', '').strip() for line in f]\npi_digits = \"\".join(lines)",
+        "hint": "列表推导式处理每行空格和换行符，配合join一次性拼接兼顾准确与高效"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，兼顾准确性与执行效率分析如下：\n- A 选项：`content.replace(' ', '')` 仅移除了空格，中间每行末尾的换行符 `\\n` 依然存在（`strip()` 仅剥除整串的首尾空白），这会导致匹配跨行时漏查或字符索引位置偏移。\n- B 选项：虽然逐行清洗了空格与换行符，但在处理一亿位（约 100MB）数据时，在循环中使用不可变字符串的 `+=` 拼接会反复触发内存重新分配与拷贝，耗时极长。\n- C 选项：`re.sub(r\"\\D\", \"\", content)` 会将所有非数字字符（包含小数点 `.`）全部替换删除，导致开头的 `3.1415...` 变成 `31415...`，使得随后的 `pi_digits.startswith(\"3.\")` 判断为 False，从而无法截掉开头的整数 3，导致查询出的小数点后位数整体产生偏差。\n- D 选项：通过逐行读取并使用 `line.replace(' ', '').strip()` 正确清除了每行的空格和换行符，同时保留了开头的 `3.`；最后使用 `\"\".join(lines)` 在底层一次性完成内存分配与高效拼接，兼顾了逻辑准确性与运行效率。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 2,
+    "subtopic": "文件逐行读取与字符串处理",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图10）。【格式/超纲】读文件代码补全，代码长且无法直接运行（依赖外部文件），文件读写为 deferred 标签；按代码推理核对答案 D",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      10
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q133",
+    "title": "推导式统计及格人数",
+    "topic": "列表/切片",
+    "tags": [
+      "推导式",
+      "列表"
+    ],
+    "stem": "已知有一个包含学生信息的列表，以下哪段代码能正确计算出成绩及格（大于或等于60分）的学生人数？",
+    "code": "students = [\n    {'name': 'Alice', 'score': 85},\n    {'name': 'Bob', 'score': 58},\n    {'name': 'Charlie', 'score': 92},\n    {'name': 'David', 'score': 60}\n]",
+    "options": [
+      {
+        "key": "A",
+        "text": "sum(s['score'] for s in students if s['score'] >= 60)",
+        "hint": "计算的是及格学生的成绩总和（237分），而非及格人数"
+      },
+      {
+        "key": "B",
+        "text": "sum(s >= 60 for s in students)",
+        "hint": "s是字典对象，字典与整数不能进行>=比较，会报TypeError"
+      },
+      {
+        "key": "C",
+        "text": "len([s for s in students if s['score'] >= 60])",
+        "hint": "列表推导式筛选出及格学生字典并用len统计总人数，结果为3（正确）"
+      },
+      {
+        "key": "D",
+        "text": "sum(s['score'] >= 60 for s in students)",
+        "hint": "生成器产生布尔值True/False并用sum求和统计及格人数，结果为3（亦正确，原题多选）"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，\n- A 选项：求和表达式累加的是学生的具体分数 `s['score']`（85 + 92 + 60 = 237），得到的是及格总分而不是及格人数。\n- B 选项：迭代中的 `s` 是字典对象（如 `{'name': 'Alice', 'score': 85}`），Python 不支持字典与整数进行 `>=` 比较，会抛出 `TypeError: '>=' not supported between instances of 'dict' and 'int'`。\n- C 选项：使用列表推导式 `[s for s in students if s['score'] >= 60]` 筛选出所有成绩 ≥ 60 的学生字典，再用 `len()` 计算列表长度，正确得到及格人数 3。\n- 补充说明：原图中该题为多选题，D 选项利用布尔值在 Python 中作为整数子类（True 即 1，False 即 0）的特性，通过 `sum(s['score'] >= 60 ...)` 也能正确统计出及格人数 3。在单选标准下答案记录为 C。",
+    "animationId": null,
+    "type": "代码补全",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图11）。【多答案】C 与 D 实际运行都得 3（sum 布尔值也能计数），原题为多选；暂按 C 录入，需改选项或改成多选 提取备注：原题为多选题（C和D均可正确计算出及格人数），此处按单选题录入，将答案标为C并在解析中说明",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      11
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q134",
+    "title": "列表别名引用与元素索引",
+    "topic": "元组/引用",
+    "tags": [
+      "可变对象与引用",
+      "列表"
+    ],
+    "stem": "仔细分析以下代码中列表、元组和引用的关系，确定最终的输出结果。",
+    "code": "data = [(1, 2), [2, 1]]\nalias = data\nalias[0] = [2, 1]\nprint(data is alias, data[0][0] == data[1][1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "True True",
+        "hint": "data[0][0]是2，而data[1][1]是1，两者并不相等"
+      },
+      {
+        "key": "B",
+        "text": "True False",
+        "hint": "alias与data指向同一列表为True；data[0][0]为2，data[1][1]为1，比较为False"
+      },
+      {
+        "key": "C",
+        "text": "False True",
+        "hint": "alias和data引用同一对象，data is alias必为True"
+      },
+      {
+        "key": "D",
+        "text": "程序会因 TypeError 而报错",
+        "hint": "外层是列表，修改列表元素alias[0]合法，不会报错"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，逐步分析：\n1. `alias = data`：赋值语句将 `data` 的引用赋予 `alias`，两者指向内存中完全相同的列表对象。因此，`data is alias` 的结果为 `True`。\n2. `alias[0] = [2, 1]`：通过 `alias` 修改了列表索引 0 处的元素（从元组 `(1, 2)` 替换为列表 `[2, 1]`）。因为 `data` 和 `alias` 指向同一列表，`data` 此时的内容也变为 `[[2, 1], [2, 1]]`。\n3. 比较 `data[0][0] == data[1][1]`：\n   - `data[0]` 为 `[2, 1]`，其索引 0 处的元素为 `2`；\n   - `data[1]` 为 `[2, 1]`，其索引 1 处的元素为 `1`；\n   - 显然 `2 == 1` 为 `False`。\n综上所述，输出结果为 `True False`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "引用与可变性",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图12）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      12
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q135",
+    "title": "循环中的异常捕获与累加",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "循环"
+    ],
+    "stem": "以下代码的输出是什么？",
+    "code": "total = 0\ndata = [1, 2, '3', 4, 'five', 5]\nfor item in data:\n    try:\n        total += int(item)\n    except ValueError:\n        total += 1\nprint(total)",
+    "options": [
+      {
+        "key": "A",
+        "text": "16",
+        "hint": "int('five')抛出ValueError被捕获后加1，总和为1+2+3+4+1+5=16"
+      },
+      {
+        "key": "B",
+        "text": "15",
+        "hint": "漏算了except分支中total += 1的累加"
+      },
+      {
+        "key": "C",
+        "text": "14",
+        "hint": "数值累加计算错误"
+      },
+      {
+        "key": "D",
+        "text": "程序会因 ValueError 异常而终止",
+        "hint": "异常已被except成功捕获，程序继续执行不会终止"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，列表遍历过程中：\n1. 前 4 个元素 1、2、'3'、4 均能正常由 int(item) 转为整数并累加，此时 total 为 1 + 2 + 3 + 4 = 10；\n2. 遇到 'five' 时，int('five') 无法转换为整数并抛出 ValueError。该异常被 except ValueError 语句块成功捕获，执行 total += 1，total 变为 11，程序继续执行而不会崩溃；\n3. 最后一个元素 5 正常转为整数累加，total 变为 11 + 5 = 16；\n循环结束后，print(total) 输出 16。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图13）。【近似重复】与 q093（循环内捕获异常不中断）考点相同；本批图13/24/40 三题也互相近似",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      13
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q136",
+    "title": "列表与字符串修改方法特性",
+    "topic": "列表/切片",
+    "tags": [
+      "列表方法",
+      "字符串方法"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "a = [3, 1, 2]\na.append(4)\nsorted(a)\n\ns = \"hello world\"\ns.replace(\"world\", \"python\")\nprint(a, s)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[1, 2, 3, 4] hello python",
+        "hint": "误以为sorted(a)和s.replace()都会就地修改原对象"
+      },
+      {
+        "key": "B",
+        "text": "[3, 1, 2, 4] hello world",
+        "hint": "append为就地修改，sorted和replace仅返回新对象而不改变原变量"
+      },
+      {
+        "key": "C",
+        "text": "[3, 1, 2, 4] hello python",
+        "hint": "字符串不可变，replace未重新赋值给s，s保持原值"
+      },
+      {
+        "key": "D",
+        "text": "[1, 2, 3] hello world",
+        "hint": "append(4)已向列表末尾成功添加元素4"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，本题考查不同数据类型方法的就地修改与返回值特性：\n1. a.append(4)：列表是可变对象，append() 会在原列表末尾就地追加元素 4，此时 a 变为 [3, 1, 2, 4]；\n2. sorted(a)：内置函数 sorted() 返回一个新的已排序列表，但不会改变原列表 a 的内容（就地排序应使用 a.sort()），因此 a 仍保持 [3, 1, 2, 4]；\n3. s.replace(\"world\", \"python\")：字符串是不可变对象，replace() 返回替换后的新字符串，并未重新赋值给 s，因此 s 依然是 'hello world'；\n综上，print(a, s) 最终输出 [3, 1, 2, 4] hello world。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图14）。【答案/内容修正】选项中列表与字符串之间原为两个空格，实际 print 输出为一个空格，已改为一个空格（答案 B 不变）",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      14
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q137",
+    "title": "strip方法字符集匹配",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串方法",
+      "字符串"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "s = \"www.example.com\"\nprint(s.strip(\"w.moc\"))",
+    "options": [
+      {
+        "key": "A",
+        "text": "'example.com'",
+        "hint": "strip会同时从左右两端剥离字符，右侧匹配字符也会被去除"
+      },
+      {
+        "key": "B",
+        "text": "'www.example'",
+        "hint": "strip会同时从左右两端剥离字符，左侧匹配字符也会被去除"
+      },
+      {
+        "key": "C",
+        "text": "'example'",
+        "hint": "strip参数为字符集合，两端属于'w.moc'的字符均被移除"
+      },
+      {
+        "key": "D",
+        "text": "''",
+        "hint": "中间的'example'包含不在参数字符集中的字符，不会被清空"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，str.strip(chars) 的参数不是匹配前缀或后缀子串，而是被视为一个字符集合（本题为 {'w', '.', 'm', 'o', 'c'}）：\n- 从左端开始扫描：遇到 'w'、'w'、'w'、'.' 均在字符集中，全部剥离；遇到 'e' 时不在字符集中，左端剥离停止；\n- 从右端开始扫描：遇到 'm'、'o'、'c'、'.' 均在字符集中，全部剥离；遇到 'e' 时不在字符集中，右端剥离停止；\n首尾剥离后中间保留 'example'，因此最终输出 example（选项以字符串字面量形式表示为 'example'）。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "字符串操作",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图15）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      15
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q138",
+    "title": "字符串清洗切分与拼接",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串方法",
+      "字符串"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "text = '  a~b~c  d'\nparts = text.strip().split('~')\nprint(\"-\".join(parts))",
+    "options": [
+      {
+        "key": "A",
+        "text": "a-b-c  d",
+        "hint": "strip去除首尾空格，按~切分后再以-拼接，c与d之间的两个空格保留"
+      },
+      {
+        "key": "B",
+        "text": "a-b-c-d",
+        "hint": "split指定以'~'切分，c与d之间的空格不是分隔符，不会被替换"
+      },
+      {
+        "key": "C",
+        "text": "  a-b-c  d",
+        "hint": "开头的两个空格已被strip()去除"
+      },
+      {
+        "key": "D",
+        "text": "a-b-cd",
+        "hint": "c与d之间的空格并未被删除"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，分步解析：\n1. text.strip()：去除字符串首尾的空白字符，开头的两个空格被去除，得到 'a~b~c  d'；\n2. .split('~')：使用指定的子串 '~' 进行分割，得到列表 ['a', 'b', 'c  d']。注意内部的空格保留在第三个元素 'c  d' 中；\n3. \"-\".join(parts)：使用 '-' 将列表中的 3 个元素连接成一个新字符串，得到 'a-b-c  d'；\n最终打印输出为 a-b-c  d。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串操作",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图16）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      16
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q139",
+    "title": "类属性与实例属性的修改",
+    "topic": "类/对象",
+    "tags": [
+      "类与对象",
+      "变量与赋值"
+    ],
+    "stem": "以下代码的输出是什么？",
+    "code": "class A:\n    x = 10\n\na1 = A()\na2 = A()\n\nA.x = 50\na2.x = 100\n\nprint(a1.x + a2.x)",
+    "options": [
+      {
+        "key": "A",
+        "text": "150",
+        "hint": "a1未定义实例属性因此读取类属性50，a2拥有实例属性100，相加为150"
+      },
+      {
+        "key": "B",
+        "text": "200",
+        "hint": "修改A.x为50，a1.x不会变为100"
+      },
+      {
+        "key": "C",
+        "text": "100",
+        "hint": "只计入了a2.x的值，漏加了a1.x"
+      },
+      {
+        "key": "D",
+        "text": "110",
+        "hint": "类属性A.x已被更新为50，a1.x不再是初始值10"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，本题考查类属性与实例属性的访问和作用域机制：\n1. class A: x = 10 在类命名空间中定义了类属性 x = 10；\n2. a1 = A()、a2 = A() 分别实例化了对象 a1 和 a2，初始时它们自身均没有名为 x 的实例属性；\n3. A.x = 50：直接通过类名修改类属性，此时类属性 x 变为 50。当访问 a1.x 时，由于 a1 自身没有 x 属性，会查找其所属类的类属性，因此 a1.x 的值为 50；\n4. a2.x = 100：通过实例赋值，为 a2 创建了一个独立的实例属性 x = 100，该属性会遮蔽类属性，因此 a2.x 的值为 100；\n5. print(a1.x + a2.x) 即 50 + 100 = 150。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "类属性与实例属性",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图17）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      17
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q140",
+    "title": "倍数筛选函数中的语法与逻辑",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "列表方法"
+    ],
+    "stem": "在上述 `find_multiples_of_8` 函数的实现中，总共有几处明显的错误？（测试代码仅为理解函数用途，不参与错误计数）",
+    "code": "def find_multiples_of_8(numbers):\n    \"\"\"找出列表中所有8的倍数\"\"\"\n    result = []\n    for num in numbers:\n        # 使用取模运算判断是否能被8整除\n        if num % 8 = 0:\n            # 满足条件的数字添加到结果列表\n            result = result.append(num)\n    return result\n\n# 测试代码（仅为理解函数用途，不参与错误计数）\ndata = [8, 16, 24, 30]",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "错误不止1处，判断相等和列表append用法均存在错误"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "共有2处错误：条件中误用单等号赋值，且将append的返回值None赋给了result"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "除上述两处错误外，其余代码语法与逻辑均正确"
+      },
+      {
+        "key": "D",
+        "text": "0",
+        "hint": "函数存在致命的语法错误与逻辑错误，错误数不为0"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，函数实现中共有 2 处明显错误：\n1. 语法错误：if num % 8 = 0: 中错误使用了单等号赋值运算符 =。在 Python 中条件判断相等必须使用比较运算符 ==（即 if num % 8 == 0:），否则在编译阶段会抛出 SyntaxError；\n2. 逻辑/类型错误：result = result.append(num)。列表的 append() 方法是就地修改列表本身，其返回值始终为 None。将返回值重新赋值给 result 会使 result 变为 None，导致后续循环调用 result.append 时抛出 AttributeError: 'NoneType' object has no attribute 'append'，且最终返回值为 None。正确写法应为直接调用 result.append(num)；\n其余部分（函数签名、文档字符串、循环迭代、返回语句）均正确，因此错误共有 2 处。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 2,
+    "subtopic": "函数定义与返回值",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图18）。【格式】「找错个数」题，代码含语法错误无法直接运行；已用修正版代码运行核对（共 2 处错）",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      18
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q141",
+    "title": "单词筛选函数中的逻辑错误分析",
+    "topic": "函数/默认参数",
+    "tags": [
+      "函数",
+      "字符串方法"
+    ],
+    "stem": "在上述 `filter_a_words` 函数的实现中，总共有几处明显的错误？（测试代码仅为理解函数用途，不参与错误计数）",
+    "code": "def filter_a_words(words):\n    \"\"\"筛选以A/a开头的单词，将其首字母大写\"\"\"\n    result = []\n    for word in words:\n        # 转换为小写，便于统一判断首字母\n        lower_word = word.lower()\n        # 检查是否以'a'开头\n        if lower_word.endswith('a'):\n            # 将单词首字母大写\n            word.capitalize()\n            # 添加到结果列表\n            result.append(word)\n    return result\n\n# 测试代码（仅为理解函数用途，不参与错误计数）\nword_list = [\"apple\", \"banana\", \"apricot\", \"Animal\"]",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "错误不止1处，判断前缀与大写转换均存在逻辑问题"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "共有2处错误：误用endswith判断前缀，且未接收capitalize的返回值"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "其余代码逻辑和结构均正确，错误总数为2处"
+      },
+      {
+        "key": "D",
+        "text": "0",
+        "hint": "代码无法实现需求功能，存在2处明显逻辑错误"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，函数实现中共有 2 处明显的逻辑错误：\n1. 方法调用错误：注释与题目要求为「检查是否以 'a' 开头」，代码却调用了 lower_word.endswith('a')（检查是否以 'a' 结尾），应更正为 lower_word.startswith('a')；\n2. 忽略字符串不可变性：字符串是不可变对象，word.capitalize() 返回首字母大写后的新字符串，而不会修改原字符串 word 本身。原代码直接调用该方法而没有接收返回值，导致随后 result.append(word) 添加的依然是原始未修改的单词。正确写法应为 word = word.capitalize() 或 result.append(word.capitalize())；\n其余部分（列表初始化、遍历、返回语句等）均正确，因此共有 2 处错误。",
+    "animationId": null,
+    "type": "报错判断",
+    "difficulty": 2,
+    "subtopic": "函数定义与返回值",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图19）。【格式】「找错个数」题；已用修正版代码运行核对（endswith→startswith、capitalize 未接收返回值，共 2 处）",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      19
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q142",
+    "title": "成绩处理函数的有效性判断",
+    "topic": "函数/默认参数",
+    "tags": [
+      "列表",
+      "函数"
+    ],
+    "stem": "学生成绩列表 `scores` 是形如 `[(\"003\", 85), (\"102\", 92), ...]` 的结构。分析下列四个函数的实现，问能正确实现其对应任务的有几个？",
+    "code": "#① 统计及格人数（60分及以上）\ndef count_pass_students(scores):\n    count = 0\n    for _id, score in scores:\n        if score >= 60:\n            count += 1\n    return count\n\n#② 统计及格人数（60分及以上）方法2\ndef count_pass_students_v2(scores):\n    return sum(1 for _id, score in scores if score >= 60)\n\n#③ 给所有分数为57~59分的同学变及格（60分）\ndef add_score(scores):\n    result = []\n    for _id, score in scores:\n        if 57 <= score <= 59:\n            result.append((_id, 60))\n        else:\n            result.append((_id, score))\n    return result\n\n#④ 按成绩升序排列\ndef sort_scores_asc(scores):\n    return sorted(scores, key=lambda x: x[1])",
+    "options": [
+      {
+        "key": "A",
+        "text": "1个",
+        "hint": "除①外，②③④也能正确实现对应任务"
+      },
+      {
+        "key": "B",
+        "text": "2个",
+        "hint": "不止2个正确，③和④的实现同样准确"
+      },
+      {
+        "key": "C",
+        "text": "3个",
+        "hint": "所有4个函数都能正确实现任务"
+      },
+      {
+        "key": "D",
+        "text": "4个",
+        "hint": "①②③④四个函数的逻辑与实现均完全正确"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，逐一判断 ① 到 ④ 四个函数是否能正确实现其任务描述：\n- ① 统计及格人数（60分及以上）—— 正确。该函数使用了标准的迭代计数方法。它初始化 count = 0，遍历 scores 列表解包学号与成绩，当 score 大于等于 60 时 count 加一，逻辑完全正确。\n- ② 统计及格人数（60分及以上）方法2 —— 正确。该函数使用了 sum() 和生成器表达式的组合。(1 for _id, score in scores if score >= 60) 会为每一个及格的学生生成一个 1，sum() 将这些 1 全部加起来，得到的就是及格总人数。这是一种常见且正确的 Pythonic 计数方式。\n- ③ 给所有分数为57~59分的同学变及格（60分）—— 正确。该函数遍历 scores 列表并创建一个新的 result 列表。使用链式比较 57 <= score <= 59 判断分数是否在指定区间；若满足条件则添加 (_id, 60)，否则添加原始的 (_id, score)。逻辑覆盖全面，实现正确。\n- ④ 按成绩升序排列 —— 正确。该函数使用了 sorted() 内置函数，key=lambda x: x[1] 正确指定了排序依据为元组中的第二个元素（即成绩）。默认情况下 sorted() 执行升序排序，符合任务要求。\n综上所述，所有 4 个函数都能正确实现任务，因此正确的函数共有 4 个，答案选 D。",
+    "animationId": null,
+    "type": "概念理解",
+    "difficulty": 2,
+    "subtopic": "函数定义与返回值",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图20、21、22）。【格式】跨图 20–22 合并；判断「几个函数正确」，代码 >10 行；已用样例数据运行四个函数核对均正确",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      20,
+      21,
+      22
+    ],
+    "origAnswer": "D"
+  },
+  {
+    "id": "q143",
+    "title": "切片拼接与星号解包求和",
+    "topic": "列表/切片",
+    "tags": [
+      "切片",
+      "解包"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "t = [1, 2, 3, 4, 5, 6]\ns = t[0:3] + t[-1:3:-1]\na, *b, c = s\nprint(sum(b))",
+    "options": [
+      {
+        "key": "A",
+        "text": "11",
+        "hint": "s为[1, 2, 3, 6, 5]，解包后b为[2, 3, 6]，sum(b)为11"
+      },
+      {
+        "key": "B",
+        "text": "16",
+        "hint": "切片和解包范围理解有误"
+      },
+      {
+        "key": "C",
+        "text": "5",
+        "hint": "5是变量c的值，而不是sum(b)"
+      },
+      {
+        "key": "D",
+        "text": "14",
+        "hint": "逆序切片t[-1:3:-1]不包含索引3处的元素4"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，逐步推导执行过程：\n1. t[0:3]：截取索引 0、1、2 的元素，结果为 [1, 2, 3]；\n2. t[-1:3:-1]：从最后一个元素（索引 -1，值为 6）开始反向切片，步长为 -1，截至索引 3（不包含索引 3 本身，即元素 4 不被包含）。截取到的元素依次为索引 5（值 6）和索引 4（值 5），结果为 [6, 5]；\n3. 列表拼接：s = [1, 2, 3] + [6, 5]，得到 [1, 2, 3, 6, 5]；\n4. 扩展解包赋值 a, *b, c = s：\n   - a 绑定第一个元素 1；\n   - c 绑定最后一个元素 5；\n   - *b 捕获中间剩余所有元素构成的列表，即 b = [2, 3, 6]；\n5. print(sum(b))：计算 2 + 3 + 6 = 11，输出 11。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "切片索引与步长",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图23）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      23
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q144",
+    "title": "字符串转列表与异常陷阱",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "循环"
+    ],
+    "stem": "忙着去约会的小明在作业Deadline写了这样一段代码，帮他看看代码输出什么吧：",
+    "code": "total = 0\ns = '1 2 3 4 5 6 7 8 9 10'\nls = list(s)\n\nfor item in ls:\n    try:\n        if item % 2 == 0:\n            total += 10 // item\n    except:\n        total += 0.1\n    finally:\n        total += 1\n\nprint(round(total, 1))",
+    "options": [
+      {
+        "key": "A",
+        "text": "22.0",
+        "hint": "字符串元素取模触发 TypeError 进入 except，每轮 total 增加 0.1+1=1.1，20 轮共 22.0"
+      },
+      {
+        "key": "B",
+        "text": "30.0",
+        "hint": "误以为字符被当作数字且执行了整除累加"
+      },
+      {
+        "key": "C",
+        "text": "20.0",
+        "hint": "漏算了 except 分支中累加的 0.1 * 20 = 2.0"
+      },
+      {
+        "key": "D",
+        "text": "2.0",
+        "hint": "漏算了 finally 分支中每轮都会执行的 total += 1"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，执行过程分析如下：\n1. `s = '1 2 3 4 5 6 7 8 9 10'`，`list(s)` 会把字符串逐字符切分为单字符列表（包含空格字符以及 '10' 切分出的 '1' 和 '0'），`ls` 中共有 20 个字符串元素；\n2. 在循环中遍历每个元素 `item` 时，`item` 均为 `str` 类型。执行 `item % 2` 属于字符串格式化操作，因缺少占位符会抛出 `TypeError`，不会进入 `if` 主体，而是直接跳转至 `except` 块；\n3. 在 `except` 块中执行 `total += 0.1`；\n4. 无论是否发生异常，`finally` 块都会执行 `total += 1`；\n5. 每次循环 `total` 实际增加 0.1 + 1 = 1.1。共循环 20 次，累加结果为 1.1 * 20 = 22.0；\n6. 最终 `print(round(total, 1))` 输出 `22.0`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "异常捕获与匹配",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图24）。【近似重复】与 q093 及本批图13 考点相同",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      24
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q145",
+    "title": "字符串乘法与循环拼接",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "循环"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "s = 'Ab'\nr = ''\n\nfor i in s * 2:\n    r += i * 2\n\nprint(r)",
+    "options": [
+      {
+        "key": "A",
+        "text": "AbAb",
+        "hint": "这是 s * 2 的结果，忽略了循环内对每个字符的 i * 2 重复"
+      },
+      {
+        "key": "B",
+        "text": "AAAAbbbb",
+        "hint": "误以为字符按字母类别重新聚集排列"
+      },
+      {
+        "key": "C",
+        "text": "AAbbAAbb",
+        "hint": "s * 2 为 'AbAb'，遍历各字符分别翻倍为 'AA'、'bb'、'AA'、'bb' 并拼接"
+      },
+      {
+        "key": "D",
+        "text": "AbAbAbAb",
+        "hint": "误将整个字符串重复了 4 次"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，执行过程逐步解析：\n1. `s = 'Ab'`，`s * 2` 计算结果为将原字符串重复拼接两次，即 `'AbAb'`；\n2. `for i in s * 2` 依次遍历该字符串中的每个单字符：`'A'`、`'b'`、`'A'`、`'b'`；\n3. 在循环体内，`i * 2` 将每个字符重复两次：\n   - 第 1 次：`'A' * 2` 得到 `'AA'`，`r` 变为 `'AA'`；\n   - 第 2 次：`'b' * 2` 得到 `'bb'`，`r` 变为 `'AAbb'`；\n   - 第 3 次：`'A' * 2` 得到 `'AA'`，`r` 变为 `'AAbbAA'`；\n   - 第 4 次：`'b' * 2` 得到 `'bb'`，`r` 变为 `'AAbbAAbb'`；\n4. 最终 `print(r)` 输出 `'AAbbAAbb'`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串操作",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图25）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      25
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q146",
+    "title": "偶数累加求均值与浮点除法",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "range"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "x = y = 0\n\nfor i in range(101):\n    if i % 2:\n        x += i\n    else:\n        y += i\n\nprint(y/50)",
+    "options": [
+      {
+        "key": "A",
+        "text": "50.0",
+        "hint": "50.0 是奇数累加和 x 除以 50 的结果（2500 / 50）"
+      },
+      {
+        "key": "B",
+        "text": "51.0",
+        "hint": "y 累加 0 到 100 的所有偶数，总和为 2550，2550 / 50 = 51.0"
+      },
+      {
+        "key": "C",
+        "text": "101.0",
+        "hint": "计算数值错误"
+      },
+      {
+        "key": "D",
+        "text": "102.0",
+        "hint": "计算数值错误"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，解析如下：\n1. `range(101)` 生成从 0 到 100（共 101 个整数）；\n2. 条件判断 `if i % 2:`：当 `i` 为奇数时求模结果为 1（真），执行 `x += i`；当 `i` 为偶数时求模结果为 0（假），进入 `else` 分支执行 `y += i`；\n3. 因此，`y` 累加了 0 到 100 之间的所有偶数（0, 2, 4, ..., 100，共 51 个数）：\ny = 0 + 2 + 4 + ... + 100 = 2 * (1 + 2 + ... + 50) = 2550；\n4. `print(y/50)`：Python 3 中 `/` 为真除法，计算 2550 / 50 = 51.0（浮点数类型）。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": null,
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图26）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      26
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q147",
+    "title": "列表相等性与对象同一性",
+    "topic": "元组/引用",
+    "tags": [
+      "可变对象与引用",
+      "列表"
+    ],
+    "stem": "问：①和②处代码的输出结果分别是什么？请选择两个选项分别对应",
+    "code": "a = [4, 5]\nb = [4, 5]\nprint(a == b, a is b)    #①\n\nc = a\nc.append(6)\nprint(a == c, a is c)    #②",
+    "options": [
+      {
+        "key": "A",
+        "text": "True True",
+        "hint": "②处 a 与 c 引用同一个列表对象，内容和内存地址均相同，输出 True True"
+      },
+      {
+        "key": "B",
+        "text": "True False",
+        "hint": "①处 a 和 b 内容相同但为独立创建的不同对象，输出 True False"
+      },
+      {
+        "key": "C",
+        "text": "False True",
+        "hint": "同一对象的值必定相等，不可能为 False True"
+      },
+      {
+        "key": "D",
+        "text": "False False",
+        "hint": "a 与 b 内容完全相等，== 判断不为 False"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是：① 对应 B（True False），② 对应 A（True True）。\n解析如下：\n1. 在 ① 处：`a` 和 `b` 分别使用列表字面量 `[4, 5]` 创建，它们是内存中两个独立的列表对象：\n   - `a == b` 比较两列表的内容与结构，两者的元素均为 `[4, 5]`，结果为 `True`；\n   - `a is b` 比较两者的对象内存地址（身份标识），因为它们是独立分配的对象，结果为 `False`；\n   - 故 ① 输出 `True False`（对应选项 B）；\n2. 在 ② 处：`c = a` 为引用赋值，变量 `c` 与 `a` 指向同一个列表对象：\n   - `c.append(6)` 就地修改该列表，`a` 随之变为 `[4, 5, 6]`；\n   - `a == c` 比较内容相同，为 `True`；\n   - `a is c` 检查同一性，为同一对象，为 `True`；\n   - 故 ② 输出 `True True`（对应选项 A）。\n原题为两空对应选择题，单选标准下将答案标为 B，具体对应见上述解析。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "同一性与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图27）。【格式】原题为两小问对应题（①B ②A），按四选一只保留第①问答案 提取备注：原题为双选对应题（要求分别为①和②选择对应选项，①对应B，②对应A），此处按四选一格式录入并将answer标为B，详细对应见解析",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      27
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q148",
+    "title": "布尔值浮点数与整型相等性",
+    "topic": "列表/切片",
+    "tags": [
+      "列表方法",
+      "None与真假值"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "ls = [3, 2, 1, 2, 5 > 2, 1.0]\n\nls.remove(2)\nfor _ in range(len(ls)):\n    try:\n        ls.remove(1)\n    except ValueError:\n        break\nprint(ls)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[3, 2, 1.0]",
+        "hint": "误以为 remove(1) 只删除整型 1，不影响 True 和 1.0"
+      },
+      {
+        "key": "B",
+        "text": "[3]",
+        "hint": "ls.remove(2) 只删除了第一个 2，列表中仍保留了第二个 2"
+      },
+      {
+        "key": "C",
+        "text": "[3, 5>2, 1.0]",
+        "hint": "5 > 2 在列表创建时已求值为 True，且与 1 数值相等会被删除"
+      },
+      {
+        "key": "D",
+        "text": "[3, 2]",
+        "hint": "在 Python 中 1 == True == 1.0，三次 remove(1) 分别删除了 1、True、1.0"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，执行过程详细分析：\n1. 初始化列表：`5 > 2` 表达式在列表初始化时即求值为布尔值 `True`，因此 `ls = [3, 2, 1, 2, True, 1.0]`；\n2. `ls.remove(2)`：删除列表中第一个值为 2 的元素（索引 1 处的 2），列表变为 `[3, 1, 2, True, 1.0]`；\n3. 此时 `len(ls)` 为 5，循环最多执行 5 次，每轮执行 `ls.remove(1)`：\n   - 在 Python 中，`bool` 是 `int` 的子类，数值比较上 `1 == True == 1.0` 均为真；\n   - `list.remove(x)` 遍历列表，删除第一个满足 `item == x` 的元素；\n   - 第 1 次循环：找到整数 `1`（`1 == 1`），将其删除，列表变为 `[3, 2, True, 1.0]`；\n   - 第 2 次循环：找到 `True`（`True == 1`），将其删除，列表变为 `[3, 2, 1.0]`；\n   - 第 3 次循环：找到 `1.0`（`1.0 == 1`），将其删除，列表变为 `[3, 2]`；\n   - 第 4 次循环：列表中仅剩 `[3, 2]`，没有等于 1 的元素，`ls.remove(1)` 抛出 `ValueError`；\n4. `except ValueError` 捕获异常后执行 `break` 退出循环；\n5. 最终 `print(ls)` 输出 `[3, 2]`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 3,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图28）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      28
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q149",
+    "title": "字符大小比较与字符串乘法",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "运算符与表达式"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "s = 'Apt'\nt = 0\nfor i in s:\n    if i > 'a':\n        t += 1\nprint(2 * s, t)",
+    "options": [
+      {
+        "key": "A",
+        "text": "AptApt 2",
+        "hint": "'A'的ASCII码(65)小于'a'(97)，仅'p'和't'大于'a'，且 2 * s 将字符串整体重复"
+      },
+      {
+        "key": "B",
+        "text": "AApptt 2",
+        "hint": "误以为 2 * s 是对每个单字符分别翻倍"
+      },
+      {
+        "key": "C",
+        "text": "AptApt 3",
+        "hint": "误将大写字母 'A' 判为大于 'a'"
+      },
+      {
+        "key": "D",
+        "text": "AApptt 3",
+        "hint": "同时误判了字符串乘法形式与字符比较大小"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，解析如下：\n1. 字符串单字符比较大小依据字符的 Unicode 编码（ASCII 码）：大写字母 `'A'` 的 ASCII 码为 65，小写字母 `'a'` 的 ASCII 码为 97，小写字母 `'p'` 为 112，`'t'` 为 116；\n2. 遍历字符串 `s = 'Apt'`：\n   - 当 `i = 'A'` 时：`'A' > 'a'` 即 65 > 97 为 `False`；\n   - 当 `i = 'p'` 时：`'p' > 'a'` 即 112 > 97 为 `True`，`t` 累加 1；\n   - 当 `i = 't'` 时：`'t' > 'a'` 即 116 > 97 为 `True`，`t` 累加 1；\n   循环结束后 `t` 的值为 2；\n3. `2 * s` 是字符串与整数相乘，表示将整个字符串重复两次，得到 `'AptApt'`；\n4. `print(2 * s, t)` 默认以空格分隔输出两项，结果为 `AptApt 2`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串操作",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图29）。【本批内近似重复】与图45 结构完全相同",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      29
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q150",
+    "title": "双重循环累加与break条件",
+    "topic": "字符串/循环",
+    "tags": [
+      "循环",
+      "range"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "s = 0\nn = 10\nfor i in range(n):\n    for j in range(i, n):\n        s += i * j\n    if s > 45:\n        break\nprint(i)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "i=1 轮结束时 s 累加至 45，由于 45 不大于 45，未触发 break"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "i=1 时 s 达 45；i=2 时 s 累加至 133，满足 s > 45 触发 break，此时 i 为 2"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "循环在 i=2 满足条件后已经 break 退出，不会进入 i=3"
+      },
+      {
+        "key": "D",
+        "text": "9",
+        "hint": "误以为循环未中断一直执行到 range(n) 末尾"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，单步跟踪执行过程：\n1. 初始 `s = 0, n = 10`；\n2. 当 i = 0 时：内层循环中 i * j = 0 * j = 0，s 保持为 0，`s > 45` 为 `False`；\n3. 当 i = 1 时：内层 j 从 1 遍历到 9，求和为 1 * (1 + 2 + ... + 9) = 45。累加后 s = 0 + 45 = 45。判断 `if s > 45:`，由于 45 不严格大于 45，条件为 `False`，不执行 `break`；\n4. 当 i = 2 时：内层 j 从 2 遍历到 9，求和为 2 * (2 + 3 + ... + 9) = 2 * 44 = 88。累加后 s = 45 + 88 = 133。判断 `if s > 45:`，133 > 45 为 `True`，触发 `break` 跳出外层循环；\n5. 外层循环终止后，`print(i)` 打印当前循环变量 i 的值，输出 `2`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "循环控制",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图30）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      30
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q151",
+    "title": "可变默认参数与显式传参",
+    "topic": "函数/默认参数",
+    "tags": [
+      "默认参数",
+      "可变对象与引用"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "def f(val, mem=[]):\n    mem.append(val)\n    return sum(mem)\n\nprint(f(1), f(2), f(3, mem=[]))",
+    "options": [
+      {
+        "key": "A",
+        "text": "1 2 3",
+        "hint": "误以为默认参数在每次函数调用时都会重新创建为空列表"
+      },
+      {
+        "key": "B",
+        "text": "1 3 6",
+        "hint": "第三次调用显式传入了新的 mem=[]，并未继续累加默认列表"
+      },
+      {
+        "key": "C",
+        "text": "6 6 6",
+        "hint": "每次函数调用返回的是求和数值而非引用，不会在后续调用中被修改"
+      },
+      {
+        "key": "D",
+        "text": "1 3 3",
+        "hint": "前两次调用共享默认可变列表分别求和为 1 和 3，第三次传入新列表独立求和为 3"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，深入解析如下：\n1. Python 函数的默认参数在定义该函数时被求值且仅创建一次。如果默认参数是可变对象（如列表 `[]`），在后续未传该参数的调用中，所有调用均会共享并修改同一个列表；\n2. 第一次调用 `f(1)`：未传 `mem`，使用默认列表，追加 1 后默认列表为 `[1]`，`sum(mem)` 返回 1；\n3. 第二次调用 `f(2)`：同样未传 `mem`，继续共享默认列表，追加 2 后默认列表变为 `[1, 2]`，`sum(mem)` 返回 1 + 2 = 3；\n4. 第三次调用 `f(3, mem=[])`：显式传入了一个新的空列表 `mem=[]`，该调用操作的是这个全新传入的列表，默认列表不受影响。向新列表追加 3 后为 `[3]`，`sum(mem)` 返回 3；\n5. 最终 `print` 打印三次函数调用的返回值，输出 `1 3 3`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "默认参数机制",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图31）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      31
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q152",
+    "title": "二维列表对称元素统计",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "循环"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "mt = [\n    [3, 0, 1],\n    [2, 1, 2],\n    [1, 2, 3]\n]\ncount = 0\nfor i in range(len(mt)):\n    for j in range(i+1, len(mt)):\n        if mt[i][j] == mt[j][i]:\n            count += 1\nprint(count)",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "只统计了 (0,2) 一处对称相等元素，漏掉了 (1,2)"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "主对角线上方 (0,2) 和 (1,2) 处元素与其对称位置值相等，共 2 对"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "计数过多，range(i+1, len(mt)) 避开了主对角线自身"
+      },
+      {
+        "key": "D",
+        "text": "4",
+        "hint": "索引比较计算有误"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，解析如下：\n代码通过两层循环遍历 3×3 矩阵中主对角线上方的所有元素（j > i 的位置），并判断其是否与沿主对角线对称的位置（mt[j][i]）元素相等：\n1. 当 i = 0 时，j 依次取 1 和 2：\n   - j = 1：比较 `mt[0][1]`（值为 0）与 `mt[1][0]`（值为 2），两者不相等；\n   - j = 2：比较 `mt[0][2]`（值为 1）与 `mt[2][0]`（值为 1），两者相等，`count` 增加 1 变为 1；\n2. 当 i = 1 时，j 取 2：\n   - j = 2：比较 `mt[1][2]`（值为 2）与 `mt[2][1]`（值为 2），两者相等，`count` 增加 1 变为 2；\n3. 当 i = 2 时，range(3, 3) 为空，内层不执行；\n4. 最终 `print(count)` 输出 `2`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图32）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      32
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q153",
+    "title": "成员运算符in与数值相等性",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "运算符与表达式"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "list1 = [\"南极\", 0, 1, 5, 10, 15, 20]\nlist2 = [\"南极大陆\", \"twenty\", 5.0, True, 0]\nc = []\n\nfor x in list1:\n    if x in list2:\n        c.append(x)\n\nprint(len(c))",
+    "options": [
+      {
+        "key": "A",
+        "text": "1",
+        "hint": "只注意到了整数 0 直接包含在 list2 中"
+      },
+      {
+        "key": "B",
+        "text": "2",
+        "hint": "漏算了 1 == True 或 5 == 5.0 的相等匹配"
+      },
+      {
+        "key": "C",
+        "text": "3",
+        "hint": "0、1（匹配True）、5（匹配5.0）在数值比较上均能匹配，共 3 个"
+      },
+      {
+        "key": "D",
+        "text": "4",
+        "hint": "字符串'南极'与'南极大陆'不相等，数值 20 与字符串'twenty'也不相等"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，详细分析如下：\n成员运算符 `x in list2` 在执行时会依次比较 `x == item`：\n1. `\"南极\" in list2`：字符串比较区分全字匹配，`\"南极\" != \"南极大陆\"`，为 `False`；\n2. `0 in list2`：`list2` 中末尾包含整数 `0`，为 `True`，`c` 追加 `0`；\n3. `1 in list2`：在 Python 中布尔类型 `bool` 是 `int` 的子类且 `True == 1` 为真，因此匹配到 `True`，为 `True`，`c` 追加 `1`；\n4. `5 in list2`：整型与浮点数按数值比较，`5 == 5.0` 为真，因此匹配到 `5.0`，为 `True`，`c` 追加 `5`；\n5. `10`、`15`、`20`：均不在 `list2` 中（整型 20 与英文单词字符串 `\"twenty\"` 不相等）；\n6. 循环结束后 `c` 为 `[0, 1, 5]`，`len(c)` 输出为 `3`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图33）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      33
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q154",
+    "title": "循环条件分支与列表追加",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "列表方法"
+    ],
+    "stem": "以下Python代码的输出结果是什么？",
+    "code": "nums = []\nfor i in range(1, 6):\n    if i % 2 == 0:\n        nums.append(i * 2)\n    else:\n        nums.append(i + 1)\nprint(nums)",
+    "options": [
+      {
+        "key": "A",
+        "text": "[2, 4, 4, 8, 6]",
+        "hint": "i 依次为 1(1+1=2), 2(2*2=4), 3(3+1=4), 4(4*2=8), 5(5+1=6)"
+      },
+      {
+        "key": "B",
+        "text": "[2, 4, 4, 6, 6]",
+        "hint": "误将偶数 i=4 算成了 4+2 或加法"
+      },
+      {
+        "key": "C",
+        "text": "[2, 4, 3, 8, 6]",
+        "hint": "误将奇数 i=3 算成了 3"
+      },
+      {
+        "key": "D",
+        "text": "[1, 4, 3, 8, 5]",
+        "hint": "误以为奇数分支直接追加原值 i"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，单步跟踪执行过程：\n`range(1, 6)` 产生整数序列 1, 2, 3, 4, 5：\n1. i = 1（奇数）：进入 `else` 分支，追加 1 + 1 = 2，此时 `nums` 为 `[2]`；\n2. i = 2（偶数）：进入 `if` 分支，追加 2 * 2 = 4，此时 `nums` 为 `[2, 4]`；\n3. i = 3（奇数）：进入 `else` 分支，追加 3 + 1 = 4，此时 `nums` 为 `[2, 4, 4]`；\n4. i = 4（偶数）：进入 `if` 分支，追加 4 * 2 = 8，此时 `nums` 为 `[2, 4, 4, 8]`；\n5. i = 5（奇数）：进入 `else` 分支，追加 5 + 1 = 6，此时 `nums` 为 `[2, 4, 4, 8, 6]`；\n循环结束后，`print(nums)` 输出 `[2, 4, 4, 8, 6]`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": null,
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图34）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      34
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q155",
+    "title": "闭包延迟绑定与循环变量",
+    "topic": "作用域/变量",
+    "tags": [
+      "函数",
+      "作用域"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "def f():\n    fs = []\n    for i in range(5):\n        def y(x):\n            return i * x\n        fs.append(y)\n    return fs\n\nfs = f()\nprint(fs[2](3))",
+    "options": [
+      {
+        "key": "A",
+        "text": "6",
+        "hint": "误以为闭包保存了函数定义时的循环变量值 i=2 (2 * 3 = 6)"
+      },
+      {
+        "key": "B",
+        "text": "12",
+        "hint": "闭包在调用时才查找外部变量 i，循环结束后 i 为 4，计算 4 * 3 = 12"
+      },
+      {
+        "key": "C",
+        "text": "15",
+        "hint": "误以为 i 的值为 range 长度 5"
+      },
+      {
+        "key": "D",
+        "text": "NameError",
+        "hint": "内部函数能够正常访问外层函数的局部变量 i"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，解析如下：\n1. 在 Python 中，闭包对外部作用域变量的查找是延迟绑定（Late Binding）的，即在函数被调用执行时才去获取外部变量的当前值，而不是在定义时保存快照；\n2. 函数 `f()` 执行过程中，`for i in range(5)` 循环结束后，局部变量 `i` 的最终值为 `4`；\n3. 列表 `fs` 中存放的 5 个函数都引用同一个外部变量 `i`；\n4. 执行 `fs[2](3)` 时调用第三个函数，此时传入参数 `x = 3`，获取当前 `i` 的值 `4` 进行计算，`4 * 3 = 12`；\n5. 因此最终输出结果为 `12`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "嵌套作用域与闭包",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图35）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      35
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q156",
+    "title": "生成器表达式与真假值过滤",
+    "topic": "列表/切片",
+    "tags": [
+      "推导式",
+      "None与真假值"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "r = sum((i + 1)**2 for i in range(3) if i)\nprint(r)",
+    "options": [
+      {
+        "key": "A",
+        "text": "12",
+        "hint": "计算错误"
+      },
+      {
+        "key": "B",
+        "text": "13",
+        "hint": "i=0 对应布尔值 False 被过滤，仅计算 i=1 与 i=2 的平方和：4 + 9 = 13"
+      },
+      {
+        "key": "C",
+        "text": "14",
+        "hint": "误以为 i=0 也参与了运算：1 + 4 + 9 = 14"
+      },
+      {
+        "key": "D",
+        "text": "9",
+        "hint": "误以为仅有 i=2 参与了运算"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，解析如下：\n1. `range(3)` 依次产生整数 0, 1, 2；\n2. 生成器表达式中的条件分支 `if i` 进行布尔真值测试：在 Python 中，数值 `0` 的真假值为 `False`，非零数值为 `True`，因此当 `i = 0` 时条件不满足，该项被过滤；\n3. 当 `i = 1` 时，条件满足，计算 `(1 + 1)**2 = 4`；\n4. 当 `i = 2` 时，条件满足，计算 `(2 + 1)**2 = 9`；\n5. `sum()` 对生成的两项累加求和：`4 + 9 = 13`，最终输出 `13`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图36）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      36
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q157",
+    "title": "引用追加修改与相等性比较",
+    "topic": "元组/引用",
+    "tags": [
+      "可变对象与引用",
+      "列表"
+    ],
+    "stem": "问：①和②处代码的输出结果分别是什么？请选择两个选项分别对应",
+    "code": "a = [0, 1]\nb = [0, 1]\nc = a\nc.append(2)\n\nprint(a == b, a is b)  #①\nprint(a == c, a is c)  #②",
+    "options": [
+      {
+        "key": "A",
+        "text": "True True",
+        "hint": "②处 a 与 c 引用同一列表对象，内容和内存地址均相同，输出 True True"
+      },
+      {
+        "key": "B",
+        "text": "True False",
+        "hint": "易错项：若在 c.append(2) 之前比较 a 与 b 则为 True False，但此时 a 已变为 [0, 1, 2]"
+      },
+      {
+        "key": "C",
+        "text": "False True",
+        "hint": "同一对象的值必定相等，不可能输出 False True"
+      },
+      {
+        "key": "D",
+        "text": "False False",
+        "hint": "①处 a 已被追加变为 [0, 1, 2]，与 b=[0, 1] 内容不同且为不同对象，输出 False False"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是：① 对应 D（False False），② 对应 A（True True）。\n解析如下：\n1. 变量赋值与修改：\n   - `a` 和 `b` 分别使用字面量创建了两个独立的列表对象 `[0, 1]`；\n   - `c = a` 为引用赋值，变量 `c` 与 `a` 指向同一个列表；\n   - `c.append(2)` 就地修改了该列表，使得 `a` 和 `c` 的内容同时变为 `[0, 1, 2]`，而列表 `b` 依然为 `[0, 1]`；\n2. 在 ① 处：\n   - `a == b`：比较内容，`[0, 1, 2] == [0, 1]` 为 `False`；\n   - `a is b`：比较身份标识，两者是不同内存地址的独立对象，为 `False`；\n   - 故 ① 输出 `False False`（对应选项 D）；\n3. 在 ② 处：\n   - `a == c` 与 `a is c`：二者引用完全相同的列表对象，内容相同且内存地址一致，均为 `True`；\n   - 故 ② 输出 `True True`（对应选项 A）。\n原题为两空对应选择题，单选标准下将答案标为 D，具体对应见上述解析。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "同一性与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图37）。【格式】原题为两小问对应题（①D ②A），按四选一只保留第①问答案；与 q070 近似 提取备注：原题为双选对应题（要求分别为①和②选择对应选项，①对应D，②对应A），此处按四选一格式录入并将answer标为D，详细对应见解析",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      37
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q158",
+    "title": "步长循环与取模分支累加",
+    "topic": "条件分支",
+    "tags": [
+      "循环",
+      "条件分支"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "x = y = 0\nfor i in range(0, 16, 2):\n    if i % 3:\n        x += i\n    else:\n        y += i\nprint(x>y, y)",
+    "options": [
+      {
+        "key": "A",
+        "text": "True 18",
+        "hint": "x 累加不被 3 整除的数为 38，y 累加被 3 整除的数为 18，38 > 18 为 True"
+      },
+      {
+        "key": "B",
+        "text": "False 18",
+        "hint": "误判了 x 和 y 的大小关系"
+      },
+      {
+        "key": "C",
+        "text": "True 38",
+        "hint": "误将第二个输出项看作了 x 的值"
+      },
+      {
+        "key": "D",
+        "text": "False 38",
+        "hint": "同时误判了比较结果与输出项"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，解析如下：\n1. `range(0, 16, 2)` 生成的序列为 `[0, 2, 4, 6, 8, 10, 12, 14]`；\n2. 遍历序列并执行条件判断 `if i % 3:`：\n   - 在 Python 中非零数值为真，当 `i % 3 != 0`（不能被 3 整除）时执行 `x += i`：满足条件的数为 2, 4, 8, 10, 14，和为 `x = 2 + 4 + 8 + 10 + 14 = 38`；\n   - 当 `i % 3 == 0`（能被 3 整除）时执行 `else: y += i`：满足条件的数为 0, 6, 12，和为 `y = 0 + 6 + 12 = 18`；\n3. 执行 `print(x>y, y)`：`38 > 18` 为 `True`，`y` 的值为 `18`，输出 `True 18`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": null,
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图38）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      38
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q159",
+    "title": "余数条件筛选与切片求和",
+    "topic": "列表/切片",
+    "tags": [
+      "切片",
+      "循环"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "nums = []\nfor i in range(1, 10):\n    if i % 3 == 1:\n        nums.append(i)\nres = sum(nums[1:])\nprint(res)",
+    "options": [
+      {
+        "key": "A",
+        "text": "12",
+        "hint": "误将 nums 中所有元素求和 (1 + 4 + 7 = 12)，忽略了切片 nums[1:]"
+      },
+      {
+        "key": "B",
+        "text": "11",
+        "hint": "nums 为 [1, 4, 7]，切片 nums[1:] 为 [4, 7]，求和得到 11"
+      },
+      {
+        "key": "C",
+        "text": "21",
+        "hint": "计算错误"
+      },
+      {
+        "key": "D",
+        "text": "15",
+        "hint": "计算错误"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，解析如下：\n1. `range(1, 10)` 遍历整数 1 至 9；\n2. 条件 `i % 3 == 1` 筛选除以 3 余 1 的数，依次为 1, 4, 7，追加后得到列表 `nums = [1, 4, 7]`；\n3. 切片 `nums[1:]` 表示从索引 1 截取至末尾，排除了索引 0 的元素 1，结果为 `[4, 7]`；\n4. `sum(nums[1:])` 计算 `4 + 7 = 11`，输出 `11`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "切片索引与步长",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图39）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      39
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q160",
+    "title": "异常捕获与布尔值整型转换",
+    "topic": "异常处理",
+    "tags": [
+      "异常处理",
+      "None与真假值"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "total = 0\ndata = [5, 4, '3', 'two', True]\nfor item in data:\n    try:\n        total += int(item)\n    except ValueError:\n        pass\nprint(total)",
+    "options": [
+      {
+        "key": "A",
+        "text": "9",
+        "hint": "误以为数字字符串 '3' 和布尔值 True 无法被 int 转换"
+      },
+      {
+        "key": "B",
+        "text": "12",
+        "hint": "忽略了布尔值 True 转换为整型是 1"
+      },
+      {
+        "key": "C",
+        "text": "13",
+        "hint": "'two' 转换触发 ValueError 被捕获跳过，True 转为 1，累加和为 5+4+3+1=13"
+      },
+      {
+        "key": "D",
+        "text": "程序会因 ValueError 异常而终止",
+        "hint": "ValueError 已被 except 显式捕获并 pass 处理，程序会正常继续执行"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，解析如下：\n1. 遍历列表中的各个元素：\n   - `int(5)` 为 5，`total = 5`；\n   - `int(4)` 为 4，`total = 9`；\n   - `int('3')` 数字字符成功转为整数 3，`total = 12`；\n   - `int('two')` 无法将英文字符串转为整数，触发 `ValueError` 异常，被 `except ValueError:` 捕获并由 `pass` 忽略，程序继续执行；\n   - `int(True)` 在 Python 中布尔类型是整型的子类，`True` 转换为整型为 1，`total = 12 + 1 = 13`；\n2. 循环正常结束，`print(total)` 打印输出 `13`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "异常捕获与匹配",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图40）。【近似重复】与 q093 及本批图13 考点相同",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      40
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q161",
+    "title": "复合条件过滤与负数取模",
+    "topic": "条件分支",
+    "tags": [
+      "条件分支",
+      "循环"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "numbers = [12, 49, 42, -3, 60, 8, 14, 16]\ncount = 0\nfor num in numbers:\n    if num < 50 and num % 3 == 0:\n        count = count + 1\nprint(count)",
+    "options": [
+      {
+        "key": "A",
+        "text": "2",
+        "hint": "误以为负数 -3 不能整除 3 或 -3 % 3 不等于 0"
+      },
+      {
+        "key": "B",
+        "text": "3",
+        "hint": "满足 < 50 且能被 3 整除的数有 12, 42, -3 共 3 个"
+      },
+      {
+        "key": "C",
+        "text": "4",
+        "hint": "误将不满足 < 50 的 60 也计入"
+      },
+      {
+        "key": "D",
+        "text": "7",
+        "hint": "计数错误"
+      }
+    ],
+    "answer": "B",
+    "explanation": "答案是 B，解析如下：\n1. 循环条件 `num < 50 and num % 3 == 0` 要求数字同时小于 50 且为 3 的整数倍：\n   - `12`：12 < 50 且 12 % 3 == 0，满足条件（count = 1）；\n   - `49`：49 % 3 == 1，不满足；\n   - `42`：42 < 50 且 42 % 3 == 0，满足条件（count = 2）；\n   - `-3`：-3 < 50 且在 Python 中 `-3 % 3 == 0`（-3 为 3 的 -1 倍），满足条件（count = 3）；\n   - `60`：虽能被 3 整除但不满足 < 50，不计入；\n   - `8, 14, 16`：均不能被 3 整除，不满足；\n2. 满足条件的共有 12, 42, -3 三个数，`print(count)` 输出 `3`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": null,
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图41）。",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      41
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q162",
+    "title": "字典遍历筛选与代码评估",
+    "topic": "字典",
+    "tags": [
+      "字典",
+      "字符串方法"
+    ],
+    "stem": "以下代码用于统计1-6班姓“欧阳”的学生人数，请评估其正确性。最准确的选项是？（假设含“欧阳”的都是作为姓）",
+    "code": "students = {\n    1: [\"李明\", \"欧阳雪\", \"王芳\"],\n    2: [\"欧阳华\", \"张伟\", \"李华\"],\n    # ... 其他班级省略\n}\n\ncount = 0                         #①\nfor class_num, name_list in students.items():  #②\n    if 1 <= class_num <= 6:       #③\n        for name in name_list:    #④\n            if name[0:2] == \"欧阳\":   #⑤\n                count = count + 1 #⑥\nprint(\"姓欧阳的学生人数: \", count)   #⑦",
+    "options": [
+      {
+        "key": "A",
+        "text": "第③行应改为 if class_num >= 1 and class_num <= 6: 才正确",
+        "hint": "Python 原生支持 1 <= class_num <= 6 链式比较语法，该写法完全正确"
+      },
+      {
+        "key": "B",
+        "text": "第⑤行应改为 if name.startswith(\"欧阳\"): 才正确",
+        "hint": "切片 name[0:2] == \"欧阳\" 能准确判断前缀且越界安全，并非必须改用 startswith"
+      },
+      {
+        "key": "C",
+        "text": "第②行students.items()写法并不准确，应去掉items后面的括号",
+        "hint": "items 是方法，必须加括号调用才能返回用于解包遍历的键值对视图"
+      },
+      {
+        "key": "D",
+        "text": "代码没有逻辑错误，可以正确统计",
+        "hint": "代码语法与逻辑均正确，能准确统计 1-6 班姓欧阳的人数"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，解析如下：\n- 选项 A 错误：Python 原生支持链式比较（Chained Comparisons），`1 <= class_num <= 6` 是地道合法的 Python 语法，等价于 `class_num >= 1 and class_num <= 6`；\n- 选项 B 错误：`name[0:2] == \"欧阳\"` 切片安全且准确，即使名字长度少于 2 切片也不会报错；虽然 `startswith()` 语义更直观，但切片在功能上完全正确，并非“必须修改才正确”；\n- 选项 C 错误：`items` 是字典对象的方法，必须使用括号 `students.items()` 进行调用，去掉括号会导致返回函数对象从而引发解包迭代异常；\n- 选项 D 正确：整段代码逻辑严谨，字典遍历、范围过滤、复姓匹配及计数均正确无误。",
+    "animationId": null,
+    "type": "概念理解",
+    "difficulty": 2,
+    "subtopic": "访问与成员检查",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图42）。【格式】代码评估题（选哪行该改），非输出判断",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      42
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q163",
+    "title": "列表切片赋值与引用修改",
+    "topic": "列表/切片",
+    "tags": [
+      "列表",
+      "切片"
+    ],
+    "stem": "关于 Python 列表的操作，下列选项中描述正确的是？\n（初始列表 a = [1, 2, 3]，各选项操作相互独立）",
+    "code": "a = [1, 2, 3]",
+    "options": [
+      {
+        "key": "A",
+        "text": "执行 a[1:2] = [2, 3] 后，a 变为 [1, [2, 3]]",
+        "hint": "切片赋值会展开右侧可迭代对象，a 变为 [1, 2, 3, 3] 而非嵌套列表"
+      },
+      {
+        "key": "B",
+        "text": "执行 a[1:3] = [4] 后，a 变为 [1, [4]]",
+        "hint": "切片赋值替换连续区间元素，a 变为 [1, 4] 而非嵌套列表"
+      },
+      {
+        "key": "C",
+        "text": "执行 a.append([4, 5]) 后，列表 a 的长度为 5",
+        "hint": "append 将列表作为单个元素追加，len(a) 变为 4"
+      },
+      {
+        "key": "D",
+        "text": "执行 b = a; b[0] = 10 后，a 变为 [10, 2, 3]",
+        "hint": "b 与 a 引用同一列表，通过 b[0] 修改元素会同步影响 a"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，解析如下：\n- 选项 A 错误：切片赋值 `a[1:2] = [2, 3]` 会将切片区间（索引 1 处的元素 2）替换为右侧可迭代对象中的元素，替换后 `a` 变为 `[1, 2, 3, 3]`，并不会产生嵌套列表；\n- 选项 B 错误：切片赋值 `a[1:3] = [4]` 会将切片区间（索引 1 和 2 处的元素 `[2, 3]`）替换为元素 4，替换后 `a` 变为 `[1, 4]`，同样不会产生嵌套列表；\n- 选项 C 错误：`append()` 方法将传入的参数作为单个元素追加至列表末尾，执行后 `a` 变为 `[1, 2, 3, [4, 5]]`，其长度为 4 而非 5；\n- 选项 D 正确：`b = a` 为引用赋值，变量 `b` 与 `a` 指向同一个列表对象；通过 `b[0] = 10` 修改列表元素属于就地修改，`a` 随之变为 `[10, 2, 3]`。",
+    "animationId": null,
+    "type": "概念理解",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图43）。【格式】图43 为小红书主页截图，题57；无整段代码，四个独立操作描述 提取备注：来源为小红书主页截图（图43）中的题57，选项文字与代码完整清晰",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      43
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q164",
+    "title": "九种列表修改方法综合判定",
+    "topic": "列表/切片",
+    "tags": [
+      "列表方法",
+      "切片"
+    ],
+    "stem": "以下九个独立的片段，分别执行后有几个 lst 的值为 [1, 2, 3, 4]？",
+    "code": "# ① lst = [1, 2]; lst.append([3, 4])\n# ② lst = [1, 2, 3, 4, 5]; lst.pop()\n# ③ lst = [1, 3, 4]; lst.insert(1, 2)\n# ④ lst = [4, 3, 2, 1]; lst.reverse()\n# ⑤ lst = [1, 2, 3, 5]; lst[3] = 4\n# ⑥ lst = [1, 2, 2, 3, 4]; lst.remove(2)\n# ⑦ lst = [1, 4, 2, 3, 4]; del lst[4]\n# ⑧ lst = [1, 3, 2, 4]; lst.sort(reverse=True)\n# ⑨ lst = [1, 2]; lst.extend([3, 4])",
+    "options": [
+      {
+        "key": "A",
+        "text": "4",
+        "hint": "计数偏少，遗漏了符合条件的操作"
+      },
+      {
+        "key": "B",
+        "text": "5",
+        "hint": "计数偏少，遗漏了符合条件的操作"
+      },
+      {
+        "key": "C",
+        "text": "6",
+        "hint": "②、③、④、⑤、⑥、⑨ 共 6 个片段执行后 lst 为 [1, 2, 3, 4]"
+      },
+      {
+        "key": "D",
+        "text": "7",
+        "hint": "误将非目标结果（如 ①、⑦ 或 ⑧）算入"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，逐项执行分析如下：\n① `lst.append([3, 4])`：将整个列表作为单个元素追加，结果为 `[1, 2, [3, 4]]`（×）；\n② `lst.pop()`：弹出末尾元素 5，结果为 `[1, 2, 3, 4]`（√）；\n③ `lst.insert(1, 2)`：在索引 1 处插入元素 2，结果为 `[1, 2, 3, 4]`（√）；\n④ `lst.reverse()`：就地反转列表，结果为 `[1, 2, 3, 4]`（√）；\n⑤ `lst[3] = 4`：将索引 3 处的元素 5 修改为 4，结果为 `[1, 2, 3, 4]`（√）；\n⑥ `lst.remove(2)`：移除列表中第一个出现的 2，结果为 `[1, 2, 3, 4]`（√）；\n⑦ `del lst[4]`：删除索引 4 处的最后一个元素 4，结果为 `[1, 4, 2, 3]`（×）；\n⑧ `lst.sort(reverse=True)`：降序排序，结果为 `[4, 3, 2, 1]`（×）；\n⑨ `lst.extend([3, 4])`：逐个追加迭代对象中的元素，结果为 `[1, 2, 3, 4]`（√）；\n综上，满足条件的片段有 ②、③、④、⑤、⑥、⑨ 共 6 个。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 2,
+    "subtopic": "列表修改与拷贝",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图43）。【格式】图43 题58，原图无 ABCD 选项，选项为 Gemini 补全（4/5/6/7）；九个片段运行核对共 6 个为 [1,2,3,4] 提取备注：来源为小红书主页截图（图43）中的题58综合题，原图封面未附ABCD选项，按四选一规范补全选项，正确值为6个",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      43
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q165",
+    "title": "集合运算与差集运算特性",
+    "topic": "集合",
+    "tags": [
+      "集合"
+    ],
+    "stem": "有以下 Python 程序。关于 s1 和 s2 集合运算的代码，哪一项是正确的？",
+    "code": "s1 = {2, 6, 4, 8, 8}\ns2 = {4, 5, 6, 7}",
+    "options": [
+      {
+        "key": "A",
+        "text": "s1 & s2 得到 {2, 4, 5, 6, 7, 8}",
+        "hint": "& 为交集运算，{2, 4, 5, 6, 7, 8} 为两集合的并集 (s1 | s2)"
+      },
+      {
+        "key": "B",
+        "text": "s1 & s2 得到 {4, 6, 8}",
+        "hint": "8 仅存在于 s1 中而不属于 s2，两集合交集应为 {4, 6}"
+      },
+      {
+        "key": "C",
+        "text": "s1 - s2 得到 {8, 2}",
+        "hint": "- 为差集运算，表示属于 s1 但不属于 s2 的元素，即 {2, 8}（集合无序）"
+      },
+      {
+        "key": "D",
+        "text": "s1 - s2 得到 {5, 7}",
+        "hint": "{5, 7} 是属于 s2 但不属于 s1 的元素，即 s2 - s1 的结果"
+      }
+    ],
+    "answer": "C",
+    "explanation": "答案是 C，解析如下：\n1. 集合创建时会自动去重：\n   - `s1 = {2, 6, 4, 8, 8}` 去重后包含元素 `{2, 4, 6, 8}`；\n   - `s2 = {4, 5, 6, 7}`；\n2. 集合运算分析：\n   - 交集 `s1 & s2`：计算两集合共有的元素，仅为 4 和 6，结果为 `{4, 6}`。选项 A 给出的是并集 `s1 | s2`，选项 B 多包含了 8，均错误；\n   - 差集 `s1 - s2`：计算属于 `s1` 但不属于 `s2` 的元素，即 `{2, 4, 6, 8} - {4, 5, 6, 7} = {2, 8}`。由于集合是无序容器，`{8, 2}` 与 `{2, 8}` 视为同一个集合，因此 C 选项正确；\n   - 选项 D 中的 `{5, 7}` 是属于 `s2` 但不属于 `s1` 的元素，即 `s2 - s1` 的差集，而非 `s1 - s2`。",
+    "animationId": null,
+    "type": "概念理解",
+    "difficulty": 1,
+    "subtopic": "集合运算",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图44）。【格式】图44 一题两小问之①；集合标签 rare 【答案/内容修正】提取时代码误带了第②问的 print(len(list(s1)))，已删去，只保留 s1/s2 定义（答案 C 不变，s1-s2 实际为 {8, 2}） 提取备注：原图（题号59）包含两个小问，此题提取为第①小问（集合运算判断）",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      44
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q166",
+    "title": "集合去重与列表长度统计",
+    "topic": "集合",
+    "tags": [
+      "集合",
+      "列表"
+    ],
+    "stem": "有以下 Python 程序。该程序输出结果为？",
+    "code": "s1 = {2, 6, 4, 8, 8}\ns2 = {4, 5, 6, 7}\nprint(len(list(s1)))",
+    "options": [
+      {
+        "key": "A",
+        "text": "4",
+        "hint": "集合字面量自动对重复元素 8 去重，s1 包含 2, 6, 4, 8 共 4 个元素，转列表后长度为 4"
+      },
+      {
+        "key": "B",
+        "text": "5",
+        "hint": "误以为集合保留了重复的元素 8"
+      },
+      {
+        "key": "C",
+        "text": "0",
+        "hint": "集合非空，长度不可能为 0"
+      },
+      {
+        "key": "D",
+        "text": "引发错误",
+        "hint": "集合可以正常转换为列表并由 len 统计长度，不会报错"
+      }
+    ],
+    "answer": "A",
+    "explanation": "答案是 A，解析如下：\n1. 集合（set）具有元素互异性（唯一性）：在通过字面量 `{2, 6, 4, 8, 8}` 创建集合 `s1` 时，重复的元素 `8` 会被自动去重，因此集合 `s1` 包含的互异元素为 `{2, 4, 6, 8}`，元素个数为 4；\n2. `list(s1)` 将集合转换为列表；\n3. `len(...)` 统计列表中的元素个数，结果为 `4`；\n4. `print(...)` 打印输出 `4`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "集合运算",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图44）。【格式】图44 一题两小问之② 提取备注：原图（题号59）包含两个小问，此题提取为第②小问（程序输出结果）",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      44
+    ],
+    "origAnswer": null
+  },
+  {
+    "id": "q167",
+    "title": "字符比较与字符串乘法",
+    "topic": "字符串/循环",
+    "tags": [
+      "字符串",
+      "运算符与表达式"
+    ],
+    "stem": "下列代码的输出结果是什么？",
+    "code": "s = 'Bye'\nt = 0\nfor i in s:\n    if i < 'Y':\n        t += 1\nprint(2 * s, t)",
+    "options": [
+      {
+        "key": "A",
+        "text": "BByyee 1",
+        "hint": "误以为 2 * s 是对每个单字符分别翻倍"
+      },
+      {
+        "key": "B",
+        "text": "BByyee 3",
+        "hint": "同时误判了字符串乘法形式与字符比较大小"
+      },
+      {
+        "key": "C",
+        "text": "ByeBye 3",
+        "hint": "误将小写字母 'y' 和 'e' 也判为小于大写字母 'Y'"
+      },
+      {
+        "key": "D",
+        "text": "ByeBye 1",
+        "hint": "'B' 的 ASCII 码(66)小于 'Y'(89)，而小写 'y' 和 'e' 均大于 'Y'，且 2 * s 整体重复字符串"
+      }
+    ],
+    "answer": "D",
+    "explanation": "答案是 D，解析如下：\n1. 单字符大小比较依据字符的 Unicode 编码（ASCII 码）：大写字母 `'B'` 为 66，`'Y'` 为 89；小写字母 `'y'` 为 121，`'e'` 为 101。小写字母的编码值均大于大写字母；\n2. 遍历字符串 `s = 'Bye'`：\n   - 当 `i = 'B'` 时：`'B' < 'Y'` 即 66 < 89 为 `True`，`t` 累加 1；\n   - 当 `i = 'y'` 时：`'y' < 'Y'` 即 121 < 89 为 `False`；\n   - 当 `i = 'e'` 时：`'e' < 'Y'` 即 101 < 89 为 `False`；\n   循环结束后 `t` 的值为 1；\n3. `2 * s` 是字符串与整数相乘，表示将整个字符串重复两次，得到 `'ByeBye'`；\n4. `print(2 * s, t)` 默认以空格分隔输出两项，结果为 `ByeBye 1`。",
+    "animationId": null,
+    "type": "输出判断",
+    "difficulty": 1,
+    "subtopic": "字符串操作",
+    "status": "needs_review",
+    "revised": false,
+    "revision": 0,
+    "lastEditedAt": "2026-10-22T14:40:00+08:00",
+    "editNote": "用户旧题图片导入（图45）。【本批内近似重复】与图29（字符大小比较与字符串乘法）结构完全相同，仅换了字符串",
+    "addedAt": "2026-10-22",
+    "source": "用户旧题·Gemini旧模型（图片导入）",
+    "sourceImages": [
+      45
+    ],
+    "origAnswer": null
   }
 ]

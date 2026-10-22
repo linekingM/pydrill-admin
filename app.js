@@ -18,6 +18,7 @@ const state = {
   // 筛选与检索
   filterStatus: "all", // all | needs_review | draft | verified
   selectedTags: new Set(), // 组合标签多选 (交集)
+  filterSource: "all", // 来源筛选
   searchKeyword: "",
 
   // 编辑模态框状态
@@ -176,6 +177,11 @@ function getFilteredQuestions() {
       return false;
     }
 
+    // 1b. 来源筛选
+    if (state.filterSource !== "all" && (q.source || "未知") !== state.filterSource) {
+      return false;
+    }
+
     // 2. 组合标签筛选 (交集：题目必须同时具备所选标签)
     if (state.selectedTags.size > 0) {
       const qTags = new Set(q.tags || []);
@@ -193,7 +199,8 @@ function getFilteredQuestions() {
       const codeMatch = (q.code || "").toLowerCase().includes(kw);
       const topicMatch = (q.topic || "").toLowerCase().includes(kw);
       const expMatch = (q.explanation || "").toLowerCase().includes(kw);
-      const noteMatch = (q.editNote || "").toLowerCase().includes(kw);
+      const noteMatch = (q.editNote || "").toLowerCase().includes(kw) ||
+        (q.source || "").toLowerCase().includes(kw);
       const optMatch = (q.options || []).some(
         (opt) =>
           (opt.text || "").toLowerCase().includes(kw) ||
@@ -407,7 +414,27 @@ function renderTagStatsGrid() {
 }
 
 // 渲染题目列表
+function renderSourceFilter() {
+  const sel = document.getElementById("sourceFilter");
+  if (!sel) return;
+  const counts = {};
+  for (const q of state.questions) {
+    const k = q.source || "未知";
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  if (state.filterSource !== "all" && !counts[state.filterSource]) state.filterSource = "all";
+  sel.innerHTML = `<option value="all">全部来源 (${state.questions.length})</option>` +
+    Object.keys(counts).sort().map((k) =>
+      `<option value="${escapeHtml(k)}">${escapeHtml(k)} (${counts[k]})</option>`).join("");
+  sel.value = state.filterSource;
+  sel.onchange = () => {
+    state.filterSource = sel.value;
+    renderQuestionList();
+  };
+}
+
 function renderQuestionList() {
+  renderSourceFilter();
   const container = document.getElementById("questionList");
   if (!container) return;
   container.innerHTML = "";
@@ -511,6 +538,8 @@ function renderQuestionList() {
           }</span>
         </div>
         <div class="q-meta-right">
+          <span class="badge badge-source" title="来源">📥 ${escapeHtml(q.source || "未知")}</span>
+          <span class="badge badge-added" title="入库日期">🗓 入库 ${escapeHtml(q.addedAt || "未知")}</span>
           ${q.lastEditedAt ? `最近改动: ${formatTime(q.lastEditedAt)}` : "未改动"}
         </div>
       </div>
@@ -607,6 +636,7 @@ function setupFilterEvents() {
   if (btnReset) {
     btnReset.onclick = () => {
       state.filterStatus = "all";
+      state.filterSource = "all";
       state.selectedTags.clear();
       state.searchKeyword = "";
       if (searchInput) searchInput.value = "";

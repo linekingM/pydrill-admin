@@ -1156,3 +1156,8 @@ textarea.code-editor {
     width: 100%;
   }
 }
+
+/* 来源 / 入库日期 */
+.badge-source { background: #eef4ff; color: #3355aa; margin-right: 4px; }
+.badge-added { background: #f3f3f3; color: #555; margin-right: 6px; }
+#sourceFilter { max-width: 280px; }
