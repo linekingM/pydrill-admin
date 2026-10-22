@@ -386,6 +386,67 @@ header.app-header {
   pointer-events: none;
 }
 
+/* 范围输入与下拉增强 */
+.range-input {
+  width: 90px;
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  background: var(--surface);
+  color: var(--ink);
+  outline: none;
+  transition: all 0.15s ease;
+}
+
+.range-input:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px var(--blue-bg);
+}
+
+select.btn-sm {
+  height: 28px;
+  padding: 2px 8px;
+  cursor: pointer;
+  background-color: var(--surface);
+  color: var(--ink-secondary);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-size: 12px;
+  outline: none;
+}
+
+select.btn-sm:focus {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px var(--blue-bg);
+}
+
+.batch-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.q-checkbox-label {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  margin-right: 4px;
+}
+
+.q-card-checkbox {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: var(--blue);
+}
+
+.q-card.selected {
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px var(--blue-bg), var(--shadow);
+}
+
 .active-tags-bar {
   display: flex;
   align-items: center;
@@ -514,6 +575,18 @@ header.app-header {
   background: var(--purple-bg);
   color: var(--purple);
   border: 1px solid var(--purple-border);
+}
+
+.badge-type {
+  background: #fdf2f8;
+  color: #db2777;
+  border: 1px solid #fbcfe8;
+}
+
+.badge-diff {
+  background: #f0fdf4;
+  color: #16a34a;
+  border: 1px solid #bbf7d0;
 }
 
 .q-meta-right {
@@ -1122,6 +1195,11 @@ textarea.code-editor {
   .search-box {
     width: 100%;
     min-width: 0;
+  }
+  .batch-actions {
+    width: 100%;
+    margin-left: 0 !important;
+    justify-content: flex-start;
   }
   .toolbar-footer-row {
     flex-direction: column;

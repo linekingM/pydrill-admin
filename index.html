@@ -95,17 +95,73 @@
           <button class="btn btn-sm status-filter-btn" data-status="verified">已通过</button>
         </div>
 
-        <div class="filter-group">
-          <span class="filter-label">来源:</span>
-          <select id="sourceFilter" class="btn btn-sm"><option value="all">全部来源</option></select>
-        </div>
-
         <div class="search-box">
           <span class="search-icon">🔍</span>
           <input type="text" id="searchInput" class="search-input" placeholder="按 题号 (如 q001)、题干、代码、选项、解析、改动备注搜索...">
         </div>
 
-        <button class="btn btn-sm" id="btnResetAllFilters">重置全部筛选</button>
+        <button class="btn btn-sm" id="btnResetAllFilters" title="清空所有筛选并恢复默认">🔄 重置全部筛选</button>
+      </div>
+
+      <div class="toolbar-row">
+        <div class="filter-group">
+          <span class="filter-label">来源:</span>
+          <select id="sourceFilter" class="btn btn-sm"><option value="all">全部来源</option></select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">入库:</span>
+          <select id="addedAtFilter" class="btn btn-sm"><option value="all">全部入库日期</option></select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">Topic:</span>
+          <select id="topicFilter" class="btn btn-sm"><option value="all">全部 Topic</option></select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">题型:</span>
+          <select id="typeFilter" class="btn btn-sm"><option value="all">全部题型</option></select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">难度:</span>
+          <select id="difficultyFilter" class="btn btn-sm"><option value="all">全部难度</option></select>
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">备注:</span>
+          <select id="noteFilter" class="btn btn-sm">
+            <option value="all">全部</option>
+            <option value="has_note">有备注</option>
+            <option value="marked">标记题(重复/格式/多选)</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="toolbar-row">
+        <div class="filter-group">
+          <span class="filter-label">题号范围:</span>
+          <input type="text" id="idRangeStart" class="range-input" placeholder="起 (如 q100)">
+          <span style="color:var(--muted);font-size:12px;">至</span>
+          <input type="text" id="idRangeEnd" class="range-input" placeholder="止 (如 q130)">
+        </div>
+
+        <div class="filter-group">
+          <span class="filter-label">排序:</span>
+          <select id="sortFilter" class="btn btn-sm">
+            <option value="id_asc">题号升序</option>
+            <option value="id_desc">题号降序</option>
+            <option value="added_desc">入库日期新→旧</option>
+            <option value="added_asc">入库日期旧→新</option>
+          </select>
+        </div>
+
+        <div class="batch-actions" style="margin-left: auto;">
+          <button class="btn btn-sm" id="btnSelectAllFiltered" title="全选当前筛选出的所有题目">☑️ 全选当前筛选</button>
+          <button class="btn btn-sm" id="btnClearSelection" title="清空已选中的所有题目">◻️ 清空选择</button>
+          <button class="btn btn-sm btn-success" id="btnBatchApprove" disabled title="将选中的题目批量审核通过">✓ 批量审核通过 (0)</button>
+        </div>
       </div>
 
       <!-- 标签组合筛选栏 -->

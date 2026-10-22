@@ -19,7 +19,18 @@ const state = {
   filterStatus: "all", // all | needs_review | draft | verified
   selectedTags: new Set(), // 组合标签多选 (交集)
   filterSource: "all", // 来源筛选
+  filterAddedAt: "all", // 入库日期筛选
+  filterTopic: "all", // Topic 筛选
+  filterType: "all", // 题型筛选
+  filterDifficulty: "all", // 难度筛选
+  filterIdStart: "", // 题号范围起
+  filterIdEnd: "", // 题号范围止
+  filterNote: "all", // 备注/标记: all | has_note | marked
+  sortBy: "id_asc", // 排序: id_asc | id_desc | added_desc | added_asc
   searchKeyword: "",
+
+  // 批量操作勾选
+  selectedQuestionIds: new Set(),
 
   // 编辑模态框状态
   editingQuestion: null,
@@ -29,8 +40,74 @@ const state = {
   pendingImportData: null,
 };
 
+// 标记题关键词（含任一即算标记题）
+const MARKED_NOTE_KEYWORDS = ["重复", "格式", "多选", "多答案"];
+
+// 解析题号中的纯数字，如 "q100" -> 100, "100" -> 100, 空值 -> null
+function parseIdNumber(val) {
+  if (val === null || val === undefined) return null;
+  const str = String(val).trim();
+  if (!str) return null;
+  const m = str.match(/^q?(\d+)$/i);
+  if (m) {
+    return parseInt(m[1], 10);
+  }
+  const num = parseInt(str, 10);
+  return isNaN(num) ? null : num;
+}
+
+// 检查是否为标记题（editNote 含「重复」「格式」「多选」「多答案」任一）
+function isMarkedQuestion(q) {
+  if (!q || !q.editNote) return false;
+  return MARKED_NOTE_KEYWORDS.some((kw) => q.editNote.includes(kw));
+}
+
+// 检查是否 editNote 非空
+function hasNote(q) {
+  return Boolean(q && q.editNote && q.editNote.trim().length > 0);
+}
+
+// 题目比较器（支持 题号升序/降序、入库日期新旧，日期相同按题号；「未知」排最后）
+function compareQuestions(a, b, sortBy) {
+  const numA = parseIdNumber(a.id) ?? 0;
+  const numB = parseIdNumber(b.id) ?? 0;
+
+  if (sortBy === "id_desc") {
+    return numB - numA;
+  }
+  if (sortBy === "id_asc") {
+    return numA - numB;
+  }
+
+  if (sortBy === "added_desc" || sortBy === "added_asc") {
+    const isUnknownA = !a.addedAt || a.addedAt === "未知";
+    const isUnknownB = !b.addedAt || b.addedAt === "未知";
+
+    // 「未知」排最后
+    if (isUnknownA && !isUnknownB) return 1;
+    if (!isUnknownA && isUnknownB) return -1;
+    if (isUnknownA && isUnknownB) {
+      return numA - numB; // 均为未知，按题号升序
+    }
+
+    // 均有有效日期
+    const dateCmp = sortBy === "added_desc"
+      ? b.addedAt.localeCompare(a.addedAt)
+      : a.addedAt.localeCompare(b.addedAt);
+
+    if (dateCmp !== 0) {
+      return dateCmp;
+    }
+    // 日期相同按题号升序
+    return numA - numB;
+  }
+
+  return numA - numB;
+}
+
 // UI 提示 Toast
 function showToast(message, type = "info") {
+  if (typeof document === "undefined") return;
   const container = document.getElementById("toastContainer");
   if (!container) return;
   const toast = document.createElement("div");
@@ -90,6 +167,7 @@ function updateDraftIndicator() {
 
 // 保存工作副本至 localStorage
 function saveDraftToStorage() {
+  if (typeof localStorage === "undefined") return;
   try {
     const meta = { updatedAt: new Date().toISOString() };
     localStorage.setItem(STORAGE_KEY_QUESTIONS, JSON.stringify(state.questions));
@@ -105,6 +183,7 @@ function saveDraftToStorage() {
 
 // 从 localStorage 读取草稿
 function loadDraftFromStorage() {
+  if (typeof localStorage === "undefined") return null;
   try {
     const raw = localStorage.getItem(STORAGE_KEY_QUESTIONS);
     const metaRaw = localStorage.getItem(STORAGE_KEY_META);
@@ -122,8 +201,10 @@ function loadDraftFromStorage() {
 
 // 清除 localStorage 草稿
 function clearStorageDraft() {
-  localStorage.removeItem(STORAGE_KEY_QUESTIONS);
-  localStorage.removeItem(STORAGE_KEY_META);
+  if (typeof localStorage !== "undefined") {
+    localStorage.removeItem(STORAGE_KEY_QUESTIONS);
+    localStorage.removeItem(STORAGE_KEY_META);
+  }
   state.isDraftLoaded = false;
   state.draftTime = null;
   updateDraftIndicator();
@@ -167,22 +248,62 @@ function computeTagStats(questions, tags) {
   };
 }
 
-// 核心筛选检索计算
+// 核心筛选检索计算（所有筛选同时生效交集，并按设定排序）
 function getFilteredQuestions() {
   const kw = state.searchKeyword.trim().toLowerCase();
+  const startNum = parseIdNumber(state.filterIdStart);
+  const endNum = parseIdNumber(state.filterIdEnd);
 
-  return state.questions.filter((q) => {
+  const filtered = state.questions.filter((q) => {
     // 1. 状态筛选
     if (state.filterStatus !== "all" && q.status !== state.filterStatus) {
       return false;
     }
 
-    // 1b. 来源筛选
+    // 2. 来源筛选
     if (state.filterSource !== "all" && (q.source || "未知") !== state.filterSource) {
       return false;
     }
 
-    // 2. 组合标签筛选 (交集：题目必须同时具备所选标签)
+    // 3. 入库日期 addedAt 筛选
+    if (state.filterAddedAt !== "all" && (q.addedAt || "未知") !== state.filterAddedAt) {
+      return false;
+    }
+
+    // 4. Topic 筛选
+    if (state.filterTopic !== "all" && (q.topic || "未知") !== state.filterTopic) {
+      return false;
+    }
+
+    // 5. 题型 type 筛选
+    if (state.filterType !== "all" && (q.type || "未知") !== state.filterType) {
+      return false;
+    }
+
+    // 6. 难度 difficulty 筛选
+    if (state.filterDifficulty !== "all") {
+      const qDiff = (q.difficulty !== undefined && q.difficulty !== null) ? String(q.difficulty) : "未知";
+      if (qDiff !== state.filterDifficulty) {
+        return false;
+      }
+    }
+
+    // 7. 题号范围筛选 (起止输入框，支持 q100/100 格式，空=不限)
+    if (startNum !== null || endNum !== null) {
+      const qNum = parseIdNumber(q.id);
+      if (qNum === null) return false;
+      if (startNum !== null && qNum < startNum) return false;
+      if (endNum !== null && qNum > endNum) return false;
+    }
+
+    // 8. 备注与标记题筛选 (全部 / 有备注 / 标记题(重复/格式/多选/多答案))
+    if (state.filterNote === "has_note") {
+      if (!hasNote(q)) return false;
+    } else if (state.filterNote === "marked") {
+      if (!isMarkedQuestion(q)) return false;
+    }
+
+    // 9. 组合标签筛选 (交集：题目必须同时具备所选标签)
     if (state.selectedTags.size > 0) {
       const qTags = new Set(q.tags || []);
       for (const reqTag of state.selectedTags) {
@@ -192,7 +313,7 @@ function getFilteredQuestions() {
       }
     }
 
-    // 3. 关键词检索 (id / stem / code / topic / explanation / editNote / options)
+    // 10. 关键词检索 (id / stem / code / topic / explanation / editNote / options)
     if (kw) {
       const idMatch = (q.id || "").toLowerCase().includes(kw);
       const stemMatch = (q.stem || "").toLowerCase().includes(kw);
@@ -214,6 +335,11 @@ function getFilteredQuestions() {
 
     return true;
   });
+
+  // 排序
+  filtered.sort((a, b) => compareQuestions(a, b, state.sortBy));
+
+  return filtered;
 }
 
 // 题库与标签数据加载主流程
@@ -281,6 +407,7 @@ async function loadData(forceClean = false) {
 
 // 更新顶部统计数据与筛选按钮状态
 function updateHeaderStats() {
+  if (typeof document === "undefined") return;
   const qList = state.questions;
   const total = qList.length;
   const verified = qList.filter((q) => q.status === "verified").length;
@@ -342,6 +469,7 @@ function renderActiveTagsBar() {
 
 // 渲染标签权重与分布看板
 function renderTagStatsGrid() {
+  if (typeof document === "undefined") return;
   const grid = document.getElementById("tagStatsGrid");
   if (!grid) return;
   grid.innerHTML = "";
@@ -413,7 +541,7 @@ function renderTagStatsGrid() {
   });
 }
 
-// 渲染题目列表
+// 渲染下拉筛选器
 function renderSourceFilter() {
   const sel = document.getElementById("sourceFilter");
   if (!sel) return;
@@ -427,14 +555,105 @@ function renderSourceFilter() {
     Object.keys(counts).sort().map((k) =>
       `<option value="${escapeHtml(k)}">${escapeHtml(k)} (${counts[k]})</option>`).join("");
   sel.value = state.filterSource;
-  sel.onchange = () => {
-    state.filterSource = sel.value;
-    renderQuestionList();
-  };
+}
+
+function renderAddedAtFilter() {
+  const sel = document.getElementById("addedAtFilter");
+  if (!sel) return;
+  const counts = {};
+  for (const q of state.questions) {
+    const k = q.addedAt || "未知";
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  if (state.filterAddedAt !== "all" && !counts[state.filterAddedAt]) state.filterAddedAt = "all";
+  const dates = Object.keys(counts).filter((k) => k !== "未知").sort((a, b) => b.localeCompare(a));
+  if (counts["未知"]) dates.push("未知");
+  sel.innerHTML = `<option value="all">全部入库日期 (${state.questions.length})</option>` +
+    dates.map((k) => `<option value="${escapeHtml(k)}">${escapeHtml(k)} (${counts[k]})</option>`).join("");
+  sel.value = state.filterAddedAt;
+}
+
+function renderTopicFilter() {
+  const sel = document.getElementById("topicFilter");
+  if (!sel) return;
+  const counts = {};
+  for (const q of state.questions) {
+    const k = q.topic || "未知";
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  if (state.filterTopic !== "all" && !counts[state.filterTopic]) state.filterTopic = "all";
+  const topics = Object.keys(counts).sort((a, b) => a.localeCompare(b, "zh-CN"));
+  sel.innerHTML = `<option value="all">全部 Topic (${state.questions.length})</option>` +
+    topics.map((k) => `<option value="${escapeHtml(k)}">${escapeHtml(k)} (${counts[k]})</option>`).join("");
+  sel.value = state.filterTopic;
+}
+
+function renderTypeFilter() {
+  const sel = document.getElementById("typeFilter");
+  if (!sel) return;
+  const counts = {};
+  for (const q of state.questions) {
+    const k = q.type || "未知";
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  if (state.filterType !== "all" && !counts[state.filterType]) state.filterType = "all";
+  const types = Object.keys(counts).sort((a, b) => a.localeCompare(b, "zh-CN"));
+  sel.innerHTML = `<option value="all">全部题型 (${state.questions.length})</option>` +
+    types.map((k) => `<option value="${escapeHtml(k)}">${escapeHtml(k)} (${counts[k]})</option>`).join("");
+  sel.value = state.filterType;
+}
+
+function renderDifficultyFilter() {
+  const sel = document.getElementById("difficultyFilter");
+  if (!sel) return;
+  const counts = {};
+  for (const q of state.questions) {
+    const k = (q.difficulty !== undefined && q.difficulty !== null) ? String(q.difficulty) : "未知";
+    counts[k] = (counts[k] || 0) + 1;
+  }
+  if (state.filterDifficulty !== "all" && !counts[state.filterDifficulty]) state.filterDifficulty = "all";
+  const diffs = Object.keys(counts).sort((a, b) => a.localeCompare(b));
+  sel.innerHTML = `<option value="all">全部难度 (${state.questions.length})</option>` +
+    diffs.map((k) => `<option value="${escapeHtml(k)}">难度 ${escapeHtml(k)} (${counts[k]})</option>`).join("");
+  sel.value = state.filterDifficulty;
+}
+
+function renderNoteFilter() {
+  const sel = document.getElementById("noteFilter");
+  if (!sel) return;
+  const hasNoteCount = state.questions.filter(hasNote).length;
+  const markedCount = state.questions.filter(isMarkedQuestion).length;
+  sel.innerHTML = `
+    <option value="all">全部备注 (${state.questions.length})</option>
+    <option value="has_note">有备注 (${hasNoteCount})</option>
+    <option value="marked">标记题(重复/格式/多选) (${markedCount})</option>
+  `;
+  sel.value = state.filterNote;
+}
+
+function renderDropdownFilters() {
+  if (typeof document === "undefined") return;
+  renderSourceFilter();
+  renderAddedAtFilter();
+  renderTopicFilter();
+  renderTypeFilter();
+  renderDifficultyFilter();
+  renderNoteFilter();
+}
+
+function updateBatchButton() {
+  if (typeof document === "undefined") return;
+  const btn = document.getElementById("btnBatchApprove");
+  const count = state.selectedQuestionIds.size;
+  if (btn) {
+    btn.innerHTML = `✓ 批量审核通过 (${count})`;
+    btn.disabled = count === 0;
+  }
 }
 
 function renderQuestionList() {
-  renderSourceFilter();
+  if (typeof document === "undefined") return;
+  renderDropdownFilters();
   const container = document.getElementById("questionList");
   if (!container) return;
   container.innerHTML = "";
@@ -455,6 +674,8 @@ function renderQuestionList() {
     importFilterCount.textContent = String(filtered.length);
   }
 
+  updateBatchButton();
+
   if (filtered.length === 0) {
     container.innerHTML = `
       <div class="card-panel" style="text-align: center; color: var(--muted); padding: 40px 20px;">
@@ -465,8 +686,9 @@ function renderQuestionList() {
   }
 
   filtered.forEach((q) => {
+    const isSelected = state.selectedQuestionIds.has(q.id);
     const card = document.createElement("div");
-    card.className = `q-card status-${q.status}`;
+    card.className = `q-card status-${q.status} ${isSelected ? "selected" : ""}`;
     card.id = `qcard-${q.id}`;
 
     // 状态徽章文本
@@ -529,10 +751,15 @@ function renderQuestionList() {
     card.innerHTML = `
       <div class="q-header">
         <div class="q-meta-left">
+          <label class="q-checkbox-label" title="选择本题进行批量操作">
+            <input type="checkbox" class="q-card-checkbox" data-qid="${escapeHtml(q.id)}" ${isSelected ? "checked" : ""}>
+          </label>
           <span class="q-id">${escapeHtml(q.id)}</span>
           <span class="badge badge-status-${q.status}">${statusBadgeText}</span>
           ${q.topic ? `<span class="badge badge-topic">${escapeHtml(q.topic)}</span>` : ""}
           ${tagsHtml}
+          ${q.type ? `<span class="badge badge-type">${escapeHtml(q.type)}</span>` : ""}
+          ${q.difficulty ? `<span class="badge badge-diff">难度 ${escapeHtml(q.difficulty)}</span>` : ""}
           <span class="badge badge-rev">${
             q.revised ? `r${q.revision} · 曾改动` : `r${q.revision || 0}`
           }</span>
@@ -598,6 +825,40 @@ function renderQuestionList() {
   });
 }
 
+// 批量审核通过逻辑 (与单题审核通过一致: status -> verified，不增加 revision，不改 revised，保持 lastEditedAt)
+function handleBatchApprove() {
+  if (state.selectedQuestionIds.size === 0) {
+    showToast("请先选择题目", "info");
+    return;
+  }
+
+  const selectedTargets = state.questions.filter((q) => state.selectedQuestionIds.has(q.id));
+  if (selectedTargets.length === 0) {
+    showToast("未找到所选题目", "error");
+    return;
+  }
+
+  const count = selectedTargets.length;
+  const ok = (typeof confirm !== "undefined")
+    ? confirm(`确认将选中的 ${count} 道题目审核通过吗？\n（状态将变更为 verified，不增加 revision 版本）`)
+    : true;
+  if (!ok) return;
+
+  selectedTargets.forEach((q) => {
+    q.status = "verified";
+  });
+
+  state.selectedQuestionIds.clear();
+
+  // 持久化与重绘 (与 handleApprove 逻辑一致)
+  saveDraftToStorage();
+  state.tagStats = computeTagStats(state.questions, state.tags);
+  updateHeaderStats();
+  renderTagStatsGrid();
+  renderQuestionList();
+  showToast(`已批量审核通过 ${count} 道题目！`, "success");
+}
+
 // 绑定筛选与检索事件
 function setupFilterEvents() {
   // 顶部状态点击
@@ -631,18 +892,143 @@ function setupFilterEvents() {
     };
   }
 
-  // 重置全部筛选
+  // 来源筛选
+  const sourceFilter = document.getElementById("sourceFilter");
+  if (sourceFilter) {
+    sourceFilter.onchange = () => {
+      state.filterSource = sourceFilter.value;
+      renderQuestionList();
+    };
+  }
+
+  // 入库日期筛选
+  const addedAtFilter = document.getElementById("addedAtFilter");
+  if (addedAtFilter) {
+    addedAtFilter.onchange = () => {
+      state.filterAddedAt = addedAtFilter.value;
+      renderQuestionList();
+    };
+  }
+
+  // Topic 筛选
+  const topicFilter = document.getElementById("topicFilter");
+  if (topicFilter) {
+    topicFilter.onchange = () => {
+      state.filterTopic = topicFilter.value;
+      renderQuestionList();
+    };
+  }
+
+  // 题型筛选
+  const typeFilter = document.getElementById("typeFilter");
+  if (typeFilter) {
+    typeFilter.onchange = () => {
+      state.filterType = typeFilter.value;
+      renderQuestionList();
+    };
+  }
+
+  // 难度筛选
+  const difficultyFilter = document.getElementById("difficultyFilter");
+  if (difficultyFilter) {
+    difficultyFilter.onchange = () => {
+      state.filterDifficulty = difficultyFilter.value;
+      renderQuestionList();
+    };
+  }
+
+  // 标记/备注筛选
+  const noteFilter = document.getElementById("noteFilter");
+  if (noteFilter) {
+    noteFilter.onchange = () => {
+      state.filterNote = noteFilter.value;
+      renderQuestionList();
+    };
+  }
+
+  // 题号范围筛选
+  const idStartInput = document.getElementById("idRangeStart");
+  const idEndInput = document.getElementById("idRangeEnd");
+  if (idStartInput) {
+    idStartInput.oninput = (e) => {
+      state.filterIdStart = e.target.value;
+      renderQuestionList();
+    };
+  }
+  if (idEndInput) {
+    idEndInput.oninput = (e) => {
+      state.filterIdEnd = e.target.value;
+      renderQuestionList();
+    };
+  }
+
+  // 排序下拉
+  const sortFilter = document.getElementById("sortFilter");
+  if (sortFilter) {
+    sortFilter.onchange = (e) => {
+      state.sortBy = e.target.value;
+      renderQuestionList();
+    };
+  }
+
+  // 全选当前筛选
+  const btnSelectAll = document.getElementById("btnSelectAllFiltered");
+  if (btnSelectAll) {
+    btnSelectAll.onclick = () => {
+      const filtered = getFilteredQuestions();
+      if (filtered.length === 0) {
+        showToast("当前筛选结果为空，无题目可全选", "info");
+        return;
+      }
+      filtered.forEach((q) => state.selectedQuestionIds.add(q.id));
+      renderQuestionList();
+      showToast(`已选中当前筛选的 ${filtered.length} 道题目`, "info");
+    };
+  }
+
+  // 清空选择
+  const btnClearSel = document.getElementById("btnClearSelection");
+  if (btnClearSel) {
+    btnClearSel.onclick = () => {
+      state.selectedQuestionIds.clear();
+      renderQuestionList();
+      showToast("已清空所选题目", "info");
+    };
+  }
+
+  // 批量审核通过
+  const btnBatch = document.getElementById("btnBatchApprove");
+  if (btnBatch) {
+    btnBatch.onclick = handleBatchApprove;
+  }
+
+  // 重置全部筛选 (清空所有新旧筛选条件，并恢复控件显示)
   const btnReset = document.getElementById("btnResetAllFilters");
   if (btnReset) {
     btnReset.onclick = () => {
       state.filterStatus = "all";
       state.filterSource = "all";
+      state.filterAddedAt = "all";
+      state.filterTopic = "all";
+      state.filterType = "all";
+      state.filterDifficulty = "all";
+      state.filterIdStart = "";
+      state.filterIdEnd = "";
+      state.filterNote = "all";
+      state.sortBy = "id_asc";
       state.selectedTags.clear();
       state.searchKeyword = "";
+      state.selectedQuestionIds.clear();
+
       if (searchInput) searchInput.value = "";
+      if (idStartInput) idStartInput.value = "";
+      if (idEndInput) idEndInput.value = "";
+      if (sortFilter) sortFilter.value = "id_asc";
+
       updateHeaderStats();
       renderActiveTagsBar();
       renderTagStatsGrid();
+      renderDropdownFilters();
       renderQuestionList();
       showToast("已重置所有筛选条件", "info");
     };
@@ -717,9 +1103,9 @@ function handleApprove(qid) {
   const q = state.questions.find((x) => x.id === qid);
   if (!q) return;
 
-  const ok = confirm(
-    `确认题目【${qid}】核验无误，审核通过吗？\n（状态将变更为 verified，不增加 revision 版本）`
-  );
+  const ok = (typeof confirm !== "undefined")
+    ? confirm(`确认题目【${qid}】核验无误，审核通过吗？\n（状态将变更为 verified，不增加 revision 版本）`)
+    : true;
   if (!ok) return;
 
   q.status = "verified";
@@ -923,9 +1309,26 @@ function setupEditModalEvents() {
     };
   }
 
-  // 事件委托：列表卡片操作按钮 (复制代码、原地编辑、审核通过)
+  // 事件委托：列表卡片复选框与操作按钮 (复制代码、原地编辑、审核通过)
   const questionList = document.getElementById("questionList");
   if (questionList) {
+    questionList.addEventListener("change", (e) => {
+      const chk = e.target.closest(".q-card-checkbox");
+      if (chk) {
+        const qid = chk.dataset.qid;
+        if (chk.checked) {
+          state.selectedQuestionIds.add(qid);
+        } else {
+          state.selectedQuestionIds.delete(qid);
+        }
+        const card = document.getElementById(`qcard-${qid}`);
+        if (card) {
+          card.classList.toggle("selected", chk.checked);
+        }
+        updateBatchButton();
+      }
+    });
+
     questionList.onclick = (e) => {
       const copyBtn = e.target.closest(".btn-copy-card-code");
       if (copyBtn) {
@@ -1311,4 +1714,23 @@ function initApp() {
 }
 
 // DOM 加载完成后初始化
-window.addEventListener("DOMContentLoaded", initApp);
+if (typeof window !== "undefined") {
+  window.addEventListener("DOMContentLoaded", initApp);
+}
+
+// 支持 Node 运行环境测试
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    state,
+    parseIdNumber,
+    isMarkedQuestion,
+    hasNote,
+    compareQuestions,
+    getFilteredQuestions,
+    computeTagStats,
+    handleApprove,
+    handleBatchApprove,
+    renderDropdownFilters,
+    renderQuestionList,
+  };
+}
